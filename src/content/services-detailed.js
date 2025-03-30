@@ -1,1076 +1,807 @@
 export const services = [
   {
-    id: 'event-lighting-design',
+    id: 'ecosystem-restoration',
     step: '01',
-    name: 'Event Lighting Design',
-    serviceimg: '/lighting/laser-show.webp',
-    img: '/lighting/laser-show.webp',
-    alt: 'Lighting designer working on event layout with 3D visualization software',
-    description: 'Full-service lighting design from concept to execution with detailed 3D visualizations',
-    link: '/services/event-lighting-design',
+    name: 'Ecosystem Restoration',
+    serviceimg: '/landscaping/ecosystem-restoration.webp',
+    img: '/landscaping/ecosystem-restoration.webp',
+    alt: 'Team of restoration ecologists working on rehabilitating native coastal dunes',
+    description: 'Comprehensive ecosystem rehabilitation services restoring degraded landscapes to thriving native habitats',
+    link: '/services/ecosystem-restoration',
     serviceDetails: {
-      process: 'Initial consultation → Site analysis → 3D rendering → Final implementation',
-      deliverables: 'Lighting plot, equipment list, power plan',
-      team: 'Senior lighting designer + technical director',
+      process: 'Initial site assessment → Ecological analysis → Restoration plan → Implementation → Monitoring',
+      deliverables: 'Detailed restoration plan, plant species list, maintenance schedule, monitoring reports',
+      team: 'Senior ecologist + restoration specialists + planting crew',
       revisionRounds: 3,
-      includes: 'Venue liaison & vendor coordination'
+      includes: 'Site preparation and 12-month establishment care'
     },
     packages: [
       {
-        name: 'Basic Design Package',
-        description: 'For simple events with single-space lighting',
-        price: 1495,
-        timeframe: '2-3 weeks'
+        name: 'Small-Scale Restoration',
+        description: 'Restoration projects up to 500sqm (residential or small commercial sites)',
+        price: 4500,
+        timeframe: '3-6 months'
       },
       {
-        name: 'Premium Design Package',
-        description: 'Multi-space designs with technical drawings',
-        price: 2995,
-        timeframe: '4-6 weeks'
+        name: 'Medium-Scale Restoration',
+        description: 'Restoration projects from 500-2000sqm with diverse habitat requirements',
+        price: 12000,
+        timeframe: '6-12 months'
       },
       {
-        name: 'Platinum Design Package',
-        description: 'Full production design with VR walkthrough',
-        price: 4995,
-        timeframe: '6-8 weeks'
+        name: 'Large-Scale Ecosystem Rehabilitation',
+        description: 'Comprehensive restoration for sites over 2000sqm with complex ecological requirements',
+        price: 25000,
+        timeframe: '1-3 years'
       }
     ],
     addons: [
       {
-        name: 'Rush Service',
-        description: '50% faster turnaround',
-        price: 750
+        name: 'Extended Monitoring Program',
+        description: 'Quarterly monitoring and reports for 3 additional years',
+        price: 3600
       },
       {
-        name: 'On-site Rehearsal',
-        description: 'Designer attendance at tech rehearsal',
-        price: 450
+        name: 'Wildlife Habitat Enhancement',
+        description: 'Installation of nesting boxes, habitat logs, and specialized wildlife structures',
+        price: 1850
       }
     ],
     commonUses: [
-      'Wedding receptions',
-      'Corporate galas',
-      'Product launches',
-      'Award ceremonies',
-      'Festival main stages'
+      'Degraded bushland regeneration',
+      'Coastal dune rehabilitation',
+      'Wetland restoration',
+      'Riparian zone recovery',
+      'Fire-damaged landscape rehabilitation'
     ],
     faqs: [
       {
-        question: 'How early should we book design services?',
-        answer: 'Minimum 8 weeks pre-event for optimal results'
+        question: 'How long until we see results?',
+        answer: 'Initial improvements are visible within 3-6 months, with substantial recovery in 2-3 years'
       },
       {
-        question: 'Do you work with external vendors?',
-        answer: 'Yes, we coordinate with all your existing vendors'
+        question: 'Do you work with local councils?',
+        answer: 'Yes, we regularly partner with Gold Coast and surrounding councils on public land restoration'
       }
     ],
-    relatedServices: ['technical-production', 'av-integration', 'event-staffing']
+    relatedServices: ['native-planting-consultation', 'bush-regeneration', 'wetland-conservation']
   },
   {
-    id: 'technical-production',
+    id: 'seasonal-fertilising-program',
     step: '02',
-    name: 'Technical Production',
-    serviceimg: '/lighting/stage-cad-wide.webp',
-    img: '/lighting/stage-cad.webp',
-    alt: 'Professional rigging system installation in event venue',
-    description: 'Complete technical production management including rigging, power distribution, and safety systems',
-    link: '/services/technical-production',
+    name: 'Seasonal Fertilising Program',
+    serviceimg: '/landscaping/seasonal-fertilising.webp',
+    img: '/landscaping/seasonal-fertilising.webp',
+    alt: 'Horticulturist applying organic fertiliser to native garden beds',
+    description: 'Customized seasonal fertilising programs using premium organic inputs tailored to your landscape needs',
+    link: '/services/seasonal-fertilising-program',
     serviceDetails: {
-      process: 'Initial consultation → Rigging design → Power planning → Final implementation',
-      deliverables: 'Rigging plot, power distribution plan, safety certifications',
-      team: 'Certified riggers and electricians',
+      process: 'Soil testing → Nutrient analysis → Custom plan development → Scheduled applications → Monitoring',
+      deliverables: 'Soil test results, fertiliser schedule, application reports, follow-up assessments',
+      team: 'Soil scientist + horticultural specialists',
       revisionRounds: 2,
-      includes: 'Permitting assistance and vendor coordination'
+      includes: 'Quarterly soil pH testing and organic matter assessment'
     },
     packages: [
       {
-        name: 'Basic Production',
-        description: 'Small venue package (up to 500sqm)',
-        price: 3495,
-        timeframe: '1 week prep'
+        name: 'Basic Fertilising Program',
+        description: 'Quarterly applications for residential gardens up to 400sqm',
+        price: 1200,
+        timeframe: '12-month program'
       },
       {
-        name: 'Advanced Production',
-        description: 'Medium venues with complex rigging',
-        price: 7495,
-        timeframe: '2 week prep'
+        name: 'Premium Garden Nutrition',
+        description: 'Bi-monthly applications with specialized amendments for gardens up to 1000sqm',
+        price: 2800,
+        timeframe: '12-month program'
       },
       {
-        name: 'Stadium Production',
-        description: 'Large-scale arena/stadium production',
-        price: 14995,
-        timeframe: '4 week prep'
+        name: 'Estate Nutrition Management',
+        description: 'Comprehensive monthly applications for large properties over 1000sqm',
+        price: 5500,
+        timeframe: '12-month program'
       }
     ],
     addons: [
       {
-        name: '24/7 Tech Support',
-        description: 'Dedicated technician on standby',
-        price: 250
-      },
-      {
-        name: 'Weather Protection',
-        description: 'Full weatherproofing package',
+        name: 'Microbial Soil Inoculation',
+        description: 'Specialized beneficial fungi and bacteria applications',
         price: 850
-      }
-    ],
-    commonUses: [
-      'Concert productions',
-      'Corporate stage shows',
-      'Outdoor festivals',
-      'Broadcast events',
-      'Theatrical performances'
-    ],
-    faqs: [
-      {
-        question: 'What venues have you worked with?',
-        answer: 'We have experience with 200+ venues nationwide'
       },
       {
-        question: 'Do you handle permits?',
-        answer: 'Yes, full permitting service included'
-      }
-    ],
-    relatedServices: ['event-lighting-design', 'av-integration', 'safety-compliance']
-  },
-  {
-    id: 'av-integration',
-    step: '03',
-    name: 'AV Integration',
-    serviceimg: '/lighting/audio-console.webp',
-    img: '/lighting/audio-console.webp',
-    alt: 'State-of-the-art AV control system with multiple monitors',
-    description: 'Seamless integration of lighting, audio, and video systems for unified event control',
-    link: '/services/av-integration',
-    serviceDetails: {
-      process: 'Initial consultation → System design → Integration → Testing → Final implementation',
-      deliverables: 'System integration plan, control programming, testing report',
-      team: 'AV integrator + control system programmer',
-      revisionRounds: 2,
-      includes: 'Vendor coordination and system optimization'
-    },
-    packages: [
-      {
-        name: 'Basic AV Sync',
-        description: 'Lighting + audio integration',
-        price: 995,
-        timeframe: '48-hour setup'
-      },
-      {
-        name: 'Full AV Integration',
-        description: 'Lighting, audio, video, and SFX',
-        price: 2495,
-        timeframe: '1 week setup'
-      },
-      {
-        name: 'Enterprise Integration',
-        description: 'Multi-venue network integration',
-        price: 4995,
-        timeframe: '2 week setup'
-      }
-    ],
-    addons: [
-      {
-        name: 'Backup System',
-        description: 'Redundant control systems',
+        name: 'Deep Root Fertilising',
+        description: 'Targeted sub-surface fertilising for established trees',
         price: 450
-      },
-      {
-        name: 'Live Streaming Integration',
-        description: 'Multi-camera live stream setup',
-        price: 895
       }
     ],
     commonUses: [
-      'Hybrid events',
-      'Multi-stage festivals',
-      'Corporate conferences',
-      'Broadcast productions',
-      'Interactive installations'
+      'Residential gardens',
+      'Native plant collections',
+      'Commercial landscapes',
+      'Public parklands',
+      'Food production areas'
     ],
     faqs: [
       {
-        question: 'Can you work with our existing equipment?',
-        answer: 'Yes, we integrate with all major AV brands'
+        question: 'Are your fertilisers organic?',
+        answer: 'Yes, we exclusively use certified organic and sustainably sourced inputs'
       },
       {
-        question: 'Do you provide operators?',
-        answer: 'Certified operators available as add-on'
+        question: 'How do you prevent nutrient runoff?',
+        answer: 'Our programs include timing and application methods specifically designed to prevent environmental contamination'
       }
     ],
-    relatedServices: ['technical-production', 'event-lighting-design', 'live-stream-production']
+    relatedServices: ['horticultural-maintenance', 'soil-remediation', 'composting-systems']
   },
   {
-    id: 'dmx-lighting-operation',
-    step: '04',
-    name: 'DMX Light Operation',
-    serviceimg: '/lighting/dmx-lights.webp',
-    img: '/lighting/dmx-lights.webp',
-    alt: 'Spectacular pyrotechnic and fog effects at concert venue',
-    description: 'Stunning visual effects including fog, haze, pyrotechnics, and projection mapping',
-    link: '/services/special-effects',
+    id: 'tree-pruning-management',
+    step: '03',
+    name: 'Tree Pruning & Management',
+    serviceimg: '/landscaping/tree-pruning.webp',
+    img: '/landscaping/tree-pruning.webp',
+    alt: 'Arborist safely pruning large native tree with professional equipment',
+    description: 'Expert tree pruning and management services focusing on tree health, safety, and natural form',
+    link: '/services/tree-pruning-management',
     serviceDetails: {
-      process: 'Initial consultation → Effect design → Programming → Testing → Final implementation',
-      deliverables: 'Effect cue list, safety plan, cleanup protocol',
-      team: 'Licensed pyrotechnicians and safety officers',
-      revisionRounds: 2,
-      includes: 'Permitting assistance and cleanup services'
-    },
-    packages: [
-      {
-        name: 'Atmospheric Package',
-        description: 'Fog, haze, and basic effects',
-        price: 995,
-        timeframe: '24-hour setup'
-      },
-      {
-        name: 'Concert Effects Package',
-        description: 'Full concert-grade effects system',
-        price: 2995,
-        timeframe: '2-day setup'
-      },
-      {
-        name: 'Spectacular Package',
-        description: 'Pyro, projection mapping, and custom effects',
-        price: 6995,
-        timeframe: '3-day setup'
-      }
-    ],
-    addons: [
-      {
-        name: 'Custom Confetti Design',
-        description: 'Branded confetti with custom colors',
-        price: 550
-      },
-      {
-        name: 'Flame Effects',
-        description: 'Controlled flame system with programming',
-        price: 1250
-      }
-    ],
-    commonUses: [
-      'Concert finales',
-      'Product reveals',
-      'Grand openings',
-      'Award show moments',
-      'Festival experiences'
-    ],
-    faqs: [
-      {
-        question: 'Are your effects safe for indoor use?',
-        answer: 'Yes, we offer specialized indoor-safe effects'
-      },
-      {
-        question: 'Do you handle cleanup?',
-        answer: 'Complete post-event cleanup included in all packages'
-      }
-    ],
-    relatedServices: ['event-lighting-design', 'technical-production', 'immersive-experiences']
-  },
-  {
-    id: 'audio-visual-technicians',
-    step: '05',
-    name: 'A/V Technicians',
-    serviceimg: '/lighting/av-staff.webp',
-    img: '/lighting/av-staff.webp',
-    alt: 'Professional lighting technicians setting up equipment',
-    description: 'Certified technicians and production staff for full event execution',
-    link: '/services/event-staffing',
-    serviceDetails: {
-      process: 'Initial consultation → Staff planning → On-site execution → Post-event review',
-      deliverables: 'Staff schedule, equipment list, post-event report',
-      team: 'Lighting operators, riggers, electricians, techs',
+      process: 'Tree assessment → Pruning plan → Safety protocol → Implementation → Debris management',
+      deliverables: 'Arborist report, pruning specifications, before/after documentation',
+      team: 'Certified arborist + climbing specialists + ground crew',
       revisionRounds: 1,
-      includes: 'PPE and comms systems for all staff'
+      includes: 'Complete cleanup and responsible green waste recycling'
     },
     packages: [
       {
-        name: 'Basic Crew',
-        description: 'Essential technical staff (3-5 people)',
-        price: 2495,
-        timeframe: 'One-day event'
+        name: 'Single Tree Service',
+        description: 'Professional pruning for individual specimen trees',
+        price: 450,
+        timeframe: '1 day'
       },
       {
-        name: 'Standard Production Team',
-        description: 'Full production department (6-12 people)',
-        price: 5995,
-        timeframe: 'Multi-day event'
+        name: 'Small Property Package',
+        description: 'Tree management for properties with 5-10 trees',
+        price: 1800,
+        timeframe: '2-3 days'
       },
       {
-        name: 'Complete Production Staff',
-        description: 'Full technical team with department heads',
-        price: 11995,
-        timeframe: 'Festival/major production'
+        name: 'Estate Tree Management',
+        description: 'Comprehensive pruning and tree care for properties with 10+ trees',
+        price: 3500,
+        timeframe: '3-5 days'
       }
     ],
     addons: [
       {
-        name: 'Production Assistant',
-        description: 'PA for client-specific tasks',
+        name: 'Tree Health Treatment',
+        description: 'Pest and disease diagnosis and organic treatment',
         price: 350
       },
       {
-        name: 'Dedicated Stage Manager',
-        description: 'Professional show caller and coordinator',
+        name: 'Canopy Thinning',
+        description: 'Specialized thinning for wind and light penetration',
+        price: 275
+      }
+    ],
+    commonUses: [
+      'Hazard reduction',
+      'Vista pruning',
+      'Storm damage repair',
+      'Fruit tree management',
+      'Native tree rejuvenation'
+    ],
+    faqs: [
+      {
+        question: 'Are your arborists certified?',
+        answer: 'All our arborists hold AQF Level 5 certification and current industry credentials'
+      },
+      {
+        question: 'Do you handle council permits?',
+        answer: 'Yes, we manage the entire permit application process for protected trees'
+      }
+    ],
+    relatedServices: ['tree-health-assessment', 'storm-preparation', 'habitat-creation']
+  },
+  {
+    id: 'horticultural-maintenance',
+    step: '04',
+    name: 'Horticultural Maintenance',
+    serviceimg: '/landscaping/horticultural-maintenance.webp',
+    img: '/landscaping/horticultural-maintenance.webp',
+    alt: 'Professional gardener performing detailed maintenance on native garden bed',
+    description: 'Premium horticultural maintenance plans ensuring thriving spaces all year round with sustainable practices',
+    link: '/services/horticultural-maintenance',
+    serviceDetails: {
+      process: 'Site assessment → Maintenance plan development → Schedule creation → Implementation → Monitoring',
+      deliverables: 'Detailed maintenance calendar, monthly reports, plant health assessments',
+      team: 'Maintenance manager + qualified horticulturists',
+      revisionRounds: 2,
+      includes: 'Organic pest management and seasonal adjustments'
+    },
+    packages: [
+      {
+        name: 'Essential Maintenance',
+        description: 'Monthly maintenance for residential gardens up to 400sqm',
+        price: 3600,
+        timeframe: '12-month program'
+      },
+      {
+        name: 'Premium Garden Care',
+        description: 'Bi-weekly maintenance for gardens up to 800sqm',
+        price: 7200,
+        timeframe: '12-month program'
+      },
+      {
+        name: 'Estate Maintenance Program',
+        description: 'Weekly comprehensive care for properties over 800sqm',
+        price: 14400,
+        timeframe: '12-month program'
+      }
+    ],
+    addons: [
+      {
+        name: 'Seasonal Color Rotation',
+        description: 'Quarterly flowering display changes',
+        price: 1200
+      },
+      {
+        name: 'Irrigation Management',
+        description: 'Regular system checks and seasonal adjustments',
+        price: 950
+      }
+    ],
+    commonUses: [
+      'Residential gardens',
+      'Commercial properties',
+      'Public spaces',
+      'Native plant collections',
+      'Resort landscapes'
+    ],
+    faqs: [
+      {
+        question: 'Can you work with existing maintenance teams?',
+        answer: 'Yes, we can collaborate with or supplement current maintenance staff'
+      },
+      {
+        question: 'What happens if plants fail?',
+        answer: 'Our maintenance plans include replacement of any plants that fail due to improper maintenance'
+      }
+    ],
+    relatedServices: ['seasonal-fertilising-program', 'pest-management', 'irrigation-services']
+  },
+  {
+    id: 'native-planting-consultation',
+    step: '05',
+    name: 'Native Plant Consultation',
+    serviceimg: '/landscaping/native-consultation.webp',
+    img: '/landscaping/native-consultation.webp',
+    alt: 'Botanist discussing native plant selection with client in garden setting',
+    description: 'Expert consultation on native plant selection and ecosystem design tailored to your specific site conditions',
+    link: '/services/native-planting-consultation',
+    serviceDetails: {
+      process: 'Site assessment → Soil analysis → Microclimate mapping → Plant selection → Implementation guidance',
+      deliverables: 'Detailed plant list, placement plan, care instructions, sourcing information',
+      team: 'Native plant specialist + landscape designer',
+      revisionRounds: 3,
+      includes: 'Follow-up support and seasonal advice'
+    },
+    packages: [
+      {
+        name: 'Basic Consultation',
+        description: 'Single consultation with basic plant recommendations for small gardens',
+        price: 650,
+        timeframe: '1-2 weeks'
+      },
+      {
+        name: 'Comprehensive Planting Plan',
+        description: 'Detailed consultation with complete planting design and specifications',
+        price: 1800,
+        timeframe: '2-4 weeks'
+      },
+      {
+        name: 'Ecosystem Design Package',
+        description: 'Full-scale ecosystem design mimicking natural plant communities',
+        price: 3500,
+        timeframe: '4-6 weeks'
+      }
+    ],
+    addons: [
+      {
+        name: 'Plant Sourcing Service',
+        description: 'Procurement of specified native plants from quality nurseries',
+        price: 550
+      },
+      {
+        name: 'Wildlife Habitat Enhancement',
+        description: 'Additional focus on creating specific wildlife habitat',
         price: 750
       }
     ],
     commonUses: [
-      'Corporate events',
-      'Music concerts',
-      'Theater productions',
-      'Festival operations',
-      'Broadcast productions'
+      'New garden establishment',
+      'Garden renovations',
+      'Property development',
+      'Habitat creation',
+      'Sustainable landscapes'
     ],
     faqs: [
       {
-        question: 'Are your staff insured?',
-        answer: 'All staff fully insured with $5M liability coverage'
+        question: 'Can you recommend plants that attract specific wildlife?',
+        answer: 'Yes, we specialize in creating targeted habitat for birds, butterflies, and native pollinators'
       },
       {
-        question: 'Can we meet the crew beforehand?',
-        answer: 'Pre-event crew introductions available on request'
+        question: 'Do you provide ongoing support?',
+        answer: 'All consultations include 12 months of email support and seasonal care reminders'
       }
     ],
-    relatedServices: ['technical-production', 'av-integration', 'event-lighting-design']
+    relatedServices: ['ecosystem-restoration', 'landscape-design', 'habitat-creation']
   },
   {
-    id: 'immersive-experiences',
+    id: 'landscape-design',
     step: '06',
-    name: 'Immersive Experiences',
-    serviceimg: '/lighting/projections.webp',
-    img: '/lighting/projections.webp',
-    alt: 'Interactive light installation with visitors engaging with light art',
-    description: 'Interactive lighting installations and immersive environments for memorable guest experiences',
-    link: '/services/immersive-experiences',
+    name: 'Landscape Design',
+    serviceimg: '/landscaping/landscape-design.webp',
+    img: '/landscaping/landscape-design.webp',
+    alt: 'Landscape architect reviewing detailed landscape plans with client',
+    description: 'Creative and sustainable landscape design services blending aesthetic beauty with ecological function',
+    link: '/services/landscape-design',
     serviceDetails: {
-      process: 'Initial consultation → Concept design → Development → Testing → Final implementation',
-      deliverables: 'Interactive system design, custom programming, installation plan',
-      team: 'Interactive designer + software developer + installation specialist',
+      process: 'Client briefing → Site analysis → Concept development → Detailed design → Implementation planning',
+      deliverables: 'Concept plans, detailed drawings, plant schedules, material specifications',
+      team: 'Landscape architect + design associates',
       revisionRounds: 3,
-      includes: 'Sensor integration and mobile app development'
+      includes: 'Digital visualization and walkthrough'
     },
     packages: [
       {
-        name: 'Interactive Light Display',
-        description: 'Motion-reactive light installation',
-        price: 2445,
-        timeframe: '3-4 weeks development'
-      },
-      {
-        name: 'Brand Experience Environment',
-        description: 'Full sensory brand activation space',
-        price: 2445,
-        timeframe: '3-4 weeks development'
-      },
-      {
-        name: 'Festival Installation',
-        description: 'Major interactive art installation',
-        price: 3445,
-        timeframe: '4-6 weeks development'
-      }
-    ],
-    addons: [
-      {
-        name: 'Mobile App Integration',
-        description: 'Custom app for visitor interaction',
-        price: 1995
-      },
-      {
-        name: 'Data Collection',
-        description: 'Analytics and user interaction data',
-        price: 1250
-      }
-    ],
-    commonUses: [
-      'Brand activations',
-      'Museum exhibitions',
-      'Corporate headquarters',
-      'Festival experiences',
-      'Retail environments'
-    ],
-    faqs: [
-      {
-        question: 'How long can installations remain active?',
-        answer: 'From one-day events to permanent installations'
-      },
-      {
-        question: 'Can experiences be branded?',
-        answer: 'Full customization for brand integration available'
-      }
-    ],
-    relatedServices: ['event-lighting-design', 'special-effects', 'virtual-production']
-  },
-  {
-    id: 'stage-production',
-    step: '07',
-    name: 'Stage Production',
-    serviceimg: '/lighting/stage-cad-wide.webp',
-    img: '/lighting/stage-cad-wide.webp',
-    alt: 'LED wall virtual production setup with camera and lighting rigs',
-    description: 'State-of-the-art LED wall and XR stage solutions for film, broadcast, and live events',
-    link: '/services/virtual-production',
-    serviceDetails: {
-      process: 'Initial consultation → Stage design → Content creation → Testing → Final implementation',
-      deliverables: 'Stage design plan, content library, technical documentation',
-      team: 'Virtual production supervisor + content creator + technician',
-      revisionRounds: 3,
-      includes: 'Real-time rendering and camera tracking'
-    },
-    packages: [
-      {
-        name: 'Basic XR Package',
-        description: 'Small LED backdrop for presentations',
-        price: 7995,
-        timeframe: '3-day setup'
-      },
-      {
-        name: 'Broadcast XR Solution',
-        description: 'Full XR environment for broadcast',
-        price: 19995,
-        timeframe: '1-week setup'
-      },
-      {
-        name: 'Production XR Stage',
-        description: 'Complete virtual production stage',
-        price: 49995,
-        timeframe: '2-week setup'
-      }
-    ],
-    addons: [
-      {
-        name: 'Custom Environment Design',
-        description: 'Bespoke virtual environment creation',
-        price: 3995
-      },
-      {
-        name: 'Real-time Rendering Operator',
-        description: 'Dedicated specialist for content manipulation',
-        price: 1250
-      }
-    ],
-    commonUses: [
-      'Film production',
-      'Broadcast studios',
-      'Live event backdrops',
-      'Corporate presentations',
-      'Virtual conferences'
-    ],
-    faqs: [
-      {
-        question: 'Do you create the virtual content?',
-        answer: 'Yes, we offer full environment creation services'
-      },
-      {
-        question: 'How much space is needed?',
-        answer: 'Solutions available from 10sqm to 500sqm'
-      }
-    ],
-    relatedServices: ['technical-production', 'av-integration', 'immersive-experiences']
-  },
-  {
-    id: 'safety-compliance',
-    step: '08',
-    name: 'Safety & Compliance',
-    serviceimg: '/lighting/architectural-lights.webp',
-    img: '/lighting/architectural-lights.webp',
-    alt: 'Safety officer checking rigging equipment with clipboard',
-    description: 'Comprehensive safety management, regulatory compliance, and risk assessment services',
-    link: '/services/safety-compliance',
-    serviceDetails: {
-      process: 'Initial consultation → Risk assessment → Documentation → Implementation → Final review',
-      deliverables: 'Safety plan, compliance certificates, inspection reports',
-      team: 'Safety officer + compliance specialist + documentation manager',
-      revisionRounds: 2,
-      includes: 'Permitting assistance and emergency planning'
-    },
-    packages: [
-      {
-        name: 'Basic Safety Compliance',
-        description: 'Essential documentation and inspection',
-        price: 995,
-        timeframe: '1 week processing'
-      },
-      {
-        name: 'Full Compliance Package',
-        description: 'Complete permit processing and on-site officer',
-        price: 2495,
-        timeframe: '2-3 weeks processing'
-      },
-      {
-        name: 'Major Event Safety Management',
-        description: 'Comprehensive risk management and team',
-        price: 5995,
-        timeframe: '4-6 weeks processing'
-      }
-    ],
-    addons: [
-      {
-        name: 'Additional Safety Officer',
-        description: 'Per-day additional safety personnel',
-        price: 450
-      },
-      {
-        name: 'Emergency Action Planning',
-        description: 'Custom emergency response protocol',
-        price: 795
-      }
-    ],
-    commonUses: [
-      'Large public events',
-      'Complex rigging installations',
-      'Festival operations',
-      'Tour productions',
-      'Special effect implementations'
-    ],
-    faqs: [
-      {
-        question: 'What regulations do you cover?',
-        answer: 'Federal, state, and local requirements for events'
-      },
-      {
-        question: 'How early should we start compliance?',
-        answer: 'Minimum 6-8 weeks before event date'
-      }
-    ],
-    relatedServices: ['technical-production', 'special-effects', 'virtual-production']
-  },
-
-  {
-    id: 'resolume-operation',
-    step: '09',
-    name: 'Resolume Operation Services',
-    serviceimg: '/lighting/touchdesigner-installation.webp',
-    img: '/lighting/touchdesigner-installation.webp',
-    alt: 'Resolume operator working on console with multi-screen display',
-    description: 'Expert Resolume Arena/Avenue operation for dynamic visual shows and projection mapping',
-    link: '/services/resolume-operation',
-    serviceDetails: {
-      process: 'Content review → Show programming → Technical rehearsal → Live operation',
-      deliverables: 'Custom visual content integration, mapping templates, show file',
-      team: 'Senior Resolume operator + media server technician',
-      revisionRounds: 2,
-      includes: 'On-site setup & troubleshooting'
-    },
-    packages: [
-      {
-        name: 'Basic Resolume Operation',
-        description: 'Single operator for simple events with pre-built content',
-        price: 1295,
-        timeframe: '1 day'
-      },
-      {
-        name: 'Advanced Resolume Package',
-        description: 'Custom content integration with live effects operation',
-        price: 2495,
-        timeframe: '2-3 days'
-      },
-      {
-        name: 'Premium Mapping Package',
-        description: 'Complex projection mapping with custom effects programming',
-        price: 3995,
-        timeframe: '3-5 days'
-      }
-    ],
-    addons: [
-      {
-        name: 'Content Creation',
-        description: 'Custom visual content designed for your event',
-        price: 1250
-      },
-      {
-        name: 'Extra Rehearsal Day',
-        description: 'Additional day for technical rehearsal',
-        price: 650
-      }
-    ],
-    commonUses: [
-      'Music festivals',
-      'Corporate presentations',
-      'Nightclub installations',
-      'Theater productions',
-      'Architectural projections'
-    ],
-    faqs: [
-      {
-        question: 'Can you work with our existing content?',
-        answer: 'Yes, we can integrate and optimize any content formats you provide'
-      },
-      {
-        question: 'What equipment do you bring?',
-        answer: 'Resolume license, control surface, and backup system - projectors/screens quoted separately'
-      }
-    ],
-    relatedServices: ['projection-mapping', 'media-server-rental', 'content-creation']
-  },
-  {
-    id: 'touchdesigner-operation',
-    step: '10',
-    name: 'TouchDesigner Operation',
-    serviceimg: '/lighting/touchdesigner-installation.webp',
-    img: '/lighting/touchdesigner-installation.webp',
-    alt: 'TouchDesigner specialist working with interactive lighting installation',
-    description: 'Specialized TouchDesigner programming and operation for interactive and responsive visual experiences',
-    link: '/services/touchdesigner-operation',
-    serviceDetails: {
-      process: 'Concept development → Patch programming → Sensor integration → Testing → Live implementation',
-      deliverables: 'TouchDesigner project file, technical documentation, integration protocol',
-      team: 'Senior TouchDesigner developer + systems integrator',
-      revisionRounds: 3,
-      includes: 'Hardware setup & calibration'
-    },
-    packages: [
-      {
-        name: 'Basic Interactive Package',
-        description: 'Simple interactive elements with standard visualizations',
-        price: 1995,
-        timeframe: '3-4 days'
-      },
-      {
-        name: 'Advanced Integration Package',
-        description: 'Complex sensor integration with custom visual responses',
-        price: 3495,
-        timeframe: '1-2 weeks'
-      },
-      {
-        name: 'Custom Installation Package',
-        description: 'Full-scale interactive installation with multiple interaction points',
-        price: 5995,
-        timeframe: '2-3 weeks'
-      }
-    ],
-    addons: [
-      {
-        name: 'Sensor Package',
-        description: 'Equipment for motion tracking and interaction',
-        price: 950
-      },
-      {
-        name: 'Extended Support',
-        description: 'Post-event technical support and adjustments',
-        price: 595
-      }
-    ],
-    commonUses: [
-      'Interactive art installations',
-      'Museum exhibits',
-      'Experiential marketing activations',
-      'Trade show booths',
-      'Immersive theater productions'
-    ],
-    faqs: [
-      {
-        question: 'Can the system respond to crowd movement?',
-        answer: 'Yes, we can implement camera-based tracking for crowd interaction'
-      },
-      {
-        question: 'Do you provide the hardware components?',
-        answer: 'We can supply all necessary hardware including sensors, cameras, and computing equipment'
-      }
-    ],
-    relatedServices: ['interactive-installations', 'sensor-integration', 'projection-mapping']
-  },
-  {
-    id: 'dmx-light-installation',
-    step: '11',
-    name: 'DMX Lighting Installations',
-    serviceimg: '/lighting/dmx-lights.webp',
-    img: '/lighting/dmx-lights.webp',
-    alt: 'Lighting technician operating DMX console for live event',
-    description: 'Professional DMX lighting programming and operation for precise control of lighting fixtures',
-    link: '/services/dmx-operation',
-    serviceDetails: {
-      process: 'Equipment inventory → Console programming → Cue creation → Show operation',
-      deliverables: 'Show file, cue sheet, patch list',
-      team: 'DMX programmer + lighting operator',
-      revisionRounds: 2,
-      includes: 'Pre-programming and on-site adjustments'
-    },
-    packages: [
-      {
-        name: 'Basic DMX Operation',
-        description: 'Single console operation for smaller venues',
-        price: 895,
-        timeframe: '1 day'
-      },
-      {
-        name: 'Standard Production Package',
-        description: 'Programming and operation for mid-sized events',
-        price: 1695,
-        timeframe: '2 days'
-      },
-      {
-        name: 'Advanced Show Control Package',
-        description: 'Complex show programming with timecode integration',
-        price: 2995,
-        timeframe: '3-4 days'
-      }
-    ],
-    addons: [
-      {
-        name: 'Console Rental',
-        description: 'Premium lighting console (MA, Hog, etc.)',
-        price: 650
-      },
-      {
-        name: 'Pre-Visualization',
-        description: '3D visualization of lighting design before event',
-        price: 850
-      }
-    ],
-    commonUses: [
-      'Live concerts',
-      'Corporate events',
-      'Theater productions',
-      'Television broadcasts',
-      'Dance performances'
-    ],
-    faqs: [
-      {
-        question: 'Which console brands do you operate?',
-        answer: 'We are certified on GrandMA, Hog, Avolites, Chamsys, and ETC consoles'
-      },
-      {
-        question: 'Can you work with our existing lighting plot?',
-        answer: 'Yes, we can program based on any existing design documentation'
-      }
-    ],
-    relatedServices: ['lighting-equipment-rental', 'event-lighting-design', 'production-management']
-  },
-  {
-    id: 'outdoor-lighting-installation',
-    step: '12',
-    name: 'Outdoor Lighting Installation',
-    serviceimg: '/lighting/zoomed-beachfestoon.webp',
-    img: '/lighting/zoomed-beachfestoon.webp',
-    alt: 'Team installing outdoor weatherproof lighting for festival environment',
-    description: 'Weatherproof lighting solutions for outdoor events with specialized power distribution',
-    link: '/services/outdoor-lighting-installation',
-    serviceDetails: {
-      process: 'Site survey → Weather planning → Installation → Weatherproofing → Testing',
-      deliverables: 'Installation report, safety certification, equipment inventory',
-      team: 'Installation manager + technical crew (3-5 members)',
-      revisionRounds: 1,
-      includes: 'Weather monitoring and contingency setup'
-    },
-    packages: [
-      {
-        name: 'Basic Outdoor Package',
-        description: 'Essential weatherproof lighting for smaller outdoor areas',
-        price: 2295,
-        timeframe: '1-2 days'
-      },
-      {
-        name: 'Festival Lighting Package',
-        description: 'Comprehensive lighting for medium-sized outdoor events',
-        price: 4495,
-        timeframe: '2-3 days'
-      },
-      {
-        name: 'Premium Outdoor Production',
-        description: 'Large-scale outdoor production with multiple areas',
-        price: 7995,
-        timeframe: '3-5 days'
-      }
-    ],
-    addons: [
-      {
-        name: 'Power Generation',
-        description: 'Silent generators with distribution system',
-        price: 1250
-      },
-      {
-        name: 'Emergency Crew',
-        description: 'On-site standby crew for weather issues',
-        price: 895
-      }
-    ],
-    commonUses: [
-      'Music festivals',
-      'Outdoor weddings',
-      'Public events',
-      'Sporting events',
-      'Architectural illuminations'
-    ],
-    faqs: [
-      {
-        question: 'What happens in case of extreme weather?',
-        answer: 'We implement our weather protocol including protective covers and backup systems'
-      },
-      {
-        question: 'Do you provide power solutions?',
-        answer: 'Yes, we offer complete power distribution and backup generators'
-      }
-    ],
-    relatedServices: ['power-distribution', 'temporary-structures', 'event-safety']
-  },
-  {
-    id: 'heights-lighting-installation',
-    step: '13',
-    name: 'Working-At-Heights Lighting',
-    serviceimg: '/lighting/boom-lift-tall.webp',
-    img: '/lighting/boom-lift-tall.webp',
-    alt: 'Certified technicians installing lighting at height with safety equipment',
-    description: 'Specialized elevated lighting installation by certified height workers for venues with challenging access',
-    link: '/services/heights-lighting-installation',
-    serviceDetails: {
-      process: 'Safety assessment → Equipment certification → Installation plan → Rigging → Focused setup',
-      deliverables: 'Rigging plot, safety documentation, inspection certificates',
-      team: 'Lead rigger + certified height technicians',
-      revisionRounds: 1,
-      includes: 'Safety equipment and compliance documentation'
-    },
-    packages: [
-      {
-        name: 'Basic Heights Package',
-        description: 'Standard truss and fixture installation up to 6m',
-        price: 2495,
-        timeframe: '1 day'
-      },
-      {
-        name: 'Advanced Rigging Package',
-        description: 'Complex installations with multiple hang points up to 12m',
-        price: 3995,
-        timeframe: '2 days'
-      },
-      {
-        name: 'Extreme Access Package',
-        description: 'Specialized installation for difficult-access locations and heights above 12m',
-        price: 6495,
-        timeframe: '3 days'
-      }
-    ],
-    addons: [
-      {
-        name: 'Structural Engineer',
-        description: 'Professional evaluation and certification',
-        price: 950
-      },
-      {
-        name: 'Aerial Access Equipment',
-        description: 'Scissor lifts, cherry pickers, and scaffolding',
-        price: 1295
-      }
-    ],
-    commonUses: [
-      'Arena concerts',
-      'Cathedral and historic venue events',
-      'Theater fly systems',
-      'Warehouse raves',
-      'Architectural installations'
-    ],
-    faqs: [
-      {
-        question: 'Are your technicians certified?',
-        answer: 'All our technicians have current Working at Heights, IPAF, and rigging certifications'
-      },
-      {
-        question: 'Can you install in protected buildings?',
-        answer: 'Yes, we specialize in non-invasive methods for historic and protected structures'
-      }
-    ],
-    relatedServices: ['rigging-services', 'structural-assessment', 'venue-consultation']
-  },
-  {
-    id: 'architectural-lighting',
-    step: '14',
-    name: 'Architectural Lighting Services',
-    serviceimg: '/lighting/architectural-lights.webp',
-    img: '/lighting/architectural-lights.webp',
-    alt: 'Building facade illuminated with color-changing architectural lighting',
-    description: 'Sophisticated lighting design for architectural features, facades, and structures',
-    link: '/services/architectural-lighting',
-    serviceDetails: {
-      process: 'Building analysis → Lighting concept → Draft design → Final implementation → Programming',
-      deliverables: 'CAD drawings, fixture specifications, control system design',
-      team: 'Architectural lighting designer + installation specialists',
-      revisionRounds: 3,
-      includes: 'Local permit management and energy efficiency analysis'
-    },
-    packages: [
-      {
-        name: 'Facade Lighting Package',
-        description: 'External building illumination for small to medium structures',
-        price: 3495,
-        timeframe: '1 week'
-      },
-      {
-        name: 'Heritage Building Package',
-        description: 'Specialized lighting for historic and listed buildings',
-        price: 5995,
-        timeframe: '2 weeks'
-      },
-      {
-        name: 'Complete Building Package',
-        description: 'Comprehensive exterior and key interior architectural lighting',
-        price: 9995,
+        name: 'Concept Design',
+        description: 'Initial design concepts for residential gardens up to 500sqm',
+        price: 2500,
         timeframe: '3-4 weeks'
+      },
+      {
+        name: 'Comprehensive Design',
+        description: 'Complete landscape design with detailed plans for properties up to 1000sqm',
+        price: 5500,
+        timeframe: '6-8 weeks'
+      },
+      {
+        name: 'Master Planning',
+        description: 'Extensive master planning for estates and large properties over 1000sqm',
+        price: 12000,
+        timeframe: '10-12 weeks'
       }
     ],
     addons: [
       {
-        name: 'DMX Control System',
-        description: 'Programmable lighting control with remote access',
-        price: 1895
+        name: '3D Visualization',
+        description: 'Photorealistic renders of proposed landscape',
+        price: 1500
       },
       {
-        name: 'Annual Maintenance Plan',
-        description: 'Regular maintenance and system updates',
-        price: 1250
+        name: 'Construction Documentation',
+        description: 'Detailed technical drawings for contractors',
+        price: 2200
       }
     ],
     commonUses: [
-      'Commercial buildings',
-      'Hotels and resorts',
-      'Historic landmarks',
-      'Bridges and public structures',
-      'Retail environments'
+      'Residential gardens',
+      'Commercial properties',
+      'Public spaces',
+      'Resort developments',
+      'Community projects'
     ],
     faqs: [
       {
-        question: 'How energy-efficient are your solutions?',
-        answer: 'We exclusively use LED technology with smart controls to minimize energy consumption'
+        question: 'Can you work with our architect?',
+        answer: 'Yes, we regularly collaborate with architects and other design professionals'
       },
       {
-        question: 'Can the lighting be changed for different occasions?',
-        answer: 'Yes, our control systems allow for seasonal and event-specific lighting programs'
+        question: 'Do you oversee installation?',
+        answer: 'We offer design implementation services to ensure your design is realized correctly'
       }
     ],
-    relatedServices: ['permanent-installations', 'building-management-systems', 'urban-planning']
+    relatedServices: ['hardscape-design', 'softscape-design', 'irrigation-design']
   },
   {
-    id: 'concert-lighting-operation',
-    step: '15',
-    name: 'Concert Lighting Operation',
-    serviceimg: '/lighting/dmx-lights.webp',
-    img: '/lighting/dmx-lights.webp',
-    alt: 'Lighting operator running dynamic show from console at concert',
-    description: 'Specialized lighting design and operation for live music performances and tours',
-    link: '/services/concert-lighting-operation',
+    id: 'softscape-design-installation',
+    step: '07',
+    name: 'Softscape Design & Installation',
+    serviceimg: '/landscaping/softscape-installation.webp',
+    img: '/landscaping/softscape-installation.webp',
+    alt: 'Crew installing carefully selected native plants in prepared garden beds',
+    description: 'Expert design and installation of garden beds, plantings, and living landscape elements',
+    link: '/services/softscape-design-installation',
     serviceDetails: {
-      process: 'Artist consultation → Song analysis → Programming → Rehearsal → Live operation',
-      deliverables: 'Show file, cue sheets, tour package documentation',
-      team: 'Lighting designer + console operator + technicians',
+      process: 'Site preparation → Soil improvement → Plant layout → Installation → Finishing & mulching',
+      deliverables: 'Planting plan, soil preparation specifications, installation documentation',
+      team: 'Planting specialist + installation crew',
       revisionRounds: 2,
-      includes: 'Band rehearsal attendance and tour preparation'
+      includes: 'Initial establishment care and 3-month warranty'
     },
     packages: [
       {
-        name: 'Club Performance Package',
-        description: 'Lighting operation for smaller venues and club shows',
-        price: 1295,
-        timeframe: '1 day'
-      },
-      {
-        name: 'Theater Concert Package',
-        description: 'Mid-sized venue production with custom programming',
-        price: 2995,
-        timeframe: '2-3 days'
-      },
-      {
-        name: 'Tour Production Package',
-        description: 'Complete show design and operation with tour-ready documentation',
-        price: 7495,
+        name: 'Garden Bed Installation',
+        description: 'Installation of prepared planting beds up to 50sqm',
+        price: 3500,
         timeframe: '1-2 weeks'
+      },
+      {
+        name: 'Complete Garden Makeover',
+        description: 'Comprehensive softscape renovation for areas up to 200sqm',
+        price: 8500,
+        timeframe: '2-3 weeks'
+      },
+      {
+        name: 'Estate Planting Package',
+        description: 'Large-scale planting implementation for properties over 200sqm',
+        price: 15000,
+        timeframe: '3-5 weeks'
       }
     ],
     addons: [
       {
-        name: 'Timecode Integration',
-        description: 'Precision cue timing with audio synchronization',
-        price: 950
+        name: 'Premium Soil Preparation',
+        description: 'Advanced soil remediation and amendment program',
+        price: 1200
       },
       {
-        name: 'Tour Bible Creation',
-        description: 'Comprehensive documentation for touring production',
-        price: 1250
+        name: 'Extended Plant Warranty',
+        description: '12-month plant replacement guarantee',
+        price: 950
       }
     ],
     commonUses: [
-      'Music tours',
-      'Festival performances',
-      'Album release events',
-      'Live broadcasts',
-      'Special fan events'
+      'New garden establishment',
+      'Garden renovations',
+      'Seasonal color displays',
+      'Native habitat creation',
+      'Edible landscapes'
     ],
     faqs: [
       {
-        question: 'Can you match the lighting to our music style?',
-        answer: 'Absolutely, we analyze your music to create a cohesive visual representation'
+        question: 'Do you supply the plants?',
+        answer: 'Yes, we source high-quality plants from trusted local nurseries and our own growing facilities'
       },
       {
-        question: 'Do you work with existing tour managers?',
-        answer: 'Yes, we integrate seamlessly with your existing tour team and management'
+        question: 'How long is the establishment period?',
+        answer: 'Typically 3-6 months depending on season, with proper care required during this time'
       }
     ],
-    relatedServices: ['tour-management', 'production-design', 'stage-management']
+    relatedServices: ['landscape-design', 'seasonal-fertilising-program', 'irrigation-services']
   },
   {
-    id: 'event-lighting-equipment',
-    step: '16',
-    name: 'Event Lighting Equipment Hire',
-    serviceimg: '/lighting/edit-lobby-festoon.webp',
-    img: '/lighting/edit-lobby-festoon.webp',
-    alt: 'Array of professional lighting fixtures including moving heads and LED panels',
-    description: 'Comprehensive inventory of professional lighting equipment available for dry hire or with technicians',
-    link: '/services/event-lighting-equipment',
+    id: 'hardscape-design-installation',
+    step: '08',
+    name: 'Hardscape Design & Installation',
+    serviceimg: '/landscaping/hardscape-installation.webp',
+    img: '/landscaping/hardscape-installation.webp',
+    alt: 'Construction of elegant outdoor entertainment area with sustainable materials',
+    description: 'Professional design and construction of patios, walkways, and outdoor living spaces using sustainable materials',
+    link: '/services/hardscape-design-installation',
     serviceDetails: {
-      process: 'Requirements assessment → Equipment selection → Prep & testing → Delivery → Collection',
-      deliverables: 'Equipment list, technical specifications, safety certification',
-      team: 'Equipment manager + prep technicians + delivery crew',
+      process: 'Design consultation → CAD development → Material selection → Construction → Finishing',
+      deliverables: 'Detailed plans, material specifications, construction documentation',
+      team: 'Hardscape designer + construction manager + skilled installers',
       revisionRounds: 2,
-      includes: 'Equipment testing and backup units'
+      includes: 'Council approvals and engineering certification'
     },
     packages: [
       {
-        name: 'Small Event Package',
-        description: 'Basic lighting kit for intimate events up to 100 guests',
-        price: 895,
-        timeframe: '1-3 days rental'
+        name: 'Basic Hardscape Elements',
+        description: 'Pathways, small patios, and garden edging up to 30sqm',
+        price: 8500,
+        timeframe: '2-3 weeks'
       },
       {
-        name: 'Medium Production Package',
-        description: 'Comprehensive lighting package for events up to 500 guests',
-        price: 2495,
-        timeframe: '1-3 days rental'
+        name: 'Outdoor Living Package',
+        description: 'Complete outdoor entertainment area up to 60sqm',
+        price: 18000,
+        timeframe: '4-6 weeks'
       },
       {
-        name: 'Large Production Package',
-        description: 'Professional lighting rig for major events and productions',
-        price: 4995,
-        timeframe: '1-5 days rental'
+        name: 'Premium Estate Hardscape',
+        description: 'Comprehensive hardscape development for large properties',
+        price: 35000,
+        timeframe: '8-12 weeks'
       }
     ],
     addons: [
       {
-        name: 'Technical Support',
-        description: 'On-site technician throughout event',
-        price: 495
+        name: 'Outdoor Lighting System',
+        description: 'Integrated low-voltage landscape lighting',
+        price: 3500
       },
       {
-        name: 'Extended Rental',
-        description: 'Additional rental days at reduced rate',
-        price: 295
+        name: 'Water Feature Integration',
+        description: 'Custom designed water feature installation',
+        price: 4800
       }
     ],
     commonUses: [
-      'Corporate events',
-      'Weddings and celebrations',
-      'Theater productions',
-      'Film and TV shoots',
-      'Fashion shows'
+      'Outdoor entertainment areas',
+      'Garden pathways',
+      'Retaining walls',
+      'Pool surrounds',
+      'Driveway enhancements'
     ],
     faqs: [
       {
-        question: 'Do you offer delivery and setup?',
-        answer: 'Yes, we provide full delivery, setup, and collection services'
+        question: 'Do you handle council approvals?',
+        answer: 'Yes, our service includes managing all necessary permits and approvals'
       },
       {
-        question: 'What happens if equipment fails?',
-        answer: 'We include backup units for critical components and offer 24/7 emergency support'
+        question: 'What sustainable materials do you use?',
+        answer: 'We prioritize permeable surfaces, recycled materials, and locally sourced stone'
       }
     ],
-    relatedServices: ['av-equipment-hire', 'power-distribution', 'event-production']
+    relatedServices: ['landscape-design', 'outdoor-kitchens', 'structural-elements']
+  },
+  {
+    id: 'bush-regeneration',
+    step: '09',
+    name: 'Bush Regeneration',
+    serviceimg: '/landscaping/bush-regeneration.webp',
+    img: '/landscaping/bush-regeneration.webp',
+    alt: 'Team removing invasive species and restoring native vegetation in bushland area',
+    description: 'Specialized regeneration of degraded bushland through weed management and assisted natural regeneration',
+    link: '/services/bush-regeneration',
+    serviceDetails: {
+      process: 'Site assessment → Weed mapping → Strategic planning → Implementation → Monitoring',
+      deliverables: 'Regeneration plan, weed management strategy, progress reports',
+      team: 'Bush regeneration specialists + field crew',
+      revisionRounds: 2,
+      includes: 'Photo monitoring and ecological assessment'
+    },
+    packages: [
+      {
+        name: 'Initial Restoration',
+        description: 'Primary weed control and initial regeneration for areas up to 1000sqm',
+        price: 4500,
+        timeframe: '3-6 months'
+      },
+      {
+        name: 'Comprehensive Regeneration',
+        description: 'Intensive regeneration program for areas up to 5000sqm',
+        price: 12000,
+        timeframe: '12-18 months'
+      },
+      {
+        name: 'Long-term Rehabilitation',
+        description: 'Extended regeneration program for large bushland areas',
+        price: 25000,
+        timeframe: '2-3 years'
+      }
+    ],
+    addons: [
+      {
+        name: 'Supplementary Planting',
+        description: 'Strategic planting of key native species to enhance regeneration',
+        price: 2500
+      },
+      {
+        name: 'Fire Management Integration',
+        description: 'Incorporating fire management strategies into regeneration',
+        price: 1800
+      }
+    ],
+    commonUses: [
+      'Degraded bushland',
+      'Property boundaries',
+      'Creek lines',
+      'Conservation areas',
+      'Lifestyle blocks'
+    ],
+    faqs: [
+      {
+        question: 'How long until the bushland recovers?',
+        answer: 'Initial recovery is visible within 6-12 months, with substantial regeneration in 3-5 years'
+      },
+      {
+        question: 'Do you use herbicides?',
+        answer: 'We minimize chemical use through targeted application on invasive species only when necessary'
+      }
+    ],
+    relatedServices: ['ecosystem-restoration', 'weed-management', 'fire-management']
+  },
+  {
+    id: 'wetland-conservation',
+    step: '10',
+    name: 'Wetland Conservation',
+    serviceimg: '/landscaping/wetland-conservation.webp',
+    img: '/landscaping/wetland-conservation.webp',
+    alt: 'Ecologists restoring native wetland with appropriate aquatic and marginal species',
+    description: 'Expert design, restoration, and management of natural and constructed wetland systems',
+    link: '/services/wetland-conservation',
+    serviceDetails: {
+      process: 'Hydrological assessment → Design → Construction/Restoration → Planting → Monitoring',
+      deliverables: 'Wetland design, plant species list, water quality parameters, monitoring protocol',
+      team: 'Wetland ecologist + water management specialists + installation team',
+      revisionRounds: 2,
+      includes: 'Water quality testing and aquatic ecosystem assessment'
+    },
+    packages: [
+      {
+        name: 'Small Wetland Creation',
+        description: 'Design and installation of small wetland features up to 100sqm',
+        price: 9500,
+        timeframe: '2-3 months'
+      },
+      {
+        name: 'Wetland Restoration',
+        description: 'Rehabilitation of degraded wetlands up to 500sqm',
+        price: 18000,
+        timeframe: '4-6 months'
+      },
+      {
+        name: 'Comprehensive Wetland System',
+        description: 'Complete wetland design and implementation for large properties',
+        price: 35000,
+        timeframe: '6-12 months'
+      }
+    ],
+    addons: [
+      {
+        name: 'Water Quality Management',
+        description: 'Ongoing water testing and remediation program',
+        price: 3600
+      },
+      {
+        name: 'Wildlife Habitat Enhancement',
+        description: 'Specialized features for target wildlife species',
+        price: 2800
+      }
+    ],
+    commonUses: [
+      'Natural wetland restoration',
+      'Stormwater management',
+      'Water purification',
+      'Wildlife habitat creation',
+      'Flood mitigation'
+    ],
+    faqs: [
+      {
+        question: 'Do wetlands attract mosquitoes?',
+        answer: 'Properly designed wetlands support predators that control mosquito populations'
+      },
+      {
+        question: 'How much maintenance do wetlands require?',
+        answer: 'After establishment, healthy wetlands require quarterly monitoring and minimal intervention'
+      }
+    ],
+    relatedServices: ['ecosystem-restoration', 'water-management', 'habitat-creation']
+  },
+  {
+    id: 'cad-landscape-design',
+    step: '11',
+    name: 'CAD Landscape Design',
+    serviceimg: '/landscaping/cad-design.webp',
+    img: '/landscaping/cad-design.webp',
+    alt: 'Landscape architect working on detailed CAD drawing of property landscape',
+    description: 'Precision CAD design services for complex landscape projects with detailed technical specifications',
+    link: '/services/cad-landscape-design',
+    serviceDetails: {
+      process: 'Site survey → Base plan creation → Design development → Technical detailing → Final documentation',
+      deliverables: 'AutoCAD drawings, technical specifications, construction details, planting plans',
+      team: 'CAD specialist + landscape architect + technical draftsperson',
+      revisionRounds: 3,
+      includes: 'Site measurement and digital terrain modeling'
+    },
+    packages: [
+      {
+        name: 'Basic CAD Package',
+        description: 'Essential CAD drawings for straightforward residential projects',
+        price: 3500,
+        timeframe: '3-4 weeks'
+      },
+      {
+        name: 'Comprehensive CAD Design',
+        description: 'Detailed technical drawings for complex residential landscapes',
+        price: 6500,
+        timeframe: '6-8 weeks'
+      },
+      {
+        name: 'Commercial CAD Documentation',
+        description: 'Full commercial-grade documentation for large projects and developments',
+        price: 12000,
+        timeframe: '8-12 weeks'
+      }
+    ],
+    addons: [
+      {
+        name: '3D Modeling',
+        description: 'Digital 3D visualization of designed landscape',
+        price: 2500
+      },
+      {
+        name: 'Construction Supervision',
+        description: 'Technical oversight during installation phase',
+        price: 3800
+      }
+    ],
+    commonUses: [
+      'Complex residential designs',
+      'Commercial developments',
+      'Public space planning',
+      'Municipal projects',
+      'Developer submissions'
+    ],
+    faqs: [
+      {
+        question: 'What CAD software do you use?',
+        answer: 'We work with AutoCAD, Vectorworks, and specialized landscape design software'
+      },
+      {
+        question: 'Can contractors work directly from your plans?',
+        answer: 'Yes, our technical documentation is prepared to industry standards for direct implementation'
+      }
+    ],
+    relatedServices: ['landscape-design', 'hardscape-design-installation', 'engineering-services']
+  },
+  {
+    id: 'outdoor-entertainment-areas',
+    step: '12',
+    name: 'Outdoor Entertainment Areas',
+    serviceimg: '/landscaping/outdoor-entertainment.webp',
+    img: '/landscaping/outdoor-entertainment.webp',
+    alt: 'Beautifully designed outdoor kitchen and entertainment area with native landscaping',
+    description: 'Custom design and construction of premium outdoor living spaces that blend with the natural environment',
+    link: '/services/outdoor-entertainment-areas',
+    serviceDetails: {
+      process: 'Client consultation → Design development → Material selection → Construction → Landscaping integration',
+      deliverables: 'Design plans, material specifications, construction documentation, lighting plan',
+      team: 'Outdoor living specialist + construction manager + landscape designer',
+      revisionRounds: 3,
+      includes: 'Council approvals and engineering certification'
+    },
+    packages: [
+      {
+        name: 'Courtyard Entertainment',
+        description: 'Intimate outdoor entertaining space up to 40sqm',
+        price: 25000,
+        timeframe: '6-8 weeks'
+      },
+      {
+        name: 'Premium Outdoor Living',
+        description: 'Comprehensive entertainment area with multiple features up to 80sqm',
+        price: 45000,
+        timeframe: '8-12 weeks'
+      },
+      {
+        name: 'Luxury Estate Entertainment',
+        description: 'Extensive outdoor living environment with premium features',
+        price: 85000,
+        timeframe: '12-16 weeks'
+      }
+    ],
+    addons: [
+      {
+        name: 'Outdoor Kitchen',
+        description: 'Custom designed outdoor cooking facilities',
+        price: 18000
+      },
+      {
+        name: 'Fire Feature',
+        description: 'Integrated fire pit or fireplace installation',
+        price: 8500
+      }
+    ],
+    commonUses: [
+      'Family entertaining',
+      'Alfresco dining areas',
+      'Pool surrounds',
+      'Outdoor relaxation spaces',
+      'Multi-functional outdoor rooms'
+    ],
+    faqs: [
+      {
+        question: 'How do you incorporate sustainable practices?',
+        answer: 'We prioritize permeable surfaces, local materials, rainwater harvesting, and energy-efficient lighting'
+      },
+      {
+        question: 'Can you work with challenging terrain?',
+        answer: 'Yes, we specialize in creating functional outdoor spaces on sloped and complex sites'
+      }
+    ],
+    relatedServices: ['hardscape-design-installation', 'landscape-design', 'outdoor-structures']
   }
 
 

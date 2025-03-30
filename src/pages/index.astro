@@ -5,11 +5,11 @@ import Hero from '../components/home/Hero.astro';
 import HeroSlider from '../components/home/Data-Carousel-Slider.astro';
 
 const backgroundUrls = [
-  '/lighting/zoomed-beachfestoon.webp',
-  '/lighting/edit-lagoon-festoon.webp',
-  '/lighting/wedding-canopy.webp',
-  '/lighting/edit-lobby-festoon.webp',
-  '/lighting/marina-festoon.webp',
+  '/img/banksia-landscape.jpg',
+  '/img/banksia-flower-closeup.jpg',
+  '/img/banksia-flower.jpg',
+  '/img/banksia.jpg',
+  '/img/grevillea.jpg',
   '/lighting/beach-festoon.webp',
   '/lighting/fairy-lights-sqr.webp',
   '/lighting/fairy-wedding-day-wide.webp',
@@ -44,11 +44,13 @@ import CtaContactServices from '../components/home/Cta-ContactServices.astro';
 
   <HeroSlider backgroundUrls={backgroundUrls} />
     
-  <!-- -->  <DataProductSlider />
+  <!-- -->  <DataServicesSlider />
   <!-- --> <Clients />
-  <!-- --> <DataServicesSlider />
+  <!-- --> 
   <!-- --> <BlogPosts /> 
 
   <CtaContactShort />
+
+  
 
 </Layout>
