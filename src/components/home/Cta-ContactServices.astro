@@ -1,0 +1,378 @@
+<!-- 
+
+This form collects standard contact information and a list of services 
+the user is interested in. 
+
+Step 1)
+Replace the variables for the API key, created with web3forms.com/,
+Replace the form name for better usage of Netlify CRM, 
+
+Step 2)
+Replace the For, ID, and Value variables in the 'Interested In Section' of the form,
+this will send the appropriate services the customer wants to speak about to your email.
+
+HiddenKey02 and HiddenKey03 are used to help provide information of the pages the customer was converted by. 
+
+-->
+
+
+<style>
+  input[type="checkbox"]:checked + span {
+  display: block;
+}
+</style>
+
+<section class="my-8 md:my-16">
+  <div class="mx-auto w-full lg:max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-4 py-12 gap-6"
+    >
+      
+    <!-- Edit name="" variable for Netlify Form CRM usage -->
+      <form netlify
+          name="CTA-Services"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          id="cta-form"
+          class="needs-validation w-full px-4 md:px-8 lg:px-16"
+          novalidate>
+
+          <!-- Create your free access key from https://web3forms.com/ -->
+          <!-- 1e0ffadd-2f05-471b-bbc2-36fa32793837 - key for email - aidenthomasgodbywood@gmail.com -->
+          <input type="hidden" name="access_key" value="1e0ffadd-2f05-471b-bbc2-36fa32793837" />
+          
+          
+          <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
+          <h5 class="text-left text-2xl lg:text-3xl font-medium tracking-tight py-4">
+            Request a sales call.
+          </h5>
+          <div class="flex flex-row gap-2 items-center justify-between py-4">
+            <legend class="text-xl font-medium mr-4">Customer details:</legend>
+            <a href="#" class="text-sm font-medium hover:underline">Privacy</a>
+          </div>
+          <div class="w-full flex flex-col md:flex-row gap-6">
+            <div class="w-full md:w-1/2">
+              <input
+                type="text"
+                placeholder="Name"
+                required
+                class="w-full px-4 py-3 border-2 placeholder:text-gray-800 bg-secondary-100 rounded-md outline-none focus:ring-4  focus:border-primary-700 ring-gray-100"
+                name="name"
+              />
+              <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                Please provide your full name.
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <label for="phone" class="sr-only">Phone Number</label><input
+                id="phone"
+                type="text"
+                placeholder="Phone"
+                name="phone"
+                required
+                class="w-full px-4 py-3 border-2 placeholder:text-gray-800 bg-secondary-100 rounded-md outline-none focus:ring-4  focus:border-primary-700 ring-gray-100"
+              />
+              <div class="empty-feedback text-red-400 text-sm mt-1">
+                Please provide your phone number.
+              </div>
+              <div class="invalid-feedback text-red-400 text-sm mt-1">
+                Please provide a valid phone number.
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-4 pt-4">
+            <div class="w-full">
+              <label for="email_address" class="sr-only">Email Address</label><input
+                id="email_address"
+                type="email"
+                placeholder="Email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border-2 placeholder:text-gray-800 bg-secondary-100 rounded-md outline-none focus:ring-4  focus:border-primary-700 ring-gray-100"
+              />
+              <div class="empty-feedback text-red-400 text-sm mt-1">
+                Please provide your email address.
+              </div>
+              <div class="invalid-feedback text-red-400 text-sm mt-1">
+                Please provide a valid email address.
+              </div>
+            </div>
+
+          </div>
+          
+
+          <div class="w-full pt-6">
+
+            <fieldset class="">
+              <div class="flex flex-row gap-2 items-center justify-between py-4 pt-8">
+                <legend class="text-xl font-medium mr-4">Interested in:</legend>
+                <a href="#" class="hidden text-sm font-medium hover:underline">Call Support</a>
+              </div>
+              <div class="grid grid-cols-2 lg:grid-cols-4 w-full gap-4">
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="festoonlights" class="relative flex flex-col gap-1 justify-center border-2 bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 focus:border-primary-600 p-4 rounded-lg  cursor-pointer">
+                  <span class="font-semibold text-base md:text-lg">Festoon Lights</span>
+                  
+                  <span>
+                    <span class="">from</span>
+                    <span class="">$895 inc. GST</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="festoonlights" value="festoonlights" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-red-700 bg-red-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="fairylights" class="relative flex flex-col bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 border-2  focus:border-gray-600 p-4 md:p-6 rounded-lg   cursor-pointer">
+                  <span class="font-semibold text-gray-500 leading-tight mb-3 text-base md:text-lg">Fairy Lights</span>
+                  
+                  <span>
+                    <span class="">from</span>
+                    <span class="">$1245 inc. GST</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="fairylights" value="fairylights" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-red-700 bg-red-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="washlights" class="relative flex flex-col bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 border-2  focus:border-gray-600 p-4 md:p-6 rounded-lg   cursor-pointer">
+                  <span class="font-semibold leading-tight mb-3 text-base md:text-lg">Wash Lights</span>
+                  
+                  <span>
+                    <span class="">from</span>
+                    <span class="">$45 each</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="washlights" value="washlights" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-red-700 bg-red-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="dmxlights" class="relative flex flex-col bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 border-2  focus:border-gray-600 p-4 md:p-6 rounded-lg   cursor-pointer">
+                  <span class="font-semibold text-gray-500 leading-tight mb-3 text-base md:text-lg">DMX Lights</span>
+                  
+                  <span>
+                    <span class="">from</span>
+                    <span class="">$85 each</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="dmxlights" value="dmxlights" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-cyan-700 bg-cyan-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="dmxcontrol" class="relative flex flex-col bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 border-2  focus:border-gray-600 p-4 md:p-6 rounded-lg   cursor-pointer">
+                  <span class="font-semibold text-gray-500 leading-tight mb-3 text-base md:text-lg">DMX Control</span>
+                  
+                  <span>
+                    <span class="">from</span>
+                    <span class="">$845 / night</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="dmxcontrol" value="dmxcontrol" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-cyan-700 bg-cyan-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="projectionmapping" class="relative flex flex-col bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 border-2  focus:border-gray-600 p-4 md:p-6 rounded-lg   cursor-pointer">
+                  <span class="font-semibold text-gray-500 leading-tight mb-3 text-base md:text-lg">Projection Mapping</span>
+                  
+                  <span>
+                    <span class="">from</span>
+                    <span class="">$1445 / night</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="projectionmapping" value="projectionmapping" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-cyan-700 bg-cyan-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="projectorhire" class="relative flex flex-col bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 border-2  focus:border-gray-600 p-4 md:p-6 rounded-lg   cursor-pointer">
+                  <span class="font-semibold text-gray-500 leading-tight mb-3 text-base md:text-lg">Projector Hire</span>
+                  
+                  <span>
+                    <span class="">from</span>
+                    <span class="">$445 / night</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="projectorhire" value="projectorhire" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-cyan-700 bg-cyan-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+                <!-- Edit for="" variable for sales information sent to email -->
+                <label for="customquote" class="relative flex flex-col bg-secondary-950 hover:bg-secondary-600 duration-100 border-secondary-200 border-2  focus:border-gray-600 p-4 md:p-6 rounded-lg   cursor-pointer">
+                  <span class="font-semibold text-gray-500 leading-tight mb-3 text-base md:text-lg">Video Production</span>
+                  
+                  <span>
+                    <span class="">Custom</span>
+                    <span class="">quote</span>
+                  </span>
+                  <!-- Edit id="" AND value="" variable for sales information sent to email -->
+                  <input type="checkbox" name="product" id="customquote" value="customquote" class="absolute h-0 w-0 appearance-none" />
+                  <span aria-hidden="true" class="hidden absolute inset-0 border-1 border-cyan-700 bg-cyan-700 bg-opacity-10 rounded-lg">
+                    <span class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-green-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-green-300">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </span>
+                </label>
+
+                
+
+              </div>
+            </fieldset>
+
+          </div>
+
+
+          <div class="flex flex-row gap-2 items-center justify-between py-4 pt-16">
+            <legend class="text-xl font-medium mr-4">Anything else:</legend>
+            <a href="#" class="text-sm font-medium hover:underline">Call Support</a>
+          </div>
+          <div class="flex flex-col md:flex-row gap-4">
+            
+            <div class="w-full">
+              <label for="message" class="sr-only">Message</label><textarea
+                id="message"
+                placeholder="Anything we can help with in particular?"
+                name="message"
+                
+                class="w-full px-4 py-3 border-2 placeholder:text-gray-800 bg-secondary-100 rounded-md outline-none focus:ring-4  focus:border-primary-700 ring-gray-100"
+              /> 
+            </div>
+            <input type="hidden" class="sourceLogging" id="hiddenKey02" name="Contacted on Page" data-name="formUrl1" value="">
+	          <input type="hidden" class="sourceLogging" id="hiddenKey03" name="Previous Page" data-name="formRef1" value="">
+          </div>
+          
+
+
+          <button
+            class="text-lg text-white dark:text-white bg-primary-700 hover:bg-primary-400 items-center inline-flex font-medium justify-center rounded-full transition px-6 py-4 my-4 mr-2"
+            type="submit"
+          >
+            Submit
+          </button>
+
+          <div id="result" class="mt-2 text-center"></div>
+
+        </form>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+</style>
+
+<script is:inline>
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    form.classList.add("was-validated");
+    if (!form.checkValidity()) {
+      form.querySelectorAll(":invalid")[0].focus();
+      return;
+    }
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Sending...";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.classList.add("text-green-500");
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.classList.add("text-red-500");
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+        form.classList.remove("was-validated");
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      });
+  });
+</script>
+
+<script> 
+	{
+		document.getElementById('hiddenKey02').value = location.pathname;
+		document.getElementById('hiddenKey03').value = document.referrer;
+	}
+	</script>

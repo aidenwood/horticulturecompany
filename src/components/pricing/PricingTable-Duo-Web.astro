@@ -1,0 +1,108 @@
+---
+const pricing = [
+ {
+   name: 'Enchant - 60m Package',
+   description: 'Perfect for intimate events and smaller spaces. Create a magical and immersive atmosphere.',
+   periodicity: 'inc. GST',
+   isFlagged: false,
+   price: '$895',
+   action: 'Order',
+   link: 'https://buy.stripe.com/7sI2aubfj9eqcQoeUU',
+   features: [
+    'Basic lighting design consultation',
+     '80 meters of premium festoon lighting',
+     'Certified professional installers',
+     'Steel wire and gripples included',
+     'All required power cables included',
+     'Next-day pack down included (late night packdown +$449)',
+   ],
+ },
+ {
+   name: 'Illuminate - 120m Package',
+   description: 'Ideal for medium-sized events, capable of creating stunning lighting canopy designs.',
+   periodicity: 'inc. GST',
+   price: '$1495',
+   isFlagged: true,
+   action: 'Order',
+   link: 'https://buy.stripe.com/cN2bL44QVaiu17G8wx',
+   features: [
+     'Full lighting design consultation',
+     '120 meters of premium festoon lighting',
+     'Certified professional installers',
+     'Steel wire and gripples included',
+     'All required power cables included',
+     'Next-day pack down included (late night packdown +$649)',
+   ],
+ },
+ {
+   name: 'Immerse - 200m Package',
+   description: 'For larger events / venues requiring extensive coverage, and creating complex designs.',
+   periodicity: 'inc. GST',
+   isFlagged: false,
+   price: '$2445',
+   action: 'Order',
+   link: 'https://buy.stripe.com/4gwdTcgzDduG3fO8wy',
+   features: [
+     'Full lighting design consultation',
+     '200 meters of premium festoon lighting',
+     'Certified professional installers',
+     'Steel wire and gripples included',
+     'All required power cables included',
+     'Next-day pack down included (late night packdown +$849)',
+   ],
+ },
+];
+---
+
+<section class="mb-28">
+  <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="-mt-8 grid gap-6 lg:mt-0 lg:grid-cols-3">
+      {
+        pricing.map((item) => (
+          <div
+            class:list={[
+              'relative flex flex-col gap-8 rounded-3xl px-4 sm:px-6 lg:px-8 py-12 border hover:border-primary-500 duration-500 bg-secondary-400/10 border-primary-900/10 dark:border-primary-300/10 dark:bg-secondary-800/40',
+              item.isFlagged && ' bg-secondary-400/30 dark:bg-secondary-600/50',
+            ]}
+          >
+            <div class="flex flex-col gap-4">
+              <h4 class="text-xl xs:text-2xl md:text-xl lg:text-2xl font-medium">{item.name}</h4>
+              <p class="flex items-baseline">
+                <span class="text-4xl font-medium tracking-tight">{item.price}</span>
+                <span class="text-primary-950/70 dark:text-primary-200/70 ml-2 text-sm font-medium">
+                  {item.periodicity}
+                </span>
+              </p>
+              <p class="text-primary-950/80 dark:text-primary-200/80 text-base xs:text-lg">{item.description}</p>
+
+              <ul role="list" class="mt-4 space-y-4">
+                {item.features.map((feature) => (
+                  <li class="flex items-center gap-3 text-base">
+                    <svg
+                      class="text-primary-600 dark:text-primary-400 h-6 w-6 flex-shrink-0"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z" />
+                    </svg>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="mt-2">
+              <a
+                href={item.link}
+                class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 w-full items-center justify-center rounded-full border border-transparent px-5 py-4 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                Purchase
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

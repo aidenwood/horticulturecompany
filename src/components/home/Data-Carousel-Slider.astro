@@ -1,0 +1,131 @@
+---
+import carouselData from '../../content/carousel.json';
+
+export interface Props {
+  backgroundUrls: string[];
+}
+
+const { backgroundUrls } = Astro.props;
+
+// Make sure we have enough background URLs for all carousel items
+const safeBackgroundUrls = backgroundUrls || [];
+const slides = carouselData.slides.map((slide, index) => ({
+  ...slide,
+  backgroundUrl: safeBackgroundUrls[index] || ''
+}));
+---
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<style>
+.fullscreen-carousel {
+  border: 1px black;
+  height: calc(100vh - 110px);
+  max-width: 100vw;
+  max-height: 1100px;  
+}
+
+@media only screen and (max-width: 1440px) {
+  .fullscreen-carousel {
+    max-height: 950px;
+    height: calc(100vh - 65px);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .fullscreen-carousel {
+    max-height: 900px;
+    height: calc(85vh - 65px);
+    min-height: 550px;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .fullscreen-carousel {
+    max-height: 650px;
+    height: calc(75vh - 65px);
+    min-height: auto;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .fullscreen-carousel {
+    max-height: 700px;
+    height: calc(85vh - 65px);
+  }
+}
+
+.container-offset {
+  max-width: 1920px;
+  margin: auto;
+}
+
+.carousel-container {
+  background: linear-gradient(to bottom right,#002f4b10,#c4210030);
+}
+
+.carousel-cell {
+  border: 1px black;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+</style>
+
+<section class="">
+  <div class="limit-container">
+    <div class="fullscreen-carousel bg-secondary-900" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false, "autoPlay": 5400, "prevNextButtons": false, "groupCells": "85%", "lazyLoad": true, "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true }'>
+      
+      {slides.map((slide, index) => (
+        <div class="carousel-cell h-full" style={`background-image: url(${slide.backgroundUrl}); background-repeat: no-repeat; background-size: cover; background-position: center;`}>
+          <div class="carousel-container h-full w-full py-8 md:py-24">
+            <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+              
+              <!-- Card styling -->
+              <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-4 md:px-6 py-6 lg:py-8 h-min max-w-3xl flex flex-col justify-center gap-4">
+                <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                  
+                  <!-- Card content -->
+                  <div class="w-full mx-auto md:ml-2 flex flex-col gap-4">
+                    <h4 class="text-2xl xs:text-3xl xl:text-4xl tracking-tight font-medium">{slide.title}</h4>
+                    <p class="max-w-xl text-md sm:text-lg pb-4">
+                      {slide.description}
+                    </p>
+                    <div>
+                      <a href={slide.primaryLink.url}
+                        class="mr-2 bg-secondary-600 hover:bg-secondary-950 text-white rounded-full px-5 py-4 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                      >
+                        {slide.primaryLink.text}
+                      </a>
+                      <a href={slide.secondaryLink.url}
+                        class="hidden mr-2 bg-secondary-600 hover:bg-secondary-950 text-white rounded-full px-5 py-4 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                      >
+                        {slide.secondaryLink.text}
+                      </a>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Flickity initialization can be customized here if needed
+  document.addEventListener('DOMContentLoaded', () => {
+    // Any additional JavaScript for carousel customization
+  });
+</script>

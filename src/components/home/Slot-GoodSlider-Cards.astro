@@ -1,0 +1,602 @@
+---
+
+export interface Props {
+
+backgroundUrl: string
+backgroundUrl2: string
+backgroundUrl3: string
+backgroundUrl4: string
+backgroundUrl5: string
+backgroundUrl6: string
+backgroundUrl7: string
+backgroundUrl8: string
+backgroundUrl9: string
+backgroundUrl10: string
+backgroundUrl11: string
+
+}
+
+const {backgroundUrl, backgroundUrl2, backgroundUrl3, backgroundUrl4, backgroundUrl5, backgroundUrl6, backgroundUrl7, backgroundUrl8, backgroundUrl9, backgroundUrl10, backgroundUrl11} = Astro.props
+
+---    
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+<style define:vars={{ backgroundUrl,  backgroundUrl2, backgroundUrl3, backgroundUrl4, backgroundUrl5, backgroundUrl6, backgroundUrl7, backgroundUrl8, backgroundUrl9, backgroundUrl10, backgroundUrl11 }}>
+
+.fullscreen-carousel {
+  border: 1px black;
+  height: calc(100vh - 110px);
+  max-width: 100vw;
+  max-height: 1100px;
+  
+}
+
+@media only screen and (max-width: 1440px) {
+  .fullscreen-carousel {
+    max-height: 950px;
+    height: calc(70vh - 65px);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .fullscreen-carousel {
+    max-height: 750px;
+    height: calc(60vh - 65px);
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .fullscreen-carousel {
+    max-height: 800px;
+    height: calc(70vh - 65px);
+  }
+}
+
+.container-offset {
+  max-width: 1920px;
+  margin: auto;
+}
+
+.carousel-container {
+  background: linear-gradient(to bottom right,#002f4b10,#c4210030);
+}
+
+.carousel-cell {
+  border: 1px black;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-1 {
+  background-image: var(--backgroundUrl);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-2 {
+  background-image: var(--backgroundUrl2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-3 {
+  background-image: var(--backgroundUrl3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-4 {
+  background-image: var(--backgroundUrl4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-5 {
+  background-image: var(--backgroundUrl5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-6 {
+  background-image: var(--backgroundUrl6);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-7 {
+  background-image: var(--backgroundUrl7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-8 {
+  background-image: var(--backgroundUrl8);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-9 {
+  background-image: var(--backgroundUrl9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-10 {
+  background-image: var(--backgroundUrl10);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell-11 {
+  background-image: var(--backgroundUrl11);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+</style>
+    
+  
+
+<section class="">
+  <div class="limit-container">
+    <div class="fullscreen-carousel bg-secondary-900" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false, "autoPlay": 5400, "groupCells": "85%", "lazyLoad": true, "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true }'>
+      
+      
+      <!-- Set background image variable below -->
+      <div class="carousel-cell cell-1 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Beautiful Festoon Light Installations</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Festoon lighting hire with complete install and pack down. Comprehensive design process to make sure your event looks as beautiful as possible!
+                  </p>
+                  <div>
+                    <a href="/products/festoon-lighting"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Festoon Lighting
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-2 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Corporate Event Lighting Hire</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Promote your brand or product in the best light with high-quality corporate event lighting hire. Tailored designs to your brand's event.
+                  </p>
+                  <div>
+                    <a href="/products"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Products
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-3 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Fairy Light Hire for Weddings</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Fairy light canopy installations for weddings can make or break the event's design. Trust the experts at Lume Hire to make your wedding pop!
+                  </p>
+                  <div>
+                    <a href="/products/fairy-light-canopy"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Fairy Lighting
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-4 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Creative Lighting Installations</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Experts at quickly creating large scale temporary lighting structures. Hire including installation and pack down, to make your special day perfect.
+                  </p>
+                  <div>
+                    <a href="/products/creative-lighting-installations"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Fairy Lighting
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-5 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Large Event Festoon Light Hire</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Offering packages of upto 200m of festoon lighting, for large events needing to light areas of over 100m2 or crowd sizes between 800-1000 pax.
+                  </p>
+                  <div>
+                    <a href="/products/festoon-lights"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Festoon Lighting
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-6 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Wide Range of Event Services</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    We offer a wide range of event services and event hire. A wide range of lights available, overhead rigging and equipment, DMX control and projection mapping.
+                  </p>
+                  <div>
+                    <a href="/products/dmx-lighting"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      DMX Lighting
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-7 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Wedding Fairy Light Canopy Hire</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Create a beautiful atmosphere for pre-drinks or for your venue entrance with our impressive fairy light canopies. Creating beautiful backdrops for your wedding.
+                  </p>
+                  <div>
+                    <a href="/products/fairy-lights"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Festoon Lighting
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-8 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Custom Fairy Light Canopies</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    We design all our lighting layouts to every event. Working with any other AV companies or providers, and able to create floor plans if needed.
+                  </p>
+                  <div>
+                    <a href="/products/fairy-lights"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Fairy Lighting
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-9 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">DMX Lighting Hire and Control</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Let our Lighting Designers control the whole room's lighting and look on the fly. Adjusting to the feel of the music and the vibe of the minute.
+                  </p>
+                  <div>
+                    <a href="/products/dmx-lighting"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      DMX Lights
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-10 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Complete Custom Light Shows</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    Offering complete custom lighting shows, taking control of all screens and lights in a room for a comprehensive custom show. 
+                  </p>
+                  <div>
+                    <a href="/services/dmx-control"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      DMX Control
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-cell cell-11 h-full">
+        <div class="carousel-container h-full w-full py-8 md:py-24">
+          <div class="container-offset h-full flex items-end px-4 sm:px-6 lg:px-8">
+            
+            
+            <!-- Set Card styling below -->
+            <div class="bg-secondary-950/90 border-secondary-300 text-white duration-200 border rounded-3xl px-6 py-8 lg:py-12 h-min max-w-3xl flex flex-col justify-center gap-4">
+              <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6">
+                
+                
+                <!-- Set Card content below -->
+                <div class="w-full mx-auto md:ml-2 flex flex-col gap-2 md:gap-4">
+                  <h4 class="text-2xl md:text-xl lg:text-2xl xl:text-4xl tracking-tight font-medium">Water-Proof Light Hire for Events</h4>
+                  <p class="text-base md:text-lg pb-4">
+                    All of our equipment is IP64 rated at minimum, making sure our equipment is never a reason for an electrical fault. Always up to date with test and tag.
+                  </p>
+                  <div>
+                    <a href="/products"
+                      class="mr-2 bg-secondary-600 hover:bg-secondary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Products
+                    </a>
+                    <a href="/contact"
+                      class="mr-2 border bg-secondary-950  border-secondary-300 inline-flex items-center justify-center rounded-full px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+                
+
+              </div> 
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+
+      
+    </div>
+  </div>
+</section>

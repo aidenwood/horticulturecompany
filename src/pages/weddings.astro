@@ -1,0 +1,139 @@
+---
+import Cta from '../components/home/Cta-ContactShort.astro';
+import Options from '../components/weddings/Options.astro';
+import Hero from '../components/home/Slot-HeroFullscreen.astro';
+import IntroSec from '../components/brand-strategy/Intro-Webdesign-Sec.astro';
+import OptionsSec from '../components/brand-strategy/Options-Secondary.astro';
+import Grid from '../components/brand-strategy/Grid-Webdesign.astro';
+import GridSec from '../components/brand-strategy/Grid-Webdesign-Sec.astro';
+import IndentInfo from '../components/home/Slot-Indent-Info.astro';
+import Faq from '../components/weddings/Faq.astro';
+import SectionHeadImg from "../components/home/slot-img.astro";
+import SectionHeadSecImg from "../components/home/slot-img-rev.astro";
+import BlogPosts from '../components/home/BlogPosts.astro';
+import FirstProcess from '../components/home/Section-Process.astro';
+
+
+import ServiceIntro1 from '../components/home/Basic-Intro-1.astro';
+import PricingSection1 from '../components/pricing/PricingTable-Duo-Web.astro';
+
+import MarketIntro from '../components/home/Basic-Intro-Market.astro';
+import PricingMarket from '../components/pricing/PricingTable-Duo-Market.astro';
+
+import Layout from '../layouts/Layout.astro';
+
+let backgroundUrl = 'url(/lighting/wedding-canopy.webp)' // Define image for Slot-HeroFullscreen and then call BackgroundURL in Section
+---
+
+<Layout
+  description="Creating magical atmospheres with custom wedding lighting solutions. Serving couples across the Gold Coast, Byron Bay and beyond with elegant festoon lighting, fairy lights and professional installation."
+  title="Weddings | Wedding & Event Hire | Lume Hire"
+>
+  
+<Hero backgroundUrl={backgroundUrl}>
+  <Fragment slot="smltitle">
+    Wedding Lighting Hire & Design
+  </Fragment>
+  <Fragment slot="title">
+    Illuminate Your Perfect Day
+  </Fragment>
+  <Fragment slot="desc">
+    Creating magical atmospheres with custom wedding lighting solutions.
+    Serving couples across the Gold Coast, Byron Bay and beyond with elegant festoon lighting, fairy lights and professional installation.
+  </Fragment>
+</Hero>
+
+  <ServiceIntro1 />
+  <PricingSection1 />
+
+  <MarketIntro />
+  <PricingMarket />
+
+<SectionHeadImg>
+  <Fragment slot="smltitle">
+    Premium Wedding Lighting Hire Gold Coast
+  </Fragment>
+  <Fragment slot="title">
+    Wedding Lighting Packages.
+  </Fragment>
+  <Fragment slot="desc">
+    Your special day deserves the perfect ambience that only professional lighting can provide. Our custom wedding lighting solutions transform venues into enchanting spaces, highlighting architectural features and creating a romantic atmosphere for your ceremony and reception. From elegant festoon canopies to subtle uplighting that complements your color scheme, our wedding lighting rentals are designed to create unforgettable moments.
+  </Fragment>
+  <Fragment slot="cover">
+    <img
+              src="/lighting/beach-festoon.webp"
+              class="object-cover w-full h-full"
+              alt="Custom wedding lighting hire packages including festoon lights, fairy lights, and accent lighting for receptions and ceremonies across Gold Coast and Byron Bay."
+            />
+  </Fragment>
+</SectionHeadImg>
+
+<SectionHeadSecImg>
+  <Fragment slot="smltitle">
+    Bespoke Wedding Light Hire Solutions
+  </Fragment>
+  <Fragment slot="title">
+    Customized For Your Vision.
+  </Fragment>
+  <Fragment slot="desc">
+    Every wedding is unique, and your lighting should reflect your personal style. We provide comprehensive consultation to understand your theme, venue constraints, and aesthetic preferences. Our experienced team handles everything from initial design to professional installation and removal, ensuring a stress-free experience. With packages tailored to various venue types and budgets, our wedding lighting rental services add that magical touch to your celebration.
+  </Fragment>
+  <Fragment slot="cover">
+    <img
+              src="/lighting/zoomed-beachfestoon.webp"
+              class="object-cover w-full h-full"
+              alt="Professional wedding lighting hire with custom installation for indoor and outdoor wedding venues across the Gold Coast region."
+            />
+  </Fragment>
+</SectionHeadSecImg>
+
+
+
+<Options />
+
+
+<SectionHeadImg>
+  <Fragment slot="smltitle">
+    Gold Coast Wedding Lighting Specialists
+  </Fragment>
+  <Fragment slot="title">
+    All-inclusive Wedding Lighting.
+  </Fragment>
+  <Fragment slot="desc">
+    From initial consultation and custom design to professional installation and removal, our wedding lighting hire services are completely comprehensive. We create breathtaking lighting arrangements that enhance your venue's features, complement your color palette, and provide the perfect backdrop for those precious wedding photographs and unforgettable moments.
+  </Fragment>
+  <Fragment slot="cover">
+    <img
+              src="/lighting/fairy-wedding-day-wide.webp"
+              class="object-cover w-full h-full"
+              alt="Professional wedding light hire services including festoon lighting, fairy lights, uplighting and custom installations for indoor and outdoor wedding venues."
+            />
+  </Fragment>
+</SectionHeadImg>
+
+<SectionHeadSecImg>
+  <Fragment slot="smltitle">
+    Expert Wedding Light Installation
+  </Fragment>
+  <Fragment slot="title">
+    Stress-Free Wedding Lighting Solutions.
+  </Fragment>
+  <Fragment slot="desc">
+    We understand that wedding planning involves countless details. Our experienced team handles every aspect of your lighting needs with meticulous attention to safety and aesthetics. From elegant ceiling installations and festoon light canopies to subtle accent lighting that highlights table settings and floral arrangements, our wedding lighting rental services create the perfect atmosphere for both ceremonies and receptions.
+  </Fragment>
+  <Fragment slot="cover">
+    <img
+              src="/lighting/wedding-canopy.webp"
+              class="object-cover object-top w-full h-full"
+              alt="Premium wedding lighting hire across Gold Coast and Byron Bay with professional installation and venue-specific lighting design."
+            />
+  </Fragment>
+</SectionHeadSecImg>
+
+<Faq />
+
+<Cta />
+
+<FirstProcess />
+
+</Layout>

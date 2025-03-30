@@ -1,0 +1,111 @@
+---
+const features = [
+  {
+    id: 'expertise-1',
+    name: 'What types of wedding lighting does Lume Hire offer?',
+    description:
+      "Lume Hire provides a comprehensive range of wedding lighting options including festoon lighting, fairy lights, uplighting, wash lights, custom gobos, and projection services. Our wedding light hire services are designed to create romantic, elegant atmospheres for both indoor and outdoor ceremonies and receptions. Each lighting solution is customized to complement your venue's architecture and wedding theme.",
+  },
+  {
+    id: 'expertise-2',
+    name: 'How far in advance should I book my wedding lighting?',
+    description:
+      "For wedding lighting hire, especially during peak season (October-March), we recommend booking 6-12 months in advance to secure your preferred date. Popular venues and weekends tend to book quickly, particularly for festoon light installations. For smaller lighting packages, 3-4 months' notice may be sufficient depending on availability. Contact us as early as possible to discuss your wedding lighting requirements.",
+  },
+  {
+    id: 'expertise-3',
+    name: 'What areas do you service for wedding lighting rental?',
+    description:
+      "Lume Hire primarily services the Gold Coast, Byron Bay, Brisbane, and Northern NSW regions for wedding lighting installations. However, as nationally recognized lighting designers, we're available to travel throughout Australia for destination weddings. Our extensive experience with venues across these regions ensures seamless execution regardless of location.",
+  },
+  {
+    id: 'expertise-4',
+    name: 'Do you offer custom lighting designs for unique wedding venues?',
+    description:
+      "Absolutely. We specialize in creating bespoke wedding lighting solutions tailored to your specific venue and vision. Our experienced designers work closely with you to understand your wedding theme, color palette, and venue constraints before crafting a custom lighting plan. For unique venues or challenging spaces, we can conduct a site visit to ensure your wedding lighting perfectly enhances the location's natural features.",
+  },
+  {
+    id: 'expertise-5',
+    name: 'Can you integrate lighting with other wedding decor elements?',
+    description:
+      "Yes, our wedding lighting hire services are designed to complement and enhance your existing decor. We coordinate with your florist, stylist, and venue to ensure our lighting installations integrate seamlessly with floral arrangements, drapery, centerpieces, and architectural features. This collaborative approach ensures a cohesive aesthetic that elevates your entire wedding design.",
+  },
+  {
+    id: 'expertise-6',
+    name: 'What is the installation and removal process for wedding lighting?',
+    description:
+      "Our professional team handles all aspects of installation and removal with minimal disruption to other wedding preparations. We typically install lighting the day before your wedding or early on the wedding day, depending on venue access. All our installations are thoroughly tested to ensure flawless operation. Standard packages include next-day morning removal, with late-night pack-down available for an additional fee if required by your venue.",
+  },
+  {
+    id: 'expertise-7',
+    name: 'Are your wedding lighting solutions weatherproof for outdoor ceremonies?',
+    description:
+      "Lume Hire offers IP-rated outdoor lighting solutions specifically designed for weather resistance. Our festoon and fairy lighting installations for outdoor weddings include appropriate weatherproofing measures and are installed with potential weather conditions in mind. For weddings during storm season, we provide guidance on weather-resistant options and can suggest beautiful contingency plans to ensure your special day shines regardless of conditions.",
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto px-4 sm:px-6 w-full lg:max-w-7xl lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-3 lg:gap-8">
+      <div>
+        <h3 id="components" class="text-xl sm:text-2xl font-medium tracking-tight mb-4">Wedding Hire FAQ's</h3>
+        <p class="text-primary-950/80 dark:text-primary-200/80 text-lg xs:text-xl">
+          Common wedding hire questions.
+        </p>
+      </div>
+      <div class="lg:col-span-2">
+        <dl
+          class="-mt-3"
+          x-data="{ selected: null, toggle(value) { this.selected = this.selected === value ? null : value } }"
+        >
+          {
+            features.map((feature, index) => (
+              <div
+                class="rounded-3xl px-4 transition hover:bg-secondary-950/10 duration-200"
+                x-data={`{ id: ${index}, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }`}
+                x-bind:class="{ 'bg-secondary-950/10 dark:bg-secondary-600/30': isOpen }"
+              >
+                <dt
+                  class="border-b text-lg transition"
+                  x-cloak
+                  x-bind:class="{ 'border-transparent': isOpen || isNextOpen, 'border-primary-900/10 dark:border-primary-300/10': !(isOpen || isNextOpen) }"
+                >
+                  <button
+                    type="button"
+                    class="group block w-full py-6 text-left transition focus-visible:outline-none"
+                    aria-controls={feature.id}
+                    x-on:click="toggle(id)"
+                    aria-expanded="false"
+                    x-bind:aria-expanded="isOpen.toString()"
+                  >
+                    <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                      <span class="text-base md:text-lg font-medium">{feature.name}</span>
+                      <span class="ml-6 flex h-7 items-center">
+                        <svg
+                          class="text-primary-600 dark:text-primary-400 h-6 w-6 rotate-0 transform transition duration-200 ease-in-out"
+                          x-bind:class="{ '-rotate-180': isOpen, 'rotate-0': !isOpen }"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z" />
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
+                </dt>
+                <dd class="pb-6 pr-6" id={feature.id} x-show="isOpen" x-cloak x-collapse>
+                  <p class="text-primary-950/80 dark:text-primary-200/80 text-base xs:text-lg">
+                    {feature.description}
+                  </p>
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

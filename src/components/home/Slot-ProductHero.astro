@@ -1,0 +1,49 @@
+<style>
+  #contain { max-width: 1980px !important; }
+</style>
+
+<section class="py-8 lg:py-16">
+  <div id="contain" class="flex flex-col lg:flex-row justify-center items-center mx-auto mb-8">
+    <div id="leftContainer" class="w-full lg:w-1/2 px-4 sm:px-6 lg:px-8">
+      <h2 class="font-thin text-base tracking-widest uppercase">
+        <slot name="smltitle">Aidxn Design</slot>
+      </h2>
+      <h3 class="text-3xl sm:text-4xl font-medium tracking-tight my-6">
+        <slot name="title">Title</slot>
+      </h3>
+      <p class="text-lg lg:text-xl max-w-3xl">
+        <slot name="desc">Some description goes here</slot>
+      </p>
+
+      <a
+        href="/enquire"
+        class="text-lg text-white dark:text-white bg-primary-600 hover:bg-primary-400 items-center inline-flex font-medium justify-center rounded-full transition px-6 py-4 my-8 mr-2"
+      >
+        Enquire
+      </a>
+    </div>
+    <div id="rightContainer" class="w-full lg:w-1/2 px-4">
+      <div class="h-fit rounded-3xl mx-auto bg-contain mb-12">
+        <slot name="cover"></slot>
+      </div>
+    </div>
+    
+  </div>
+  <div id="contain" class="mx-auto my-8">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 px-4 sm:px-6 lg:px-8">
+      <div class="border-2 bg-white border-primary-700 dark:bg-primary-700/10 p-12 flex items-start rounded-md">
+        <ul class="text-sm sm:text-base leading-6 list-disc">
+          <h4 class="text-3xl font-semibold mb-2">Details</h4>
+          <slot name="details">Details</slot>
+        </ul>
+      </div>
+    
+      <div class="border-2 bg-white border-primary-700 dark:bg-primary-700/10 p-12 flex items-start rounded-md">
+        <ul class="text-sm sm:text-base leading-6 list-disc">
+          <h4 class="text-3xl font-semibold mb-2">Specifications</h4>
+          <slot name="specs">Specs</slot>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

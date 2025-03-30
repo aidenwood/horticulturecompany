@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Hero from '../components/home/Hero.astro';
+import HeroSlider from '../components/home/Data-Carousel-Slider.astro';
+
+const backgroundUrls = [
+  '/lighting/zoomed-beachfestoon.webp',
+  '/lighting/edit-lagoon-festoon.webp',
+  '/lighting/wedding-canopy.webp',
+  '/lighting/edit-lobby-festoon.webp',
+  '/lighting/marina-festoon.webp',
+  '/lighting/beach-festoon.webp',
+  '/lighting/fairy-lights-sqr.webp',
+  '/lighting/fairy-wedding-day-wide.webp',
+  '/lighting/intelligent-lighting-wide.webp',
+  '/lighting/lx-band-show.webp',
+  '/lighting/corporate-festoon-sqr.webp',
+  // Add all your image URLs here for Slot-Slider
+];
+
+import DataServicesSlider from '../components/home/Data-Services-Slider.astro';
+
+import DataProductSlider from '../components/home/Data-Products-Slider.astro';
+
+import Clients from '../components/home/Section-Clients.astro';
+
+
+import CtaContactShort from '../components/home/Cta-ContactShort.astro';
+
+
+import BlogPosts from '../components/home/BlogPosts-Slider.astro';
+import CtaContactServices from '../components/home/Cta-ContactServices.astro';
+
+---
+
+<Layout
+  description="Over 10 years professional experience in outdoor lighting design and creating immersive spaces through lighting installations. Installation and next day pack down included with all festoon lighting hire packages, to make the most of your event space."
+  title="Lume Hire | Wedding & Event Hire | Lighting Hire with Delivery & Install"
+>
+  
+  <Hero />
+  
+
+  <HeroSlider backgroundUrls={backgroundUrls} />
+    
+  <!-- -->  <DataProductSlider />
+  <!-- --> <Clients />
+  <!-- --> <DataServicesSlider />
+  <!-- --> <BlogPosts /> 
+
+  <CtaContactShort />
+
+</Layout>

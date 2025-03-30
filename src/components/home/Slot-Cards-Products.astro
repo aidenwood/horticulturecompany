@@ -1,0 +1,71 @@
+---
+const stats = [
+  {
+    name: 'Years in Web Design',
+    value: '10+',
+  },
+  {
+    name: 'Years in Marketing',
+    value: '6+',
+  },
+  {
+    name: 'Projects Completed',
+    value: '120+',
+  },
+  {
+    name: 'Design Awards',
+    value: '3',
+  },
+];
+---
+<style>
+    #contain { max-width: 1920px; }
+</style>
+
+<section class="my-28">
+  <div id="contain" class="mx-auto w-full px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+      <div class="flex flex-col justify-center">
+        
+        <div class="flex flex-col gap-10">
+          <!-- Mission description -->
+          <div class="">
+            <div class="space-y-4">
+              <h3 class="text-base uppercase font-thin tracking-widest">
+                Custom Web Design and Branding
+              </h3>
+              <h4 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-medium tracking-tight my-6">
+                Code Meets Design
+              </h4>
+              <p class="max-w-3xl text-primary-950/80 dark:text-primary-200/80 text-lg xs:text-xl">
+                Web design and marketing, all in one place. Honest and fair pricing structures. 
+                Manage your brand and marketing from a single point of contact. 
+                Creating a cohesive strategy between your website and marketing.
+              </p>
+              <a
+                  href="/services"
+                  class="mt-6 mr-4 bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                  All Services
+              </a>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="w-full">
+
+      <dl class="grid gap-6 grid-cols-1 xs:grid-cols-2 my-8">
+        {
+          stats.map((stat) => (
+            <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border px-6 py-8 lg:py-12 space-y-2 xs:space-y-4">
+              <dd class="text-2xl xs:text-3xl lg:text-4xl text-primary-950 dark:text-primary-200 font-medium tracking-tight">{stat.value}</dd>
+              <dt class="text-primary-950 dark:text-primary-200 text-base sm:text-lg">{stat.name}</dt>
+            </div>
+          ))
+        }
+      </dl>
+      
+    </div>
+  </div>
+</section>

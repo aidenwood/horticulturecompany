@@ -1,0 +1,60 @@
+<style>
+  #contain { max-width: 1980px !important; }
+  .fade {
+  transition: opacity .7s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+</style>
+<div class="py-16 lg:py-32 bg-secondary-950 text-white dark:bg-secondary-600">
+  <div class="fade fadeIn fadeOut text-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center gap-4 md:gap-6">
+    <h4 class="font-thin text-base tracking-widest uppercase">
+      <slot name="smltitle">LTEK</slot>
+    </h4>
+    <h3 class="text-3xl sm:text-4xl font-medium tracking-tight">
+      <slot name="title">Title</slot>
+    </h3>
+    <p class="text-lg xs:text-xl max-w-4xl leading-6 mx-auto">
+      <slot name="desc">Some description goes here</slot>
+    </p>
+    <a href="/sales-call" class="mt-6 mr-2 bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+      Speak to our team
+    </a>
+  </div>
+</div>
+
+<script>
+  // INTERSECTION OBSERVER API
+
+const observerOptions = {
+  root: null, // Null = based on viewport
+  rootMargin: "0px", // Margin for root if desired
+  threshold: 0.35 // Percentage of visibility needed to execute function
+};
+
+function observerCallback(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Fade in observed elements that are in view
+      entry.target.classList.replace('fadeOut', 'fadeIn');
+    }
+    else {
+      // Fade out observed elements that are not in view
+      entry.target.classList.replace('fadeIn', 'fadeOut');
+    }
+  });
+}
+
+// Grab all relevant elements from DOM
+const fadeElms = document.querySelectorAll('.fade');
+
+// Call function for each element
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+fadeElms.forEach(el => observer.observe(el));
+</script>

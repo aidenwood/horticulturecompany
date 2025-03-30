@@ -1,0 +1,184 @@
+---
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import { ViewTransitions } from 'astro:transitions';
+import Footer from '../components/layout/Footer.astro';
+import Header from '../components/layout/Header.astro';
+import type { arrayOutputType } from 'astro/zod';
+
+
+interface Props {
+  description: string;
+  title: string;
+  canonicalURL?: URL | string;
+}
+
+const { description, title } = Astro.props;
+
+const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
+---
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href="/sitemap-0.xml" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:image" content="/opengraph.png" />
+    <meta name="twitter:image" content="/opengraph.png">
+
+    <meta name="generator" content={Astro.generator} />
+    
+    <meta name="title" content={title}>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL}>
+
+    <title>{title}</title>
+  
+
+  </head>
+  <body 
+    class="bg-secondary-100 text-secondary-950 dark:bg-black dark:text-white antialiased transition" 
+  >
+    <Header />
+    <main >
+      <slot />
+    </main>
+    <Footer />
+    <style is:global>
+      [x-cloak] {
+        display: none !important;
+      }
+
+      /* Hero Components and Primary Components Width */
+      #contain { max-width: 1920px; }
+
+      /* Stop CLS Shift */
+      img{
+        width: 100%;
+        height: auto; /* Ensure proper aspect ratio */
+      }
+
+
+      /* CSS overrides for snipcart */
+      /* Side modal cart header spacing */
+      .snipcart-button-primary {
+        -webkit-appearance: button;
+        background-color: #1a4db3 !important;
+      }
+      .snipcart-cart-summary-side .snipcart-cart__secondary-header {
+          margin: 115px 0 0 0 !important;
+      }
+
+      @media screen and (max-width: 1640px) {
+        .snipcart-cart-summary-side .snipcart-cart__secondary-header {
+          margin: 80px 0 0 0 !important;
+        }
+      }
+
+      /* Full size cart header spacing */
+      .snipcart-cart-header {
+        margin: 115px auto 0;
+        max-width: 1440px;
+      }
+
+      @media screen and (max-width: 1640px) {
+        .snipcart-cart-header {
+          margin: 80px 0 0 0 !important;
+        }
+      }
+
+      
+    </style>
+
+
+    <!-- 
+    Live Public API Key
+    ZDBkOGRlODAtOWIxMy00NWE0LTk1ZjMtODM4NGM5NTk3YzFlNjM4NzcwNzY3ODYzMDU3MzMw
+
+    Test Public API Key
+    MDkwNzBmZjItODMyNi00MWViLThkYTUtZWViNDZhYzEwMTUzNjM4NzcwNzY3ODYzMDU3MzMw
+
+    Make sure currency is set to the same currency in your snipcart dashboard
+
+    -->
+
+    <!-- Snipcart JavaScript SDK -->
+    <script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+
+    <!-- Snipcart JavaScript SDK -->
+    <script>
+      window.SnipcartSettings = {
+        publicApiKey: "ZDBkOGRlODAtOWIxMy00NWE0LTk1ZjMtODM4NGM5NTk3YzFlNjM4NzcwNzY3ODYzMDU3MzMw",
+        currency: "aud",
+        modalStyle: "side",
+        version: "3.7.1"
+      };
+    
+      (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+    </script>
+
+    
+
+  </body>
+
+    <!-- Alpine JS is used for Dark and Light Mode theme -->
+    <script>
+      import Alpine from 'alpinejs';
+      import collapse from '@alpinejs/collapse';
+
+      Alpine.plugin(collapse);
+
+      Alpine.store('theme', {
+        init() {
+          this.isDark = (() => {
+            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+              return localStorage.getItem('theme') === 'dark';
+            }
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              return true;
+            }
+            return false;
+          })();
+        },
+
+        isDark: false,
+
+        toggle() {
+          this.isDark = !this.isDark;
+          localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+        },
+      });
+
+      window.Alpine = Alpine;
+      Alpine.start();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZJWS6RV4X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZJWS6RV4X');
+    </script>
+
+
+</html>
+  
+  
+  

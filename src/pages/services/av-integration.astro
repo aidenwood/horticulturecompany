@@ -1,0 +1,238 @@
+---
+/*
+This products.astro file template takes data from the content folder, products-detailed.js in this instance. 
+And extends the whole current product page design, using components for easy quick development, 
+while allowing for individual design to sales funnels.
+
+Start by changing the product.id for festoonProduct to the appropriate page required. (STEP 1)
+*/
+
+import SlotHero from '../../components/products/Slot-Product-Hero.astro';
+import SlotDetails from '../../components/products/Slot-Product-Details.astro';
+import PricingPackages from "../../components/products/PricingPackages.astro";
+
+import RelatedServices from '../../components/services/RelatedServices.astro';
+
+import SubHeroCard from "../../components/home/Slot-Img-HeroCard.astro";
+
+import SectionHeadImg from "../../components/home/slot-img.astro";
+import SectionHeadImgReverse from "../../components/home/slot-img-rev.astro";
+
+
+import SlotColourBlock from "../../components/home/Slot-ColourBlock.astro";
+import Layout from '../../layouts/Layout.astro';
+
+/* Import the Products JS Data file */
+import { services } from '../../content/services-detailed.js';
+
+// STEP 1 
+// Replace the product.id with the page data required. Usually the same as the page address.
+const festoonProduct = services.find(product => product.id === 'av-integration');
+
+// Get the related products data
+const relatedProductsData = services.filter(product => 
+  festoonProduct?.relatedServices?.includes(product.id)
+) || [];
+---
+
+<Layout
+  description={`${festoonProduct?.description}. All our ${festoonProduct.name} include ${festoonProduct.serviceDetails.deliverables}. Commonly hired for events in ${festoonProduct.commonUses}`}
+  title={`${festoonProduct.name} | Event Hire Services | Lume Hire`}
+>
+<SlotHero>
+  <Fragment slot="smltitle">
+    {festoonProduct.step}
+  </Fragment>
+  <Fragment slot="title">
+    {festoonProduct.name}
+  </Fragment>
+  <Fragment slot="desc">
+    {festoonProduct.description}
+  </Fragment>
+
+  <Fragment slot="cover">
+    <img
+      src={festoonProduct?.serviceimg}
+      class="w-full rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+      alt={festoonProduct.alt}
+    />
+  </Fragment>
+
+</SlotHero>
+
+<PricingPackages 
+      pricingOptions={festoonProduct.packages}
+      additionalOptions={festoonProduct.addons}
+      specifications={festoonProduct.commonUses}
+      popularMiddleOption={true}
+      ctaText="Book Now"
+    />
+
+
+<SlotDetails>
+
+  <Fragment slot="details">
+    <ul class="space-y-2">
+      <li><span class="font-semibold">Ideal for:</span> {festoonProduct.commonUses.slice(0, 5).join(', ')} and more.</li>
+      <li><span class="font-semibold">Process:</span> {festoonProduct.serviceDetails.process} </li>
+      <li><span class="font-semibold">Deliverables:</span> {festoonProduct?.serviceDetails.deliverables}</li>
+      <li><span class="font-semibold">Revisions:</span> {festoonProduct.serviceDetails.revisionRounds}</li>
+    </ul>
+  </Fragment>
+
+  
+  <Fragment slot="specs">
+    <ul class="space-y-2">
+      <li><span class="font-semibold">Deliverables:</span> {festoonProduct.serviceDetails.deliverables}</li>
+      <li><span class="font-semibold">Team Members:</span> {festoonProduct.serviceDetails.team}</li>
+      <li><span class="font-semibold">Includes:</span> {festoonProduct.serviceDetails.includes}</li>
+    </ul>
+  </Fragment>
+  
+
+  <Fragment slot="extracontent">
+    <div className="mt-8 bg-gray-50 p-4 rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Add Ons</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {festoonProduct?.addons.map((option) => (
+          <div className="bg-white p-4 rounded shadow-sm">
+            <h4 className="font-semibold">{option.name}</h4>
+            <p className="text-sm text-gray-600">{option.description}</p>
+            <p className="text-amber-600 font-bold mt-2">{option.price}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Fragment>
+</SlotDetails>
+
+
+<RelatedServices relatedServices={relatedProductsData} />
+
+
+
+<SubHeroCard>
+  <Fragment slot="smltitle">
+    {festoonProduct.name} Event Services
+  </Fragment>
+  <Fragment slot="title">
+    Experts in {festoonProduct.name}
+  </Fragment>
+  <Fragment slot="desc">
+    Our {festoonProduct.name} event services have improved over 300 events over the last 10 years.
+  </Fragment>
+  <Fragment slot="cover">
+    <img
+      src={festoonProduct.img}
+      class="object-cover w-full h-full bg-center"
+      alt={festoonProduct.alt}
+    />
+  </Fragment>
+
+  <Fragment slot="largesubheader">
+    {festoonProduct.alt}
+  </Fragment>
+  
+  <Fragment slot="card1title">
+    Complete {festoonProduct.name}
+  </Fragment>
+  <Fragment slot="card1paragraph">
+    Our {festoonProduct.name} are operated by {festoonProduct.serviceDetails.team} an include {festoonProduct?.serviceDetails.deliverables.toLowerCase()}.
+  </Fragment>
+
+  <Fragment slot="card2title">
+    Common Uses
+  </Fragment>
+  <Fragment slot="card2paragraph">
+    {festoonProduct.name} is commonly needed for {festoonProduct?.commonUses.slice(0, 5).join(' and ')}.
+  </Fragment>
+
+  <Fragment slot="card3title">
+    Complete Delivery & Installation
+  </Fragment>
+  <Fragment slot="card3paragraph">
+    All {festoonProduct.name} hire packages include {festoonProduct.serviceDetails.process}.
+  </Fragment>
+
+  <Fragment slot="faq">
+    <div class="mt-8">
+      <h3 class="text-2xl font-bold mb-4">Frequently Asked Questions</h3>
+      <div class="space-y-4">
+        {festoonProduct.faqs.map((faq) => (
+          <div class="border-b pb-3">
+            <h4 class="font-semibold text-lg">{faq.question}</h4>
+            <p class="text-gray-600">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Fragment>
+
+  <Fragment slot="related">
+    <div class="mt-8">
+      <h3 class="text-xl font-bold mb-4">Related Products</h3>
+      <div class="flex flex-wrap gap-2">
+        {festoonProduct?.relatedServices.map((product) => (
+          <a href={`/services/${product}`} className="px-3 py-2 bg-primary-600 text-primary-800 rounded-full text-sm hover:bg-amber-200 transition-colors">
+            {product.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+          </a>
+        ))}
+      </div>
+    </div>
+  </Fragment>
+</SubHeroCard>
+
+
+
+    
+    <SectionHeadImg>
+      <Fragment slot="smltitle">
+        From Delivery to Pack-Down, We Handle Everything for Your Event
+      </Fragment>
+      <Fragment slot="title">
+        Full-Service Lighting Hire Solutions
+      </Fragment>
+      <Fragment slot="desc">
+        Providing comprehensive service with every hire package. All packages include professional delivery, setup according to your specifications, monitoring throughout your event, and complete pack-down service. This hassle-free approach ensures you can focus on your event while we handle all technical aspects of your lighting needs.
+      </Fragment>
+      <Fragment slot="cover">
+        <img
+          src="/lighting/edit-lobby-festoon.webp"
+          class="w-full"
+        />
+      </Fragment>
+    </SectionHeadImg>
+
+    <SectionHeadImgReverse>
+      <Fragment slot="smltitle">
+        Over a Decade Working on Events
+      </Fragment>
+      <Fragment slot="title">
+        Over 10+ Years of A/V Experience.
+      </Fragment>
+      <Fragment slot="desc">
+        With more than 10 years of specialized experience in the AV industry, Lume Lighting brings unparalleled expertise to every project we undertake. All packages include professional consulting, technical direction, and creative solutions from our seasoned team who are skilled across multiple event disciplines. From concert lighting and corporate presentations to wedding ambiance and festival installations, we ensure your event achieves the perfect atmosphere with professional execution.
+      </Fragment>
+      <Fragment slot="cover">
+        <img
+          src="/lighting/zoomed-beachfestoon.webp"
+          class="w-full"
+        />
+      </Fragment>
+    </SectionHeadImgReverse>
+
+    
+
+    <SlotColourBlock>
+      <Fragment slot="smltitle">
+        Speak to our team
+      </Fragment>
+      <Fragment slot="title">
+        We're here to help.
+      </Fragment>
+      <Fragment slot="desc">
+        Have questions about our {festoonProduct.name} lighting hire? Our expert team is ready to assist with package selection, custom installation options, and venue compatibility. Book a call with our team easily below.
+      </Fragment>
+    </SlotColourBlock>
+    
+</Layout>

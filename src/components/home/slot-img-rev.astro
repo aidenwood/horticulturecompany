@@ -1,0 +1,69 @@
+<style>
+  #contain {
+    max-width: 1920px;
+  }
+  .fade {
+    transition: opacity .7s ease-in-out;
+  }
+  
+  .fadeOut {
+    opacity: 0;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+  }
+  
+  </style>
+  
+<div id="contain" class="mx-auto">
+  <div class="flex flex-col-reverse lg:flex-row-reverse justify-center items-start md:items-center mx-auto gap-12 my-24 px-4 sm:px-6 lg:px-8">
+  
+    <div id="leftContainer" class="block w-full lg:w-2/3 xl:w-1/2 max-w-3xl my-6">
+      <h3 class="font-thin pb-4 text-sm lg:text-base tracking-widest uppercase">
+        <slot name="smltitle">Small Header for SEO</slot>
+      </h3>
+      <h4 class="text-4xl md:text-3xl xl:text-4xl font-medium tracking-tight">
+        <slot name="title">Large Header for conversion</slot>
+      </h4>
+      <p class="text-lg lg:text-xl leading-6 max-w-3xl mt-4">
+        <slot name="desc">Slot text area</slot>
+      </p>
+    </div>
+  
+    <div id="rightContainer" class="fade fadeIn fadeOut w-full lg:w-1/3 xl:w-1/2 max-w-3xl h-auto bg-contain">
+      <slot name="cover"></slot>
+    </div>
+  
+  </div>  
+</div>
+
+<script>
+  // INTERSECTION OBSERVER API
+
+const observerOptions = {
+  root: null, // Null = based on viewport
+  rootMargin: "0px", // Margin for root if desired
+  threshold: 0.35 // Percentage of visibility needed to execute function
+};
+
+function observerCallback(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Fade in observed elements that are in view
+      entry.target.classList.replace('fadeOut', 'fadeIn');
+    }
+    else {
+      // Fade out observed elements that are not in view
+      entry.target.classList.replace('fadeIn', 'fadeOut');
+    }
+  });
+}
+
+// Grab all relevant elements from DOM
+const fadeElms = document.querySelectorAll('.fade');
+
+// Call function for each element
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+fadeElms.forEach(el => observer.observe(el));
+</script>

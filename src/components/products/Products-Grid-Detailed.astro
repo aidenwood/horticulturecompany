@@ -1,0 +1,185 @@
+---
+/* Import the Services JS Data file */
+import { products } from '../../content/products-detailed.js';
+
+// Helper function to format price
+const formatPrice = (price) => {
+  if (typeof price === 'string' && price.startsWith('From')) {
+    return price;
+  }
+  return `$${price}`;
+};
+---
+
+<style>
+  .main-carousel { width: 100%; }
+  .main-carousel.is-expanded { width: 100%; }
+  
+  #contain { max-width: 1980px !important; }
+  
+  /* Image cover settings for consistent sizing */
+  .image-cover {
+    width: 100%;
+    height: 220px; /* Increased height for larger images */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .image-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image cover the entire container */
+    object-position: center; /* Centers the image within the container */
+  }
+  
+  /* Badge styles */
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    background-color: rgba(var(--color-primary-500), 0.8);
+    color: rgb(var(--color-primary-700));
+    font-weight: 500;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .badge-primary {
+    background-color: rgba(var(--color-secondary-500), 0.8);
+  }
+  
+  /* Price tag styles */
+  .price-tag {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    z-index: 10;
+  }
+  
+  /* Specification list styles */
+  .spec-list {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  .spec-list li {
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .spec-list li:before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: rgb(var(--color-primary-500));
+  }
+  
+  /* Card styles */
+  .product-card {
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+</style>
+
+<section class="my-24">
+  <div id="contain" class="mx-auto w-full">
+    <div id="border" class="">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-4 md:gap-4 px-4 lg:px-8">
+        {
+          products.map((service) => (
+            <div class="product-card carousel-cell rounded-2xl text-secondary-950 dark:text-secondary-100 bg-secondary-400/10 hover:bg-secondary-600/20 dark:bg-secondary-800/40 dark:hover:bg-secondary-600/50 border-primary-900/10 dark:border-primary-300/10 hover:dark:bg-secondary-600/10 duration-200 border overflow-hidden">
+              <div class="relative">
+                <div class="image-cover">
+                  <img src={service.img} alt={service.alt} />
+                  {service.pricing && service.pricing[0] && (
+                    <div class="price-tag">From {formatPrice(service.pricing[0].price)}</div>
+                  )}
+                </div>
+              </div>
+              
+              <div class="card-content p-4 sm:p-6">
+                <h2 class="text-md md:text-xl lg:text-2xl font-semibold mb-2">{service.name}</h2>
+                <p class="text-xs sm:text-sm mb-4">{service.description}</p>
+                
+                {service.pricing && (
+                  <div class="hidden md:block mb-4">
+                    <h3 class="text-sm font-semibold mb-2">Available Packages</h3>
+                    <div class="text-sm">
+                      {service.pricing.slice(0, 2).map((pkg) => (
+                        <div class="mb-1">• {pkg.name}: {formatPrice(pkg.price)}</div>
+                      ))}
+                      {service.pricing.length > 2 && (
+                        <div class="text-xs text-gray-400">+{service.pricing.length - 2} more options</div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {service.specifications && (
+                  <div class="hidden md:block mb-4">
+                    <h3 class="text-sm font-semibold mb-2">Key Specifications</h3>
+                    <ul class="spec-list text-secondary-950">
+                      {service.specifications.bulbType && (
+                        <li>Bulb Type: {service.specifications.bulbType}</li>
+                      )}
+                      {service.specifications.waterproof && (
+                        <li>Weather Rating: {service.specifications.waterproof}</li>
+                      )}
+                      {service.specifications.installation && (
+                        <li>Installation: {service.specifications.installation}</li>
+                      )}
+                    </ul>
+                  </div>
+                )}
+                
+                {service.popularApplications && (
+                  <div class="hidden md:block mb-4">
+                    <h3 class="text-sm font-semibold mb-2 text-gray-200">Popular For</h3>
+                    <div class="flex flex-wrap">
+                      {service.popularApplications.slice(0, 3).map((app) => (
+                        <span class="badge badge-primary bg-secondary-300/30 text-secondary-950 rounded-md">{app}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                
+                
+                <div class="card-footer">
+                  <a href={service.link} class="block w-full text-sm xl:text-base py-2 px-4 bg-primary-600 hover:bg-primary-700 rounded-full text-center text-white font-medium transition-colors">
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

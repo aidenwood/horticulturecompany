@@ -1,0 +1,33 @@
+<style>
+  #contain { max-width: 1980px !important; }
+</style>
+
+<section class="py-8 lg:py-16">
+  <div id="contain" class="flex flex-col-reverse lg:flex-row justify-center items-center mx-auto mb-8">
+    <div id="leftContainer" class="w-full lg:w-1/2 px-4 sm:px-6 lg:px-8">
+      <h4 class="font-thin text-base tracking-widest uppercase">
+        <slot name="smltitle">Aidxn Design</slot>
+      </h4>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight my-6">
+        <slot name="title">Title</slot>
+      </h1>
+      <p class="text-lg lg:text-xl max-w-3xl">
+        <slot name="desc">Some description goes here</slot>
+      </p>
+
+      <a
+        href="/sales-call"
+        class="my-6 mr-2 bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+      >
+        Book a Sales Call
+      </a>
+    </div>
+    <div id="rightContainer" class="w-full lg:w-1/2 px-4">
+      <div class="h-fit rounded-3xl mx-auto bg-contain mb-12">
+        <slot name="cover"></slot>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>

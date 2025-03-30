@@ -1,0 +1,81 @@
+---
+
+/* Import the Services JS Data file */
+import { products } from '../../content/products-detailed.js';
+
+---
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+
+<style>
+  #contain { max-width: 1980px !important; }
+
+  .main-carousel { width: 100%; }
+  .main-carousel.is-expanded { width: 100%; }
+  
+  
+  .carousel-cell {
+    width: 17.5%;
+    margin: 5px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .carousel-cell {
+      width: 22.5%;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+    .carousel-cell {
+      width: 27.5;
+    }
+  }
+
+/* transition height change */
+.flickity-viewport {
+  transition: height 0.2s;
+}
+</style>
+
+
+
+
+
+<section class="mt-8 mb-28">
+  <div id="contain" class="mx-auto w-full">
+  
+    <!-- Perfect Slider Velocity8 - Start -->
+    <div id="border" class="">
+        
+      
+      <div class="carousel carousel-nav py-4 px-4 sm:px-6 lg:px-8" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+        {
+          products.map((service) => (
+            
+            <div class="carousel-cell shadow-md bg-white border-primary-400 dark:bg-primary-700/10 hover:bg-primary-700/20 hover:dark:bg-primary-700/20 duration-200 rounded-md border-2 flex flex-col xl:flex-row items-center lg:items-center justify-center gap-6 p-6 mr-6">
+              <div class="w-full mx-auto flex flex-col items-center">
+                <img
+                  class="max-h-32 lg:max-h-64 w-auto mx-auto"
+                  width="640"
+                  height="640"
+                  src={service.img}
+                  alt={service.alt}
+                />
+                <h2 class="hidden xl:block text-center md:text-left text-base md:text-lg font-medium">{service.name}</h2>
+             </div>
+              
+            </div>
+          
+          ))
+        }
+      </div>
+
+    </div>
+  </div>
+</section>
