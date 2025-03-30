@@ -11,6 +11,7 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       black: colors.black,
+      /*  Define your primary and secondary colours here for main recolouring of the site   */
       primary: colors.green,
       secondary: colors.orange,
       orange: colors.orange,
