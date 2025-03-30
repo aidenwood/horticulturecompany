@@ -41,8 +41,13 @@ const services = [
 ---
 
 <style>
-  
-  #heroArea { height: calc(100vh - 113px); min-height: 850px; display: flex; justify-content: center; align-items: center; }
+  #heroArea { 
+    height: calc(100vh - 113px); 
+    min-height: 850px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
 
   @media screen and (max-width: 1680px) {
     #heroArea {
@@ -56,30 +61,93 @@ const services = [
     }
   }
 
-  .image-container {
-  position: relative;
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  border-radius: 0.75rem; /* Optional: Adds rounded corners */
-}
-
-@media screen and (max-width: 568px) {
-    .image-container {
-      min-height: 340px;
-    }
+  #contain { 
+    max-width: 1920px; 
   }
 
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire area without distortion */
-}
+  /* Modern Card Styles */
+  .service-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s ease;
+  }
 
-  #contain { max-width: 1920px; }
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(194, 65, 12, 0.4) 0%, rgba(0, 0, 0, 0.9) 80%);
+    z-index: 1;
+  }
+
+  .service-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .service-card:hover .service-card-bg {
+    transform: scale(1.05);
+  }
+
+  .service-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: white;
+  }
+
+  .service-card-step {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .service-card-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Responsive grid adjustments */
+  @media (max-width: 768px) {
+    .service-card {
+      min-height: 250px;
+    }
+    .service-card-title {
+      font-size: 1.25rem;
+    }
+    .service-card-desc {
+      font-size: 0.875rem;
+    }
+  }
 </style>
 
 <section id="heroArea" class="">
@@ -100,51 +168,42 @@ const services = [
             back to life through sustainable practices and innovative solutions.
           </p>
           
-          <a
-            href="/products"
-            class="mt-6 mr-2 bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-          >
-            Products
-          </a>
-          <a
-            href="/services"
-            class="mt-6 mr-2 bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-          >
-            Services
-          </a>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="/products"
+              class="mt-6 bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            >
+              Products
+            </a>
+            <a
+              href="/services"
+              class="mt-6 bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            >
+              Services
+            </a>
+          </div>
         </div>
         
         <div id="cardContainer" class="servicesContainer w-full xl:w-1/2 items-start">
-          <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2">
+          <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
             {services.map((service) => (
-              <a rel="canonical" href={service.link}>  
-                <div id="serviceCard" class="text-secondary-950 dark:text-secondary-100 bg-secondary-400/10 hover:bg-secondary-600/20 dark:bg-secondary-800/40 dark:hover:bg-secondary-600/50 border-primary-900/10 dark:border-primary-300/10 duration-200 border rounded-xl md:rounded-3xl px-4 md:px-6 py-8 lg:py-12 h-full flex flex-col justify-center gap-4 relative overflow-hidden">
-                  
-                  {/* Background image for small screens (hidden on md and above) */}
-                  <div class="absolute inset-0 w-full h-full xl:hidden">
-                    <img src={service.img} class="w-full h-full object-cover" alt={service.name} />
-                    {/* Gradient overlay */}
-                    <div class="absolute inset-0 bg-gradient-to-r from-secondary-950/90 to-secondary-30/50"></div>
-                  </div>
-                  
-                  <div class="w-full flex flex-row-reverse sm:flex-col md:flex-row-reverse items-center justify-center gap-6 relative z-10">
-                    <div class="w-full mx-auto md:ml-2 flex flex-col gap-4">
-                      {/* Image visible only on md screens and above */}
-                      <div class="image-container hidden xl:block">
-                        <img src={service.img} class="w-full rounded-xl" alt={service.name} />
-                      </div>
-                      <h3 class="text-left text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-tight font-medium dark:text-white text-white xl:text-secondary-950">{service.name}</h3>
-                      <p class="hidden xl:block text-base xs:text-lg pr-4 leading-6">
-                        {service.description}
-                      </p>
-                    </div>
+              <a rel="canonical" href={service.link} class="block h-full">  
+                <div class="service-card">
+                  <img 
+                    src={service.img} 
+                    alt={service.name} 
+                    class="service-card-bg"
+                  />
+                  <div class="service-card-content">
+                    <div class="service-card-step">{service.step}</div>
+                    <h3 class="service-card-title">{service.name}</h3>
+                    <p class="service-card-desc">{service.description}</p>
                   </div>
                 </div>
               </a>
             ))}
           </div>
         </div>
-       
       </div>
     </div>
   </div>
