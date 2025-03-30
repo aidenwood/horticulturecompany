@@ -146,7 +146,8 @@ const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Ast
         init() {
           this.isDark = (() => {
             if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-              return localStorage.getItem('theme') === 'dark';
+              /*  Define the initial dark or light state below  */
+              return localStorage.getItem('theme') === 'light';
             }
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
               return true;
@@ -167,15 +168,7 @@ const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Ast
       Alpine.start();
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZJWS6RV4X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-SZJWS6RV4X');
-    </script>
+  
 
 
 </html>
