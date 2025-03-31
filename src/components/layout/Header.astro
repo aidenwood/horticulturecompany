@@ -43,13 +43,13 @@ const links = [
 <header id="navbar"
   x-data="{ open: false }"
   class="transition sticky top-0 z-50 backdrop-blur-xl "
-  :class="{ 'bg-secondary-950/80 dark:bg-secondary-900/50': open, 'bg-secondary-950/80': !(open) }"
+  :class="{ 'bg-secondary-950/80 dark:bg-secondary-900/50': open, 'bg-secondary-950/50': !(open) }"
 >
   <div id="navContainer"
     class="mx-auto w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 py-1"
   >
    
-    <div class="flex my-1">
+    <div class="flex max-w-3xl  my-1">
       <a
         href="/"
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
@@ -58,8 +58,8 @@ const links = [
         <span class="sr-only">The Horticulture Company - Landscaping and Garden Restoration Gold Coast</span>
         <img id="logo"
           class="h-14 sm:h-16 xl:h-24 w-auto"
-          :src="$store.theme.isDark ? '/thehorticultureco-logo-wide-dark.svg' : '/thehorticultureco-logo-wide.svg'"
-          alt="Lume Hire Logo - Gold Coast Event Lighting Hire and Festoon Hire"
+          :src="$store.theme.isDark ? '/gc-horticulture-dark.svg' : '/gc-horticulture.svg'"
+          alt="The Horticulture Company Logo - Gold Coast Landscaping and Native Restorations"
         />
       </a>
     </div>
@@ -178,9 +178,9 @@ const links = [
         class="bg-secondary-900 dark:bg-secondary-900/60 hidden items-center justify-center rounded-3xl px-6 py-8 lg:flex"
       >
         <p
-          class="text-white max-w-sm text-xl leading-loose"
+          class="text-white max-w-2xl text-xl leading-loose"
         >
-          <span class="font-medium">Immersive Lighting</span> will transform your event with professional lighting and visual design services tailored for weddings, festivals, and corporate functions across the Gold Coast, Byron Bay, and nationwide. 
+          <span class="font-medium">The Horticulture Company</span> Specialized restoration of Gold Coast's natural ecosystems using indigenous plants and sustainable techniques. Our ecological experts bring degraded landscapes back to life while enhancing biodiversity and resilience.
         </p>
       </div>
 
