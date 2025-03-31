@@ -11,7 +11,7 @@ export default defineConfig({
     viewTransitions: true
   },
   // Set your website domain here for Canonical URL variables down the project
-  site: 'https://lumehire.com',
+  site: 'https://thehorticulturecompany.com.au/',
   output: 'static', // or 'server', or 'hybrid'
   integrations: [tailwind(), compress(), partytown(), sitemap()]
 });

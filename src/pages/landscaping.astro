@@ -2,10 +2,6 @@
 import Cta from '../components/home/Cta-ContactShort.astro';
 import Options from '../components/weddings/Options.astro';
 import Hero from '../components/home/Slot-HeroFullscreen.astro';
-import IntroSec from '../components/brand-strategy/Intro-Webdesign-Sec.astro';
-import OptionsSec from '../components/brand-strategy/Options-Secondary.astro';
-import Grid from '../components/brand-strategy/Grid-Webdesign.astro';
-import GridSec from '../components/brand-strategy/Grid-Webdesign-Sec.astro';
 import IndentInfo from '../components/home/Slot-Indent-Info.astro';
 import Faq from '../components/weddings/Faq.astro';
 import SectionHeadImg from "../components/home/slot-img.astro";
@@ -13,28 +9,41 @@ import SectionHeadSecImg from "../components/home/slot-img-rev.astro";
 import BlogPosts from '../components/home/BlogPosts.astro';
 import FirstProcess from '../components/home/Section-Process.astro';
 
+
+import ServiceIntro1 from '../components/home/Basic-Intro-1.astro';
+import PricingSection1 from '../components/pricing/PricingTable-Duo-Web.astro';
+
+import MarketIntro from '../components/home/Basic-Intro-Market.astro';
+import PricingMarket from '../components/pricing/PricingTable-Duo-Market.astro';
+
 import Layout from '../layouts/Layout.astro';
 
-let backgroundUrl = 'url(/lighting/lx-band-show.webp)' // Define image for Slot-HeroFullscreen and then call BackgroundURL in Section
+let backgroundUrl = 'url(/img/banksia-landscape.webp)' // Define image for Slot-HeroFullscreen and then call BackgroundURL in Section
 ---
 
 <Layout
   description="Creating magical atmospheres with custom wedding lighting solutions. Serving couples across the Gold Coast, Byron Bay and beyond with elegant festoon lighting, fairy lights and professional installation."
-  title="Corporate Events | Wedding & Event Hire | Lume Hire"
+  title="Landscaping | The Horticulture Company | Native Landscaping & Ecosystem Restorations"
 >
   
 <Hero backgroundUrl={backgroundUrl}>
   <Fragment slot="smltitle">
-    Corporate Event Lighting Hire
+    Wedding Lighting Hire & Design
   </Fragment>
   <Fragment slot="title">
-    Lighting Hire for High-Quality Corporate Events
+    Illuminate Your Perfect Day
   </Fragment>
   <Fragment slot="desc">
     Creating magical atmospheres with custom wedding lighting solutions.
     Serving couples across the Gold Coast, Byron Bay and beyond with elegant festoon lighting, fairy lights and professional installation.
   </Fragment>
 </Hero>
+
+  <ServiceIntro1 />
+  <PricingSection1 />
+
+  <MarketIntro />
+  <PricingMarket />
 
 <SectionHeadImg>
   <Fragment slot="smltitle">
