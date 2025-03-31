@@ -149,9 +149,10 @@ const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Ast
               /*  Define the initial dark or light state below  */
               return localStorage.getItem('theme') === 'light';
             }
+            /* Check for Device Preferred Colouring - Currently Disabled with this single comment
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
               return true;
-            }
+            } */
             return false;
           })();
         },
