@@ -66,21 +66,23 @@ const links = [
 
     
 
-    <!-- Actions -->
+    
     <div class="flex items-center">
+      <!-- Snipcart Cart Total - Currently Disabled by this comment 
       <div class="flex flex-row gap-2 text-right text-white xs:bg-secondary-300/30 xs:px-4 py-2.5 xl:py-3 rounded-full mr-2">
         <div class="hidden md:block"><span class="snipcart-items-count font-semibold text-base"></span><span class="font-thin text-base"> items in cart.</span></div>
         <span class="snipcart-total-price font-semibold text-xs xs:text-sm md:text-base"></span>
       </div>
+      -->
       <div>
-        <button class="snipcart-checkout text-white mr-2 bg-primary-600 border-2 border-primary-600 dark:hover:border-primary-200 dark:border-2 rounded-full px-3 md:px-4 py-2 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+        <button class="hidden xs:block snipcart-checkout text-white mr-2 bg-primary-600 border-2 border-primary-600 dark:hover:border-primary-200 dark:border-2 rounded-full px-3 md:px-4 py-2 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
           Cart 
         </button>
       </div>
       <div class="">
         <a  id="bookBtn"
           href="/contact"
-          class="hidden sm:block mr-2 text-white bg-primary-600 border-1 border-primary-600 dark:hover:border-primary-200 dark:border-2 tracking-tighter md:tracking-normal rounded-full px-4 py-2.5 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="block mr-2 text-white bg-primary-600 border-1 border-primary-600 dark:hover:border-primary-200 dark:border-2 tracking-tighter md:tracking-normal rounded-full px-4 py-2.5 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Contact
       </a>
