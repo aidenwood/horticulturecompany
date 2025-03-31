@@ -1,197 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://lumehire.com/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://thehorticulturecompany.com.au/</loc>
+	<lastmod>2025-03-31T07:27:11+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/contact/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/contact/</loc>
+	<lastmod>2025-03-31T07:27:11+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/</loc>
+	<lastmod>2025-03-31T07:27:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/services/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/services/</loc>
+	<lastmod>2025-03-31T07:27:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/weddings/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/about/</loc>
+	<lastmod>2025-03-31T07:27:19+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/corporate/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/festoon-lighting/</loc>
+	<lastmod>2025-03-31T07:27:19+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/festivals/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/fairy-light-canopy/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/creative-installations/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/stage-wash-package/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/festoon-lighting/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/lighting-installations/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/fairy-light-canopy/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/outdoor-tree-lighting/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/stage-wash-package/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/dmx-light-shows/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/lighting-installations/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/projection-mapping-package/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/outdoor-tree-lighting/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/custom-laser-shows/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/dmx-light-shows/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/premium-projector-hire/</loc>
+	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/custom-laser-shows/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/custom-stage-renders/</loc>
+	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/projection-mapping-package/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/table-centerpiece-lighting/</loc>
+	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/premium-projector-hire/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/chandelier-installations/</loc>
+	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/custom-stage-renders/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/letter-lights/</loc>
+	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/table-centerpiece-lighting/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/products/pendant-light-installations/</loc>
+	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://lumehire.com/products/chandelier-installations/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://thehorticulturecompany.com.au/sales-call/</loc>
+	<lastmod>2025-03-31T07:27:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
-<url>
-  <loc>https://lumehire.com/products/letter-lights/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/products/pendant-light-installations/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/event-lighting-design/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/technical-production/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/av-integration/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/immersive-experiences/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/safety-compliance/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/resolume-operation/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/touchdesigner-operation/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/outdoor-lighting-installation/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/heights-lighting-installation/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/architectural-lighting/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/concert-lighting-operation/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/services/event-lighting-equipment/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/about/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/enquire/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://lumehire.com/sales-call/</loc>
-  <lastmod>2025-03-17T03:43:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
 </urlset>
