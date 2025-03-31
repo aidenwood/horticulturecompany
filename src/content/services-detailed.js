@@ -19,32 +19,32 @@ export const services = [
       {
         name: 'Small-Scale Restoration',
         description: 'Restoration projects up to 500sqm (residential or small commercial sites)',
-        price: 4500,
-        timeframe: '3-6 months'
+        price: 245,
+        timeframe: '2-3 hours'
       },
       {
         name: 'Medium-Scale Restoration',
         description: 'Restoration projects from 500-2000sqm with diverse habitat requirements',
-        price: 12000,
-        timeframe: '6-12 months'
+        price: 445,
+        timeframe: '4-6 hours'
       },
       {
-        name: 'Large-Scale Ecosystem Rehabilitation',
+        name: 'Large-Scale Restoration',
         description: 'Comprehensive restoration for sites over 2000sqm with complex ecological requirements',
-        price: 25000,
-        timeframe: '1-3 years'
+        price: 895,
+        timeframe: '7-12 hours'
       }
     ],
     addons: [
       {
         name: 'Extended Monitoring Program',
         description: 'Quarterly monitoring and reports for 3 additional years',
-        price: 3600
+        price: 1245
       },
       {
-        name: 'Wildlife Habitat Enhancement',
+        name: 'On-Going Habitat Enhancement',
         description: 'Installation of nesting boxes, habitat logs, and specialized wildlife structures',
-        price: 1850
+        price: 1445
       }
     ],
     commonUses: [
@@ -84,34 +84,34 @@ export const services = [
     },
     packages: [
       {
-        name: 'Basic Fertilising Program',
+        name: 'Small Fertilising Program',
         description: 'Quarterly applications for residential gardens up to 400sqm',
-        price: 1200,
-        timeframe: '12-month program'
+        price: 245,
+        timeframe: '1-2 hour plus fertiliser'
       },
       {
-        name: 'Premium Garden Nutrition',
+        name: 'Medium Fertilising Program',
         description: 'Bi-monthly applications with specialized amendments for gardens up to 1000sqm',
-        price: 2800,
-        timeframe: '12-month program'
+        price: 345,
+        timeframe: '3 hour plus fertiliser'
       },
       {
-        name: 'Estate Nutrition Management',
+        name: 'Large Fertilising Program',
         description: 'Comprehensive monthly applications for large properties over 1000sqm',
-        price: 5500,
-        timeframe: '12-month program'
+        price: 445,
+        timeframe: '4 hour plus fertiliser'
       }
     ],
     addons: [
       {
         name: 'Microbial Soil Inoculation',
         description: 'Specialized beneficial fungi and bacteria applications',
-        price: 850
+        price: 245
       },
       {
         name: 'Deep Root Fertilising',
         description: 'Targeted sub-surface fertilising for established trees',
-        price: 450
+        price: 345
       }
     ],
     commonUses: [
@@ -151,34 +151,34 @@ export const services = [
     },
     packages: [
       {
-        name: 'Single Tree Service',
+        name: 'Small Tree Pruning Service',
         description: 'Professional pruning for individual specimen trees',
-        price: 450,
-        timeframe: '1 day'
+        price: 445,
+        timeframe: '4-6 hours'
       },
       {
-        name: 'Small Property Package',
+        name: 'Medium Tree Pruning Service',
         description: 'Tree management for properties with 5-10 trees',
-        price: 1800,
-        timeframe: '2-3 days'
+        price: 645,
+        timeframe: '7-12 hours'
       },
       {
-        name: 'Estate Tree Management',
+        name: 'Large Tree Pruning Service',
         description: 'Comprehensive pruning and tree care for properties with 10+ trees',
-        price: 3500,
-        timeframe: '3-5 days'
+        price: 1445,
+        timeframe: '2-3 days'
       }
     ],
     addons: [
       {
         name: 'Tree Health Treatment',
         description: 'Pest and disease diagnosis and organic treatment',
-        price: 350
+        price: 245
       },
       {
         name: 'Canopy Thinning',
         description: 'Specialized thinning for wind and light penetration',
-        price: 275
+        price: 645
       }
     ],
     commonUses: [
@@ -219,33 +219,33 @@ export const services = [
     packages: [
       {
         name: 'Essential Maintenance',
-        description: 'Monthly maintenance for residential gardens up to 400sqm',
-        price: 3600,
-        timeframe: '12-month program'
+        description: 'Maintenance for residential gardens up to 400sqm',
+        price: 445,
+        timeframe: '3-4 hours'
       },
       {
         name: 'Premium Garden Care',
-        description: 'Bi-weekly maintenance for gardens up to 800sqm',
-        price: 7200,
-        timeframe: '12-month program'
+        description: 'Maintenance for gardens up to 800sqm',
+        price: 845,
+        timeframe: '6-8 hours'
       },
       {
         name: 'Estate Maintenance Program',
-        description: 'Weekly comprehensive care for properties over 800sqm',
-        price: 14400,
-        timeframe: '12-month program'
+        description: 'Comprehensive care for properties over 800sqm',
+        price: 1245,
+        timeframe: '12-14 hours'
       }
     ],
     addons: [
       {
         name: 'Seasonal Color Rotation',
         description: 'Quarterly flowering display changes',
-        price: 1200
+        price: 845
       },
       {
         name: 'Irrigation Management',
         description: 'Regular system checks and seasonal adjustments',
-        price: 950
+        price: 845
       }
     ],
     commonUses: [
@@ -287,32 +287,32 @@ export const services = [
       {
         name: 'Basic Consultation',
         description: 'Single consultation with basic plant recommendations for small gardens',
-        price: 650,
-        timeframe: '1-2 weeks'
+        price: 145,
+        timeframe: '1-2 hours'
       },
       {
         name: 'Comprehensive Planting Plan',
         description: 'Detailed consultation with complete planting design and specifications',
-        price: 1800,
-        timeframe: '2-4 weeks'
+        price: 345,
+        timeframe: '2-4 hours'
       },
       {
         name: 'Ecosystem Design Package',
         description: 'Full-scale ecosystem design mimicking natural plant communities',
-        price: 3500,
-        timeframe: '4-6 weeks'
+        price: 845,
+        timeframe: '4-6 hours'
       }
     ],
     addons: [
       {
         name: 'Plant Sourcing Service',
         description: 'Procurement of specified native plants from quality nurseries',
-        price: 550
+        price: 245
       },
       {
         name: 'Wildlife Habitat Enhancement',
         description: 'Additional focus on creating specific wildlife habitat',
-        price: 750
+        price: 345
       }
     ],
     commonUses: [
@@ -354,19 +354,19 @@ export const services = [
       {
         name: 'Concept Design',
         description: 'Initial design concepts for residential gardens up to 500sqm',
-        price: 2500,
+        price: 1245,
         timeframe: '3-4 weeks'
       },
       {
         name: 'Comprehensive Design',
         description: 'Complete landscape design with detailed plans for properties up to 1000sqm',
-        price: 5500,
+        price: 1645,
         timeframe: '6-8 weeks'
       },
       {
         name: 'Master Planning',
         description: 'Extensive master planning for estates and large properties over 1000sqm',
-        price: 12000,
+        price: 2445,
         timeframe: '10-12 weeks'
       }
     ],
@@ -374,12 +374,12 @@ export const services = [
       {
         name: '3D Visualization',
         description: 'Photorealistic renders of proposed landscape',
-        price: 1500
+        price: 245
       },
       {
         name: 'Construction Documentation',
         description: 'Detailed technical drawings for contractors',
-        price: 2200
+        price: 445
       }
     ],
     commonUses: [
@@ -421,32 +421,32 @@ export const services = [
       {
         name: 'Garden Bed Installation',
         description: 'Installation of prepared planting beds up to 50sqm',
-        price: 3500,
-        timeframe: '1-2 weeks'
+        price: 645,
+        timeframe: '1-2 days'
       },
       {
         name: 'Complete Garden Makeover',
-        description: 'Comprehensive softscape renovation for areas up to 200sqm',
-        price: 8500,
-        timeframe: '2-3 weeks'
+        description: 'Comprehensive softscape renovation for areas up to 300sqm',
+        price: 1645,
+        timeframe: '3-4 days'
       },
       {
-        name: 'Estate Planting Package',
-        description: 'Large-scale planting implementation for properties over 200sqm',
-        price: 15000,
-        timeframe: '3-5 weeks'
+        name: 'Estate Garden Makeover',
+        description: 'Large-scale planting implementation for properties over 300sqm',
+        price: 2445,
+        timeframe: '3-5 days'
       }
     ],
     addons: [
       {
         name: 'Premium Soil Preparation',
         description: 'Advanced soil remediation and amendment program',
-        price: 1200
+        price: 245
       },
       {
-        name: 'Extended Plant Warranty',
+        name: 'Extended Plant Maintanence',
         description: '12-month plant replacement guarantee',
-        price: 950
+        price: 1245
       }
     ],
     commonUses: [
@@ -488,32 +488,32 @@ export const services = [
       {
         name: 'Basic Hardscape Elements',
         description: 'Pathways, small patios, and garden edging up to 30sqm',
-        price: 8500,
-        timeframe: '2-3 weeks'
+        price: 1245,
+        timeframe: '2-3 days'
       },
       {
         name: 'Outdoor Living Package',
         description: 'Complete outdoor entertainment area up to 60sqm',
-        price: 18000,
-        timeframe: '4-6 weeks'
+        price: 2445,
+        timeframe: '4-6 days'
       },
       {
         name: 'Premium Estate Hardscape',
         description: 'Comprehensive hardscape development for large properties',
-        price: 35000,
-        timeframe: '8-12 weeks'
+        price: 3445,
+        timeframe: '8-12 days'
       }
     ],
     addons: [
       {
         name: 'Outdoor Lighting System',
         description: 'Integrated low-voltage landscape lighting',
-        price: 3500
+        price: 1445
       },
       {
         name: 'Water Feature Integration',
         description: 'Custom designed water feature installation',
-        price: 4800
+        price: 1445
       }
     ],
     commonUses: [
@@ -555,32 +555,32 @@ export const services = [
       {
         name: 'Initial Restoration',
         description: 'Primary weed control and initial regeneration for areas up to 1000sqm',
-        price: 4500,
-        timeframe: '3-6 months'
+        price: 445,
+        timeframe: '3-4 hours'
       },
       {
         name: 'Comprehensive Regeneration',
         description: 'Intensive regeneration program for areas up to 5000sqm',
-        price: 12000,
-        timeframe: '12-18 months'
+        price: 1245,
+        timeframe: '10-12 hours'
       },
       {
         name: 'Long-term Rehabilitation',
         description: 'Extended regeneration program for large bushland areas',
-        price: 25000,
-        timeframe: '2-3 years'
+        price: 2445,
+        timeframe: '24-26 hours'
       }
     ],
     addons: [
       {
         name: 'Supplementary Planting',
         description: 'Strategic planting of key native species to enhance regeneration',
-        price: 2500
+        price: 845
       },
       {
         name: 'Fire Management Integration',
         description: 'Incorporating fire management strategies into regeneration',
-        price: 1800
+        price: 2445
       }
     ],
     commonUses: [
@@ -622,32 +622,32 @@ export const services = [
       {
         name: 'Small Wetland Creation',
         description: 'Design and installation of small wetland features up to 100sqm',
-        price: 9500,
-        timeframe: '2-3 months'
+        price: 1445,
+        timeframe: '2-3 days'
       },
       {
         name: 'Wetland Restoration',
         description: 'Rehabilitation of degraded wetlands up to 500sqm',
-        price: 18000,
-        timeframe: '4-6 months'
+        price: 2445,
+        timeframe: '5-6 days'
       },
       {
         name: 'Comprehensive Wetland System',
         description: 'Complete wetland design and implementation for large properties',
-        price: 35000,
-        timeframe: '6-12 months'
+        price: 3445,
+        timeframe: '7-8 days'
       }
     ],
     addons: [
       {
         name: 'Water Quality Management',
         description: 'Ongoing water testing and remediation program',
-        price: 3600
+        price: 1445
       },
       {
         name: 'Wildlife Habitat Enhancement',
         description: 'Specialized features for target wildlife species',
-        price: 2800
+        price: 1445
       }
     ],
     commonUses: [
@@ -689,32 +689,32 @@ export const services = [
       {
         name: 'Basic CAD Package',
         description: 'Essential CAD drawings for straightforward residential projects',
-        price: 3500,
-        timeframe: '3-4 weeks'
+        price: 845,
+        timeframe: '3-4 days'
       },
       {
         name: 'Comprehensive CAD Design',
         description: 'Detailed technical drawings for complex residential landscapes',
-        price: 6500,
-        timeframe: '6-8 weeks'
+        price: 1245,
+        timeframe: '6-8 days'
       },
       {
         name: 'Commercial CAD Documentation',
         description: 'Full commercial-grade documentation for large projects and developments',
-        price: 12000,
-        timeframe: '8-12 weeks'
+        price: 2445,
+        timeframe: '10-12 days'
       }
     ],
     addons: [
       {
         name: '3D Modeling',
         description: 'Digital 3D visualization of designed landscape',
-        price: 2500
+        price: 245
       },
       {
         name: 'Construction Supervision',
         description: 'Technical oversight during installation phase',
-        price: 3800
+        price: 2445
       }
     ],
     commonUses: [
@@ -756,32 +756,32 @@ export const services = [
       {
         name: 'Courtyard Entertainment',
         description: 'Intimate outdoor entertaining space up to 40sqm',
-        price: 25000,
-        timeframe: '6-8 weeks'
+        price: 2445,
+        timeframe: '6-8 days'
       },
       {
         name: 'Premium Outdoor Living',
         description: 'Comprehensive entertainment area with multiple features up to 80sqm',
-        price: 45000,
-        timeframe: '8-12 weeks'
+        price: 3445,
+        timeframe: '8-12 days'
       },
       {
         name: 'Luxury Estate Entertainment',
         description: 'Extensive outdoor living environment with premium features',
-        price: 85000,
-        timeframe: '12-16 weeks'
+        price: 4445,
+        timeframe: '12-16 days'
       }
     ],
     addons: [
       {
         name: 'Outdoor Kitchen',
         description: 'Custom designed outdoor cooking facilities',
-        price: 18000
+        price: 2445
       },
       {
         name: 'Fire Feature',
         description: 'Integrated fire pit or fireplace installation',
-        price: 8500
+        price: 1245
       }
     ],
     commonUses: [
