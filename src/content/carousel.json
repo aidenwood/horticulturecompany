@@ -1,7 +1,7 @@
 {
   "slides": [
     {
-      "title": "Expert Native Ecosystem Restoration",
+      "title": "Expert Native Ecosystem Maintanence",
       "description": "Specialized restoration of Gold Coast's natural ecosystems using indigenous plants and sustainable techniques. Our ecological experts bring degraded landscapes back to life while enhancing biodiversity and resilience.",
       "primaryLink": {
         "text": "Restoration Services",
@@ -61,11 +61,11 @@
       }
     },
     {
-      "title": "Coastal Restoration Projects",
+      "title": "Coastal Native Landscaping",
       "description": "Specialized in rehabilitating and preserving Gold Coast's sensitive coastal environments. Our coastal projects employ innovative techniques to stabilize dunes, restore native vegetation, and create resilient shoreline ecosystems.",
       "primaryLink": {
         "text": "Coastal Services",
-        "url": "/services/coastal-restoration"
+        "url": "/services/coastal-native-landscaping"
       },
       "secondaryLink": {
         "text": "Contact",

@@ -1,36 +1,36 @@
 export const services = [
   {
-    id: 'ecosystem-restoration',
+    id: 'ecosystem-maintanence',
     step: '01',
-    name: 'Ecosystem Restoration',
-    serviceimg: '/img/ecosystem-restoration.jpg',
-    img: '/img/ecosystem-restoration.jpg',
-    alt: 'Team of restoration ecologists working on rehabilitating native coastal dunes',
+    name: 'Ecosystem Maintanence',
+    serviceimg: '/img/ecosystem-maintanence.jpg',
+    img: '/img/ecosystem-maintanence.jpg',
+    alt: 'Team of maintanence ecologists working on rehabilitating native coastal dunes',
     description: 'Comprehensive ecosystem rehabilitation services restoring degraded landscapes to thriving native habitats',
-    link: '/services/ecosystem-restoration',
+    link: '/services/ecosystem-maintanence',
     serviceDetails: {
-      process: 'Initial site assessment → Ecological analysis → Restoration plan → Implementation → Monitoring',
-      deliverables: 'Detailed restoration plan, plant species list, maintenance schedule, monitoring reports',
-      team: 'Senior ecologist + restoration specialists + planting crew',
+      process: 'Initial site assessment → Ecological analysis → maintanence plan → Implementation → Monitoring',
+      deliverables: 'Detailed maintanence plan, plant species list, maintenance schedule, monitoring reports',
+      team: 'Senior ecologist + maintanence specialists + planting crew',
       revisionRounds: 3,
       includes: 'Site preparation and 12-month establishment care'
     },
     packages: [
       {
-        name: 'Small-Scale Restoration',
-        description: 'Restoration projects up to 500sqm (residential or small commercial sites)',
+        name: 'Small-Scale Maintanence',
+        description: 'maintanence projects up to 500sqm (residential or small commercial sites)',
         price: 245,
         timeframe: '2-3 hours'
       },
       {
-        name: 'Medium-Scale Restoration',
-        description: 'Restoration projects from 500-2000sqm with diverse habitat requirements',
+        name: 'Medium-Scale Maintanence',
+        description: 'maintanence projects from 500-2000sqm with diverse habitat requirements',
         price: 445,
         timeframe: '4-6 hours'
       },
       {
-        name: 'Large-Scale Restoration',
-        description: 'Comprehensive restoration for sites over 2000sqm with complex ecological requirements',
+        name: 'Large-Scale Maintanence',
+        description: 'Comprehensive maintanence for sites over 2000sqm with complex ecological requirements',
         price: 895,
         timeframe: '7-12 hours'
       }
@@ -534,140 +534,6 @@ export const services = [
       }
     ],
     relatedServices: ['landscape-design', 'outdoor-kitchens', 'structural-elements']
-  },
-  {
-    id: 'bush-regeneration',
-    step: '09',
-    name: 'Bush Regeneration',
-    serviceimg: '/img/softscape-design.jpg',
-    img: '/img/softscape-design.jpg',
-    alt: 'Team removing invasive species and restoring native vegetation in bushland area',
-    description: 'Specialized regeneration of degraded bushland through weed management and assisted natural regeneration',
-    link: '/services/bush-regeneration',
-    serviceDetails: {
-      process: 'Site assessment → Weed mapping → Strategic planning → Implementation → Monitoring',
-      deliverables: 'Regeneration plan, weed management strategy, progress reports',
-      team: 'Bush regeneration specialists + field crew',
-      revisionRounds: 2,
-      includes: 'Photo monitoring and ecological assessment'
-    },
-    packages: [
-      {
-        name: 'Initial Restoration',
-        description: 'Primary weed control and initial regeneration for areas up to 1000sqm',
-        price: 445,
-        timeframe: '3-4 hours'
-      },
-      {
-        name: 'Comprehensive Regeneration',
-        description: 'Intensive regeneration program for areas up to 5000sqm',
-        price: 1245,
-        timeframe: '10-12 hours'
-      },
-      {
-        name: 'Long-term Rehabilitation',
-        description: 'Extended regeneration program for large bushland areas',
-        price: 2445,
-        timeframe: '24-26 hours'
-      }
-    ],
-    addons: [
-      {
-        name: 'Supplementary Planting',
-        description: 'Strategic planting of key native species to enhance regeneration',
-        price: 845
-      },
-      {
-        name: 'Fire Management Integration',
-        description: 'Incorporating fire management strategies into regeneration',
-        price: 2445
-      }
-    ],
-    commonUses: [
-      'Degraded bushland',
-      'Property boundaries',
-      'Creek lines',
-      'Conservation areas',
-      'Lifestyle blocks'
-    ],
-    faqs: [
-      {
-        question: 'How long until the bushland recovers?',
-        answer: 'Initial recovery is visible within 6-12 months, with substantial regeneration in 3-5 years'
-      },
-      {
-        question: 'Do you use herbicides?',
-        answer: 'We minimize chemical use through targeted application on invasive species only when necessary'
-      }
-    ],
-    relatedServices: ['ecosystem-restoration', 'weed-management', 'fire-management']
-  },
-  {
-    id: 'wetland-conservation',
-    step: '10',
-    name: 'Wetland Conservation',
-    serviceimg: '/img/softscape-design.jpg',
-    img: '/img/softscape-design.jpg',
-    alt: 'Ecologists restoring native wetland with appropriate aquatic and marginal species',
-    description: 'Expert design, restoration, and management of natural and constructed wetland systems',
-    link: '/services/wetland-conservation',
-    serviceDetails: {
-      process: 'Hydrological assessment → Design → Construction/Restoration → Planting → Monitoring',
-      deliverables: 'Wetland design, plant species list, water quality parameters, monitoring protocol',
-      team: 'Wetland ecologist + water management specialists + installation team',
-      revisionRounds: 2,
-      includes: 'Water quality testing and aquatic ecosystem assessment'
-    },
-    packages: [
-      {
-        name: 'Small Wetland Creation',
-        description: 'Design and installation of small wetland features up to 100sqm',
-        price: 1445,
-        timeframe: '2-3 days'
-      },
-      {
-        name: 'Wetland Restoration',
-        description: 'Rehabilitation of degraded wetlands up to 500sqm',
-        price: 2445,
-        timeframe: '5-6 days'
-      },
-      {
-        name: 'Comprehensive Wetland System',
-        description: 'Complete wetland design and implementation for large properties',
-        price: 3445,
-        timeframe: '7-8 days'
-      }
-    ],
-    addons: [
-      {
-        name: 'Water Quality Management',
-        description: 'Ongoing water testing and remediation program',
-        price: 1445
-      },
-      {
-        name: 'Wildlife Habitat Enhancement',
-        description: 'Specialized features for target wildlife species',
-        price: 1445
-      }
-    ],
-    commonUses: [
-      'Natural wetland restoration',
-      'Stormwater management',
-      'Water purification',
-      'Wildlife habitat creation',
-      'Flood mitigation'
-    ],
-    faqs: [
-      {
-        question: 'Do wetlands attract mosquitoes?',
-        answer: 'Properly designed wetlands support predators that control mosquito populations'
-      },
-      {
-        question: 'How much maintenance do wetlands require?',
-        answer: 'After establishment, healthy wetlands require quarterly monitoring and minimal intervention'
-      }
-    ],
-    relatedServices: ['ecosystem-restoration', 'water-management', 'habitat-creation']
   },
   {
     id: 'cad-landscape-design',
