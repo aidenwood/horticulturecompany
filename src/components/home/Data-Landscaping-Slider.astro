@@ -228,7 +228,7 @@ const formatPrice = (price) => {
                 {service.packages && (
                   <div class="mb-2">
                     <h3 class="text-ms font-semibold mb-2">Available Packages</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 text-sm">
+                    <div class="grid grid-cols-1 text-sm">
                       {service.packages.slice(0, 3).map((pkg) => (
                         <div class="bg-secondary-300/30 rounded-md mr-2 p-2 mb-1">
                           <p class="text-md md:text-sm font-medium">{pkg.name}</p>

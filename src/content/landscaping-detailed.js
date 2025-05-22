@@ -67,6 +67,73 @@ export const services = [
     relatedServices: ['native-planting-consultation', 'horticultural-maintenance', 'seasonal-fertilising-program']
   },
   {
+    id: 'turf-installation',
+    step: '08',
+    name: 'Turf Installation',
+    serviceimg: '/img/turf-install.webp',
+    img: '/img/turf-install.webp',
+    alt: 'Professional installation of native hedging and premium turf areas',
+    description: 'Specialist installation of hedging, screening plants, and premium turf solutions for residential properties',
+    link: '/services/hedging-turf-installation',
+    serviceDetails: {
+      process: 'Site assessment → Species selection → Soil preparation → Installation → Establishment care',
+      deliverables: 'Planting specifications, installation schedule, care instructions, warranty documentation',
+      team: 'Turf specialist + hedging expert + installation crew',
+      revisionRounds: 2,
+      includes: 'Initial establishment care and 6-month establishment warranty'
+    },
+    packages: [
+      {
+        name: 'Hedging Installation',
+        description: 'Professional hedging installation up to 50 linear meters',
+        price: 245,
+        timeframe: '1-2 days'
+      },
+      {
+        name: 'Turf & Hedging Package',
+        description: 'Combined turf and hedging installation for residential properties',
+        price: 445,
+        timeframe: '2-3 days'
+      },
+      {
+        name: 'Complete Screening Solution',
+        description: 'Comprehensive privacy screening and turf installation for large properties',
+        price: 745,
+        timeframe: '3-4 days'
+      }
+    ],
+    addons: [
+      {
+        name: 'Irrigation Integration',
+        description: 'Automated irrigation system for new installations',
+        price: 395
+      },
+      {
+        name: 'Soil Enhancement Program',
+        description: 'Premium soil preparation and organic conditioning',
+        price: 295
+      }
+    ],
+    commonUses: [
+      'Privacy screening and boundary definition',
+      'Formal garden structure and organization',
+      'Lawn replacement with premium turf varieties',
+      'Property enhancement and value addition',
+      'Functional landscape zoning'
+    ],
+    faqs: [
+      {
+        question: 'What types of turf do you install?',
+        answer: 'We specialize in premium native and adapted turf varieties suitable for local climate conditions'
+      },
+      {
+        question: 'How quickly do hedges establish?',
+        answer: 'Most hedging plants establish within 6-12 months, with full screening achieved in 2-3 years'
+      }
+    ],
+    relatedServices: ['landscape-design', 'irrigation-services', 'horticultural-maintenance']
+  },
+  {
     id: 'seasonal-fertilising-program',
     step: '02',
     name: 'Seasonal Fertilising Program',
@@ -132,73 +199,6 @@ export const services = [
       }
     ],
     relatedServices: ['horticultural-maintenance', 'soil-remediation', 'composting-systems']
-  },
-  {
-    id: 'tree-pruning-management',
-    step: '03',
-    name: 'Tree Pruning & Management',
-    serviceimg: '/img/pruning.jpg',
-    img: '/img/pruning.jpg',
-    alt: 'Arborist safely pruning large native tree with professional equipment',
-    description: 'Expert tree pruning and management services focusing on tree health, safety, and natural form',
-    link: '/services/tree-pruning-management',
-    serviceDetails: {
-      process: 'Tree assessment → Pruning plan → Safety protocol → Implementation → Debris management',
-      deliverables: 'Arborist report, pruning specifications, before/after documentation',
-      team: 'Certified arborist + climbing specialists + ground crew',
-      revisionRounds: 1,
-      includes: 'Complete cleanup and responsible green waste recycling'
-    },
-    packages: [
-      {
-        name: 'Small Tree Pruning Service',
-        description: 'Professional pruning for individual specimen trees',
-        price: 345,
-        timeframe: '4-6 hours'
-      },
-      {
-        name: 'Medium Tree Pruning Service',
-        description: 'Tree management for properties with 5-10 trees',
-        price: 545,
-        timeframe: '7-12 hours'
-      },
-      {
-        name: 'Large Tree Pruning Service',
-        description: 'Comprehensive pruning and tree care for properties with 10+ trees',
-        price: 945,
-        timeframe: '2-3 days'
-      }
-    ],
-    addons: [
-      {
-        name: 'Tree Health Treatment',
-        description: 'Pest and disease diagnosis and organic treatment',
-        price: 195
-      },
-      {
-        name: 'Canopy Thinning',
-        description: 'Specialized thinning for wind and light penetration',
-        price: 445
-      }
-    ],
-    commonUses: [
-      'Residential tree health and safety',
-      'Vista enhancement and view corridor creation',
-      'Storm damage prevention and repair',
-      'Heritage tree preservation and care',
-      'Mature landscape rejuvenation'
-    ],
-    faqs: [
-      {
-        question: 'Are your arborists certified?',
-        answer: 'All our arborists hold AQF Level 5 certification and current industry credentials'
-      },
-      {
-        question: 'Do you handle council permits?',
-        answer: 'Yes, we manage the entire permit application process for protected trees'
-      }
-    ],
-    relatedServices: ['tree-health-assessment', 'storm-preparation', 'habitat-creation']
   },
   {
     id: 'horticultural-maintenance',
@@ -469,71 +469,71 @@ export const services = [
     relatedServices: ['landscape-design', 'seasonal-fertilising-program', 'irrigation-services']
   },
   {
-    id: 'hedging-turf-installation',
-    step: '08',
-    name: 'Hedging & Turf Installation',
-    serviceimg: '/img/hedging-turf.jpg',
-    img: '/img/hedging-turf.jpg',
-    alt: 'Professional installation of native hedging and premium turf areas',
-    description: 'Specialist installation of hedging, screening plants, and premium turf solutions for residential properties',
-    link: '/services/hedging-turf-installation',
+    id: 'tree-pruning-management',
+    step: '03',
+    name: 'Tree Pruning & Management',
+    serviceimg: '/img/pruning.jpg',
+    img: '/img/pruning.jpg',
+    alt: 'Arborist safely pruning large native tree with professional equipment',
+    description: 'Expert tree pruning and management services focusing on tree health, safety, and natural form',
+    link: '/services/tree-pruning-management',
     serviceDetails: {
-      process: 'Site assessment → Species selection → Soil preparation → Installation → Establishment care',
-      deliverables: 'Planting specifications, installation schedule, care instructions, warranty documentation',
-      team: 'Turf specialist + hedging expert + installation crew',
-      revisionRounds: 2,
-      includes: 'Initial establishment care and 6-month establishment warranty'
+      process: 'Tree assessment → Pruning plan → Safety protocol → Implementation → Debris management',
+      deliverables: 'Arborist report, pruning specifications, before/after documentation',
+      team: 'Certified arborist + climbing specialists + ground crew',
+      revisionRounds: 1,
+      includes: 'Complete cleanup and responsible green waste recycling'
     },
     packages: [
       {
-        name: 'Hedging Installation',
-        description: 'Professional hedging installation up to 50 linear meters',
-        price: 245,
-        timeframe: '1-2 days'
+        name: 'Small Tree Pruning Service',
+        description: 'Professional pruning for individual specimen trees',
+        price: 345,
+        timeframe: '4-6 hours'
       },
       {
-        name: 'Turf & Hedging Package',
-        description: 'Combined turf and hedging installation for residential properties',
-        price: 445,
+        name: 'Medium Tree Pruning Service',
+        description: 'Tree management for properties with 5-10 trees',
+        price: 545,
+        timeframe: '7-12 hours'
+      },
+      {
+        name: 'Large Tree Pruning Service',
+        description: 'Comprehensive pruning and tree care for properties with 10+ trees',
+        price: 945,
         timeframe: '2-3 days'
-      },
-      {
-        name: 'Complete Screening Solution',
-        description: 'Comprehensive privacy screening and turf installation for large properties',
-        price: 745,
-        timeframe: '3-4 days'
       }
     ],
     addons: [
       {
-        name: 'Irrigation Integration',
-        description: 'Automated irrigation system for new installations',
-        price: 395
+        name: 'Tree Health Treatment',
+        description: 'Pest and disease diagnosis and organic treatment',
+        price: 195
       },
       {
-        name: 'Soil Enhancement Program',
-        description: 'Premium soil preparation and organic conditioning',
-        price: 295
+        name: 'Canopy Thinning',
+        description: 'Specialized thinning for wind and light penetration',
+        price: 445
       }
     ],
     commonUses: [
-      'Privacy screening and boundary definition',
-      'Formal garden structure and organization',
-      'Lawn replacement with premium turf varieties',
-      'Property enhancement and value addition',
-      'Functional landscape zoning'
+      'Residential tree health and safety',
+      'Vista enhancement and view corridor creation',
+      'Storm damage prevention and repair',
+      'Heritage tree preservation and care',
+      'Mature landscape rejuvenation'
     ],
     faqs: [
       {
-        question: 'What types of turf do you install?',
-        answer: 'We specialize in premium native and adapted turf varieties suitable for local climate conditions'
+        question: 'Are your arborists certified?',
+        answer: 'All our arborists hold AQF Level 5 certification and current industry credentials'
       },
       {
-        question: 'How quickly do hedges establish?',
-        answer: 'Most hedging plants establish within 6-12 months, with full screening achieved in 2-3 years'
+        question: 'Do you handle council permits?',
+        answer: 'Yes, we manage the entire permit application process for protected trees'
       }
     ],
-    relatedServices: ['landscape-design', 'irrigation-services', 'horticultural-maintenance']
+    relatedServices: ['tree-health-assessment', 'storm-preparation', 'habitat-creation']
   }
 ];
 
