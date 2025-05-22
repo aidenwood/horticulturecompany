@@ -1,0 +1,23 @@
+<style>
+  #contain { max-width: 1980px !important; }
+</style>
+
+<section class="py-8 lg:py-16">
+  <div id="contain" class="mx-auto my-8">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 px-4 sm:px-6 lg:px-8">
+      <div class="border-2 bg-secondary-100 dark:bg-secondary-950 border-primary-900/10 dark:border-primary-300/10 py-8 px-4 sm:px-6 lg:px-8 flex items-start rounded-3xl">
+        <ul class="text-base leading-6 list-disc">
+          <h4 class="text-3xl text-secondary-950 dark:text-white font-semibold mb-2">Details</h4>
+          <slot name="details">Details</slot>
+        </ul>
+      </div>
+    
+      <div class="border-2 bg-secondary-100 dark:bg-secondary-950 border-primary-900/10 dark:border-primary-300/10 py-8 px-4 sm:px-6 lg:px-8 flex items-start rounded-3xl">
+        <ul class="text-base leading-6 list-disc">
+          <h4 class="text-3xl text-secondary-950 dark:text-white font-semibold mb-2">Specifications</h4>
+          <slot name="specs">Specs</slot>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,7 @@
 ---
 
 /* Import the Services JS Data file */
-import { products } from '../../content/hardscapes-detailed.js';
+import { services } from '../../content/hardscapes-detailed.js';
 
 
 ---
@@ -134,22 +134,22 @@ import { products } from '../../content/hardscapes-detailed.js';
         
         <div class="flex flex-col justify-end gap-4">
           <h1 class="text-base lg:text-lg uppercase font-thin tracking-widest">
-            Hire Event Lighting
+            Book Event Services
           </h2>
           <h2 class="text-4xl md:text-5xl font-medium tracking-tight">
-            Products
+            Services
           </h2>
          
         </div>
         <div id="slider" class="carousel carousel-main pt-8" data-flickity='{ "pageDots": false }'>
           {
-            products.map((service) => (
+            services.map((service) => (
               <div class="carousel-cell bg-secondary-950/90 border-secondary-200 rounded-2xl border-2 gap-4 md:gap-8 flex flex-col md:flex-row items-start md:items-center duration-200 py-8 lg:py-6 px-4 lg:px-6">
                 <div class="w-full md:w-2/5 min-h-full">
                   <div id="imageCover" class="aspect-ratio-box relative h-44 md:h-80 overflow-hidden rounded-xl">
                     <img
                       class="w-full h-full object-cover absolute inset-0 product-image"
-                      src={service.productimg}
+                      src={service.serviceimg}
                       alt={service.alt}
                       data-background-image={service.img}
                     />
@@ -186,17 +186,17 @@ import { products } from '../../content/hardscapes-detailed.js';
           
           <div class="carousel carousel-nav px-4 lg:px-6" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "adaptiveHeight": true, "freeScroll": true, "prevNextButtons": false }'>
             {
-              products.map((service) => (
+              services.map((service) => (
                 
                 <div class="seccarousel-cell shadow-md bg-secondary-950/90 border-secondary-200 hover:bg-secondary-600/60 hover:dark:bg-primary-700/20 duration-200 rounded-md border-2 xl:flex lg:flex-col md:items-center gap-2 md:gap-6 p-2 py-3 md:p-4 lg:p-6">
                   <div class="w-full mx-auto flex flex-row items-center justify-center">
                     
-                    <div id="imageCover" class="hidden lg:block w-full aspect-ratio-box relative md:h-32 overflow-hidden rounded-xl">
+                    <div id="imageCover" class="hidden xl:block w-full aspect-ratio-box relative md:h-32 overflow-hidden rounded-xl">
                       <img
                       class="w-full h-full object-cover absolute inset-0 product-image"
                       width="640"
                       height="640"
-                      src={service.productimg}
+                      src={service.serviceimg}
                       alt={service.alt}
                     />
                     </div>

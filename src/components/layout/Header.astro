@@ -43,7 +43,7 @@ const links = [
 <header id="navbar"
   x-data="{ open: false }"
   class="transition sticky top-0 z-50 backdrop-blur-xl "
-  :class="{ 'bg-secondary-950/80 dark:bg-secondary-900/50': open, 'bg-secondary-950/50': !(open) }"
+  :class="{ 'bg-secondary-950/80 dark:bg-secondary-900/50': open, 'bg-secondary-950/90': !(open) }"
 >
   <div id="navContainer"
     class="mx-auto w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 py-1"
@@ -57,8 +57,8 @@ const links = [
        <!-- Logo image file and accessibility for logo -->
         <span class="sr-only">The Horticulture Company - Landscaping and Garden Restoration Gold Coast</span>
         <img id="logo"
-          class="h-14 sm:h-16 xl:h-24 w-auto"
-          :src="$store.theme.isDark ? '/gc-horticulture-dark.svg' : '/gc-horticulture.svg'"
+          class="h-12 sm:h-14 lg:h-16 xl:h-20 w-auto"
+          :src="$store.theme.isDark ? '/gc-horticulture-dark.svg' : '/gc-horticulture-dark.svg'"
           alt="The Horticulture Company Logo - Gold Coast Landscaping and Native Restorations"
         />
       </a>
@@ -75,7 +75,7 @@ const links = [
       </div>
       -->
       <div>
-        <button class="hidden xs:block snipcart-checkout text-white mr-2 bg-primary-600 border-2 border-primary-600 dark:hover:border-primary-200 dark:border-2 rounded-full px-3 md:px-4 py-2 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+        <button class="hidden sm:block snipcart-checkout text-white mr-2 bg-primary-600 border-2 border-primary-600 dark:hover:border-primary-200 dark:border-2 rounded-full px-3 md:px-4 py-2 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
           Cart 
         </button>
       </div>

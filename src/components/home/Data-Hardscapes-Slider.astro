@@ -1,8 +1,8 @@
 ---
 /* Import the Services JS Data file */
-import { products } from '../../content/hardscapes-detailed.js';
+import { services } from '../../content/hardscapes-detailed.js'; // Changed import
 
-// Helper function to format price
+// Helper function to format price remains the same
 const formatPrice = (price) => {
   if (typeof price === 'string' && price.startsWith('From')) {
     return price;
@@ -17,8 +17,6 @@ const formatPrice = (price) => {
 
 <!-- JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-
 
 <style>
   .main-carousel { width: 100%; }
@@ -104,6 +102,7 @@ const formatPrice = (price) => {
     display: inline-block;
     padding: 0.25rem 0.5rem;
     border-radius: 9999px;
+    font-size: 0.75rem;
     font-weight: 500;
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
@@ -112,6 +111,7 @@ const formatPrice = (price) => {
 
   
   .badge-primary {
+    background-color: rgba(var(--color-primary-500), 0.1);
     color: rgb(var(--color-primary-700));
   }
   /* Title tag styles */
@@ -196,73 +196,65 @@ const formatPrice = (price) => {
     padding-top: 1rem;
   }
 </style>
-
 <section class="my-24">
   <div id="contain" class="mx-auto w-full">
     <div id="border" class="">
       <div class="flex flex-col gap-4 px-4 lg:px-8">
         <h3 class="text-base lg:text-lg uppercase font-thin tracking-widest">
-          High-Quality Event Lighting Hire
+          High-Quality Garden Hardscapes & Landscape Builds
         </h3>
         <h4 class="text-3xl sm:text-4xl font-medium tracking-tight">
-          Our Products
+          Landscape Construction Services
         </h4>
         <p class="max-w-6xl text-lg xs:text-xl">
-          Offering the most high-quality event lighting products available, all hires include delivery and installation. By professional event technicials and qualified riggers to ensure the safety of your event. 
+          Comprehensive event production services including technical design, AV integration, and full production management by certified professionals.
         </p>
       </div>
-      <div class="fullscreen-carousel gap-6 px-4 lg:px-8 py-4" data-flickity='{ "adaptiveHeight": true, "cellAlign": "center", "contain": true, "pageDots": false, "prevNextButtons": false, "lazyLoad": true, "imagesLoaded": true, "adaptiveHeight": true }'>
+      <div class="fullscreen-carousel gap-6 px-4 lg:px-8 py-4" data-flickity='{ "cellAlign": "left", "freeScroll": true, "wrapAround": true, "contain": true, "pageDots": false, "prevNextButtons": false, "lazyLoad": true, "imagesLoaded": true, "adaptiveHeight": true }'>
         {
-          products.map((service) => (
+          services.map((service) => (
             <div class="carousel-cell product-card rounded-3xl text-secondary-950 dark:text-secondary-100 bg-secondary-400/10 hover:bg-secondary-600/20 dark:bg-secondary-800/40 dark:hover:bg-secondary-600/50 border-primary-900/10 dark:border-primary-300/10 duration-200 border overflow-hidden">
               <div class="relative">
                 <div class="image-cover">
                   <img src={service.img} alt={service.alt} />
-                  {service.pricing && service.pricing[0] && (
-                    <div class="price-tag">From {formatPrice(service.pricing[0].price)}</div>
+                  {service.packages && service.packages[0] && (
+                    <div class="price-tag">From {formatPrice(service.packages[0].price)}</div>
                   )}
-                <h2 class="title-tag text-md lg:text-lg font-medium mb-2">{service.name}</h2>
-
+                  <h2 class="title-tag text-xl lg:text-xl font-medium mb-2">{service.name}</h2>
                 </div>
-                
               </div>
               
               <div class="card-content px-4 md:px-6">
-                <p class="text-sm md:text-md font-thin mb-4">{service.description}</p>
-                {service.pricing && (
+                {service.packages && (
                   <div class="mb-2">
                     <h3 class="text-ms font-semibold mb-2">Available Packages</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 text-sm">
-                      {service.pricing.slice(0, 2).map((pkg) => (
+                    <div class="grid grid-cols-1 text-sm">
+                      {service.packages.slice(0, 3).map((pkg) => (
                         <div class="bg-secondary-300/30 rounded-md mr-2 p-2 mb-1">
                           <p class="text-md md:text-sm font-medium">{pkg.name}</p>
                           <p class="text-lg md:text-xl lg:text-2xl font-thin">{formatPrice(pkg.price)}</p>
-                          </div>
+                        </div>
                       ))}
-                      {service.pricing.length > 2 && (
-                        <div class="text-md">+{service.pricing.length - 2} more options</div>
+                      {service.packages.length > 3 && (
+                        <div class="text-md">+{service.packages.length - 3} more options</div>
                       )}
                     </div>
                   </div>
                 )}
 
-              
-                
-                {service.popularApplications && (
+                {service.commonUses && (
                   <div class="">
                     <h3 class="text-md font-semibold mb-2">Popular For</h3>
                     <div class="flex flex-wrap">
-                      {service.popularApplications.slice(0, 5).map((app) => (
-                        <span class="badge badge-primary text-xs bg-secondary-300/30 text-secondary-950 rounded-md">{app}</span>
+                      {service.commonUses.slice(0, 4).map((use) => (
+                        <span class="badge badge-primary text-xs bg-secondary-300/30 text-secondary-950 rounded-md">{use}</span>
                       ))}
                     </div>
                   </div>
                 )}
                 
-                
-                
                 <div class="card-footer">
-                  <a href={service.link} class="text-white bg-primary-600  inline-flex items-center justify-center rounded-full mb-4 px-4 xs:px-5 py-3 text-sm xl:text-base font-semibold">
+                  <a href={service.link} class="text-white bg-primary-600 inline-flex items-center justify-center rounded-full mb-4 px-4 xs:px-5 py-3 text-sm xl:text-base font-semibold">
                     View Details
                   </a>
                 </div>

@@ -19,7 +19,9 @@ const backgroundUrls = [
   // Add all your image URLs here for Slot-Slider
 ];
 
-import DataServicesSlider from '../components/home/Data-Services-Slider.astro';
+import DataHardscapesSlider from '../components/home/Data-Hardscapes-Slider.astro';
+
+import DataLandscapingSlider from '../components/home/Data-Landscaping-Slider.astro';
 
 import Clients from '../components/home/Section-Clients.astro';
 
@@ -41,10 +43,12 @@ import CtaContactServices from '../components/home/Cta-ContactServices.astro';
   
 
    <HeroSlider backgroundUrls={backgroundUrls} />
-    <DataServicesSlider />
-  <!-- --> <Clients />
-  <!-- --> 
-  <!-- --> <BlogPosts /> 
+    
+   <DataHardscapesSlider />
+
+   <DataLandscapingSlider />
+
+   <BlogPosts /> 
 
   <CtaContactShort />
 
