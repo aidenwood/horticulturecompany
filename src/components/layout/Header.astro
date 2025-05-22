@@ -75,14 +75,14 @@ const links = [
       </div>
       -->
       <div>
-        <button class="hidden sm:block snipcart-checkout text-white mr-2 bg-primary-600 border-2 border-primary-600 dark:hover:border-primary-200 dark:border-2 rounded-full px-3 md:px-4 py-2 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+        <button class="hidden sm:block snipcart-checkout mr-2 text-white bg-secondary-600 hover:bg-secondary-700 rounded-full px-3 md:px-4 py-2 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
           Cart 
         </button>
       </div>
       <div class="">
         <a  id="bookBtn"
           href="/contact"
-          class="block mr-2 text-white bg-primary-600 border-1 border-primary-600 dark:hover:border-primary-200 dark:border-2 tracking-tighter md:tracking-normal rounded-full px-4 py-2.5 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="block mr-2 text-white bg-secondary-600 hover:bg-secondary-700 tracking-tighter md:tracking-normal rounded-full px-4 py-2.5 md:py-3 text-sm xl:text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Contact
       </a>
@@ -93,7 +93,7 @@ const links = [
       <!-- Toggle theme mode -->
       <button
         type="button"
-        class="text-white bg-primary-600 mr-2 border-2 border-primary-600 dark:hover:border-primary-200 dark:border-2 inline-flex h-10 md:h-12 xl:h-14 w-10 md:w-12 xl:w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
+        class="text-white mr-2 bg-secondary-600 hover:bg-secondary-700 inline-flex h-10 md:h-12 xl:h-14 w-10 md:w-12 xl:w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
         x-data
         @click="$store.theme.toggle()"
       >
@@ -130,7 +130,7 @@ const links = [
       <!-- Toggle menu -->
       <button
         type="button"
-        class="text-white bg-primary-600 hover:scale-115 border-1 border-primary-600 dark:hover:border-primary-200 dark:border-2 inline-flex h-10 md:h-12 xl:h-14 w-10 md:w-12 xl:w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
+        class="text-white bg-secondary-600 hover:bg-secondary-700 inline-flex h-10 md:h-12 xl:h-14 w-10 md:w-12 xl:w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
         @click="open = !open"
         @mousedown="if (open) $event.preventDefault()"
         aria-controls="website-menu"

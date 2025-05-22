@@ -1,11 +1,11 @@
 {
   "slides": [
     {
-      "title": "Expert Native Ecosystem Maintanence",
-      "description": "Specialized restoration of Gold Coast's natural ecosystems using indigenous plants and sustainable techniques. Our ecological experts bring degraded landscapes back to life while enhancing biodiversity and resilience.",
+      "title": "Construction & Horticulture Experts",
+      "description": "Transform your Gold Coast property with premium landscape construction services featuring expertly crafted hardscapes, water features, and garden installations. Our skilled craftsmen deliver exceptional outdoor living spaces using high-quality materials and innovative design techniques.",
       "primaryLink": {
-        "text": "Restoration Services",
-        "url": "/services/ecosystem-restoration"
+        "text": "Landscape Construction",
+        "url": "/landscape-construction/"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -13,11 +13,11 @@
       }
     },
     {
-      "title": "Premium Horticultural Maintenance",
-      "description": "Premium horticultural maintenance plans ensuring thriving spaces all year round. Our specialized teams implement seasonal care programs using sustainable practices for both residential and commercial properties.",
+      "title": "Residential Landscape Construction",
+      "description": "Create stunning outdoor living spaces with our comprehensive residential construction services including patios, retaining walls, pergolas, and water features. Our experienced construction teams combine premium materials with expert craftsmanship to deliver lasting beauty and functionality.",
       "primaryLink": {
-        "text": "Maintenance Plans",
-        "url": "/services/maintenance"
+        "text": "Residential Construction",
+        "url": "/services/residential-construction"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -25,11 +25,23 @@
       }
     },
     {
-      "title": "Sustainable Landscape Design",
+      "title": "Outdoor Area Construction",
+      "description": "Transform your property with expert outdoor landscape construction services, specializing in custom patios, retaining walls, garden design, and sustainable hardscaping solutions. Enhance curb appeal and outdoor living with professional landscaping that blends beauty, durability, and functionality for lasting value.",
+      "primaryLink": {
+        "text": "Landscape Construction",
+        "url": "/landscape-construction/"
+      },
+      "secondaryLink": {
+        "text": "Contact",
+        "url": "/contact"
+      }
+    },
+    {
+      "title": "Eye-Catching Landscape Design",
       "description": "Transform your property with sustainable landscape designs that reflect the Gold Coast's natural beauty. Our designs integrate native plants, water-wise features, and eco-friendly materials for stunning outdoor spaces.",
       "primaryLink": {
-        "text": "Landscape Design",
-        "url": "/services/landscape-design"
+        "text": "Landscape Maintenance",
+        "url": "/landscape-services/"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -37,11 +49,11 @@
       }
     },
     {
-      "title": "Commercial Landscaping Experts",
+      "title": "Commercial Landscape Maintenance",
       "description": "Enhance your business property with professional landscaping that creates a lasting impression. Our commercial projects balance aesthetic appeal with environmental responsibility to create spaces that benefit both people and nature.",
       "primaryLink": {
-        "text": "Commercial Services",
-        "url": "/services/commercial-landscaping"
+        "text": "Landscape Maintenance",
+        "url": "/landscape-services/"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -52,32 +64,21 @@
       "title": "Native Garden Installations",
       "description": "Showcase the beauty of Australian flora with custom native garden installations designed specifically for Gold Coast conditions. Our gardens create vital habitat for local wildlife while reducing water consumption and maintenance needs.",
       "primaryLink": {
-        "text": "Native Gardens",
-        "url": "/services/native-gardens"
+        "text": "Landscape Construction",
+        "url": "/landscape-construction/"
       },
       "secondaryLink": {
         "text": "Contact",
         "url": "/contact"
       }
     },
-    {
-      "title": "Coastal Native Landscaping",
-      "description": "Specialized in rehabilitating and preserving Gold Coast's sensitive coastal environments. Our coastal projects employ innovative techniques to stabilize dunes, restore native vegetation, and create resilient shoreline ecosystems.",
-      "primaryLink": {
-        "text": "Coastal Services",
-        "url": "/services/coastal-native-landscaping"
-      },
-      "secondaryLink": {
-        "text": "Contact",
-        "url": "/contact"
-      }
-    },
+    
     {
       "title": "Seasonal Garden Maintenance",
       "description": "Keep your garden thriving through every season with our comprehensive maintenance programs tailored to Gold Coast's unique climate. Our horticultural experts provide scheduled care including pruning, fertilizing, and pest management using organic methods.",
       "primaryLink": {
-        "text": "Seasonal Care",
-        "url": "/services/seasonal-maintenance"
+        "text": "Landscape Construction",
+        "url": "/landscape-construction/"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -85,11 +86,11 @@
       }
     },
     {
-      "title": "Bush Regeneration Services",
-      "description": "Restore degraded bushland to its natural state with our specialized regeneration services. We employ ecological techniques to remove invasive species, encourage natural regeneration, and reintroduce native plants for sustainable recovery.",
+      "title": "Plant-Specific Maintenance Programs",
+      "description": "Specialized maintenance programs tailored to specific plant types and varieties in your landscape. Our horticultural specialists provide expert care for palm collections, rose gardens, tropical plantings, and native species with customized fertilization, pruning, and health monitoring schedules.",
       "primaryLink": {
-        "text": "Bush Regeneration",
-        "url": "/services/bush-regeneration"
+        "text": "Landscape Maintenance",
+        "url": "/landscape-services/"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -97,11 +98,11 @@
       }
     },
     {
-      "title": "Wetland Conservation & Creation",
-      "description": "Design and implement functional wetland systems that purify water and support biodiversity. Our wetland projects range from restoring degraded systems to creating new wetland features that enhance both ecological function and landscape beauty.",
+      "title": "Premium Landscape Maintenance",
+      "description": "Comprehensive premium maintenance services that keep your landscape investment looking pristine year-round. Our professional teams provide regular lawn care, garden bed maintenance, irrigation management, and seasonal plant health assessments using the latest horticultural techniques.",
       "primaryLink": {
-        "text": "Wetland Services",
-        "url": "/services/wetland-conservation"
+        "text": "Landscape Maintenance",
+        "url": "/landscape-services/"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -112,8 +113,8 @@
       "title": "Commercial Property Maintenance",
       "description": "Comprehensive maintenance programs for commercial properties that enhance curb appeal while advancing sustainability. Our specialized teams provide regular care that reduces water usage, eliminates harmful chemicals, and maximizes the ecological benefits of your landscape.",
       "primaryLink": {
-        "text": "Commercial Maintenance",
-        "url": "/services/commercial-maintenance"
+        "text": "Landscape Maintenance",
+        "url": "/landscape-services/"
       },
       "secondaryLink": {
         "text": "Contact",
@@ -121,11 +122,11 @@
       }
     },
     {
-      "title": "Sustainable Urban Greening",
-      "description": "Transform urban spaces with innovative greening solutions including vertical gardens, green roofs, and bioswales. Our urban projects create ecological stepping stones throughout the Gold Coast while mitigating heat island effects and improving air quality.",
+      "title": "Hardscape Construction & Installation",
+      "description": "Expert hardscape construction services including custom stonework, outdoor kitchens, fire features, and entertainment areas. Our skilled craftsmen use premium materials and proven construction techniques to create durable outdoor spaces that enhance your property's value and enjoyment.",
       "primaryLink": {
-        "text": "Urban Greening",
-        "url": "/services/urban-greening"
+        "text": "Landscape Construction",
+        "url": "/landscape-construction/"
       },
       "secondaryLink": {
         "text": "Contact",
