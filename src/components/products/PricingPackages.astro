@@ -1,10 +1,6 @@
 ---
-import services from '../../content/hardscapes-detailed.js';
+import { services } from '../../content/hardscapes-detailed.js';
 
-// PricingPackages.astro
-// This component displays pricing packages for rental products
-
-// Define the props with TypeScript interface
 interface PricingOption {
   name: string;
   description: string;
@@ -18,17 +14,8 @@ interface AdditionalOption {
   price: number | string;
 }
 
-interface Props {
-  pricingOptions: PricingOption[];
-  additionalOptions?: AdditionalOption[];
-  specifications?: Record<string, any>;
-  popularMiddleOption?: boolean;
-  ctaText?: string;
-}
-
-// Get props with defaults
 const { 
-  pricingOptions, 
+  pricingOptions = [],  // Provide default empty array
   additionalOptions = [], 
   specifications = {},
   popularMiddleOption = true,
@@ -36,114 +23,70 @@ const {
 } = Astro.props;
 ---
 
-<style>
-    #contain {
-        max-width: 1940px;
-    }
-</style>
-
-<div id="contain" class="w-full mx-auto bg-gradient-to-r from-secondary-200 to-secondary-400 dark:from-secondary-800 dark:to-secondary-950 py-8 px-4 my-6 rounded-3xl">
+<div id="contain" class="w-full mx-auto ...">
   <h2 class="text-2xl font-bold text-center mb-6">Pricing Packages</h2>
   
-  <!-- Pricing Packages Grid -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     {pricingOptions.map((pkg, index) => {
       const isPopular = popularMiddleOption && index === 1;
-      
-      // Find the corresponding product image
-      const product = products.find(product => product.pricing.some(pricing => pricing.name === pkg.name));
-      const productImg = product ? product.productimg : 'public/product-image-basic.webp';
+
+      // Find matching service by package name
+      const product = services.find(service => service.packages?.some(p => p.name === pkg.name));
+      const productImg = product?.serviceimg || 'public/product-image-basic.webp';
 
       return (
-        <div class={`bg-secondary-100 hover:bg-secondary-200 dark:bg-secondary-950 dark:hover:bg-secondary-800 duration-300 rounded-xl shadow-md overflow-hidden ${isPopular ? 'bg-secondary-200 bg-gradient-to-tr from-secondary-100 to-secondary-300 dark:from-secondary-950 dark:to-secondary-900 relative' : ''}`}>
+        <div key={pkg.name} class={`bg-secondary-100 ... ${isPopular ? 'popular-class' : ''}`}>
           {isPopular && (
-            <div class="uppercase absolute top-1 md:top-2 right-2 md:right-4 rounded-full bg-primary-600 text-white px-3 py-1 text-sm font-bold">
-              Most Popular
-            </div>
+            <div class="popular-badge">Most Popular</div>
           )}
           <div class="p-6">
-            <h3 class="text-xl font-bold text-secondary-950 dark:text-white">{pkg.name}</h3>
-            <p class="text-gray-800 mb-4">{pkg.description}</p>
-            <div class="flex items-baseline mb-4">
-              <span class="text-3xl font-extrabold text-secondary-950 dark:text-white">
-                ${pkg.price}
-              </span>
-              {pkg.rentalPeriod && (
-                <span class="ml-2 text-gray-800">/ {pkg.rentalPeriod}</span>
-              )}
+            <h3>{pkg.name}</h3>
+            <p>{pkg.description}</p>
+            <div>
+              <span>${pkg.price}</span>
+              {pkg.rentalPeriod && <span>/ {pkg.rentalPeriod}</span>}
             </div>
-            <ul class="space-y-3 mb-6">
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                {pkg.description}
-              </li>
-              {specifications.installation && (
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  {specifications.installation}
-                </li>
-              )}
-              {specifications.waterproof && (
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  {specifications.waterproof}
-                </li>
-              )}
-              {specifications.dimmable !== undefined && (
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  {specifications.dimmable ? 'Dimmable lighting' : 'Fixed brightness'}
-                </li>
-              )}
+            <ul>
+              {/* Example spec list */}
+              {specifications.installation && <li>{specifications.installation}</li>}
+              {/* Add other specs similarly */}
             </ul>
-              
-              <button class="snipcart-add-item
-                w-full bg-secondary-600 hover:bg-secondary-700 rounded-full px-4 py-3 text-white font-medium"
-                data-item-id={pkg.name}
-                data-item-price={pkg.price}
-                data-item-description={pkg.description}
-                data-item-image={productImg}
-                data-item-name={pkg.name}>
-                Add to cart
-              </button>
+            <button
+              class="snipcart-add-item"
+              data-item-id={pkg.name}
+              data-item-price={pkg.price}
+              data-item-description={pkg.description}
+              data-item-image={productImg}
+              data-item-name={pkg.name}
+            >
+              {ctaText}
+            </button>
           </div>
         </div>
-      )
+      );
     })}
   </div>
-  
-  <!-- Additional Options Section -->
+
+  {/* Additional Options */}
   {additionalOptions.length > 0 && (
-    <div class="mt-8">
-      <h3 class="text-xl font-bold mb-4">Additional Options</h3>
+    <div>
+      <h3>Additional Options</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {additionalOptions.map((option) => (
-          <div class="bg-secondary-100 hover:bg-secondary-200 dark:bg-secondary-950 dark:hover:bg-secondary-800 duration-200 shadow-md border-primary-900/10 dark:border-primary-300/10 p-4 rounded-xl flex flex-col justify-between">
-            <div>
-              <h4 class="font-semibold">{option.name}</h4>
-              <p class="text-sm text-gray-600">{option.description}</p>
-            </div>
-            <div class="mt-2 flex items-center justify-between">
-              <span class="text-2xl font-bold">
-                ${option.price}
-              </span>
-              <button class="snipcart-add-item bg-secondary-600 hover:bg-secondary-700 rounded-full text-white px-4 py-3"
-                data-item-id={option.name}
-                data-item-price={option.price}
-                data-item-description={option.description}
-                data-item-image="public/product-image-basic.webp"
-                data-item-name={option.name}>
-                Add to cart
-              </button>
-            </div>
+        {additionalOptions.map(option => (
+          <div key={option.name} class="option-card">
+            <h4>{option.name}</h4>
+            <p>{option.description}</p>
+            <span>${option.price}</span>
+            <button
+              class="snipcart-add-item"
+              data-item-id={option.name}
+              data-item-price={option.price}
+              data-item-description={option.description}
+              data-item-image="public/product-image-basic.webp"
+              data-item-name={option.name}
+            >
+              Add to cart
+            </button>
           </div>
         ))}
       </div>

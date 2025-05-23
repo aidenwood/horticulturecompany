@@ -1,0 +1,156 @@
+---
+/*
+  Astro service page template for a hardscape service.
+  - Imports service data from hardscapes-detailed.js
+  - Renders hero, details, pricing, add-ons, uses, FAQs, and related services.
+  - Fixed to work with string-based serviceDetails structure
+*/
+
+import SlotHero from '../../components/products/Slot-Product-Hero.astro';
+import SlotDetails from '../../components/products/Slot-Product-Deliverables.astro';
+import PricingPackages from "../../components/products/PricingPackages.astro";
+import RelatedProducts from '../../components/products/RelatedProducts.astro';
+import Layout from '../../layouts/Layout.astro';
+
+import services from '../../content/hardscapes-detailed.js';
+
+const serviceId = 'paver-stepper-installation';
+const service = services.find(item => item.id === serviceId);
+
+const processSteps = service?.serviceDetails?.process?.split('→').map(s => s.trim()) || [];
+const deliverables = service?.serviceDetails?.deliverables?.split(',').map(s => s.trim()) || [];
+
+const relatedServicesData = service?.relatedServices
+  ? services.filter(item => service.relatedServices.includes(item.id))
+  : [];
+
+// Helper function to split process string into steps
+const getProcessSteps = (processString) => {
+  if (!processString) return [];
+  return processString.split(' → ').map(step => step.trim());
+};
+
+// Helper function to split deliverables string into items
+const getDeliverablesItems = (deliverablesString) => {
+  if (!deliverablesString) return [];
+  return deliverablesString.split(', ').map(item => item.trim());
+};
+
+// Helper function to split includes string into items
+const getIncludesItems = (includesString) => {
+  if (!includesString) return [];
+  return includesString.split(', ').map(item => item.trim());
+};
+---
+
+<Layout title={service?.name ?? "Service"} description={service?.description ?? ""}>
+
+  {/* Hero section */}
+  {service ? (
+    <SlotHero>
+      <Fragment slot="smltitle">
+        Services by The Horticulture Company
+      </Fragment>
+      <Fragment slot="title">
+        {service.name}
+      </Fragment>
+      <Fragment slot="desc">
+        {service.description ?? "No description available."}
+      </Fragment>
+      <Fragment slot="cover">
+        <img 
+          src={service.serviceimg ?? "/default-image.jpg"}
+          alt={service.alt ?? service.name ?? "Service image"}
+          class="object-cover w-full h-full"
+        />
+      </Fragment>
+    </SlotHero>
+  ) : (
+    <p>Service not found.</p>
+  )}
+
+
+
+  {/* Related Services */}
+  <section>
+    {relatedServicesData.length > 0 ? (
+      <RelatedProducts products={relatedServicesData} />
+    ) : (
+      <p>No related services available.</p>
+    )}
+  </section>
+
+  {service?.serviceDetails ? (
+  <SlotDetails>
+    <div slot="process">
+      <ul class="list-disc pl-6 space-y-2">
+        {processSteps.map(step => <li class="text-secondary-700 dark:text-secondary-300">{step}</li>)}
+      </ul>
+    </div>
+
+    <div slot="deliverables">
+      <ul class="list-disc pl-6 space-y-2">
+        {deliverables.map(item => <li class="text-secondary-700 dark:text-secondary-300">{item}</li>)}
+      </ul>
+    </div>
+  </SlotDetails>
+) : (
+  <p>Service details are not available.</p>
+)}
+
+  {/* Pricing */}
+  <section>
+    <h2>Pricing Options</h2>
+    {service?.packages?.length > 0 ? (
+      <PricingPackages packages={service.packages} />
+    ) : (
+      <p>Contact us for a custom quote.</p>
+    )}
+  </section>
+
+  {/* Add-ons */}
+  <section>
+    <h2>Additional Options</h2>
+    <ul>
+      {(service?.addons ?? []).length > 0 ? (
+        service.addons.map(addon => (
+          <li key={addon.name}>
+            <strong>{addon.name}</strong>: {addon.description} - £{addon.price}
+          </li>
+        ))
+      ) : (
+        <li>No additional options available.</li>
+      )}
+    </ul>
+  </section>
+
+  {/* Common uses */}
+  <section>
+    <h2>Common Uses</h2>
+    <ul>
+      {(service?.commonUses ?? []).length > 0 ? (
+        service.commonUses.map(use => <li key={use}>{use}</li>)
+      ) : (
+        <li>No common uses listed.</li>
+      )}
+    </ul>
+  </section>
+
+  {/* FAQs */}
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      {(service?.faqs ?? []).length > 0 ? (
+        service.faqs.map(faq => (
+          <div key={faq.question}>
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+          </div>
+        ))
+      ) : (
+        <p>No FAQs available.</p>
+      )}
+    </div>
+  </section>
+
+</Layout>
