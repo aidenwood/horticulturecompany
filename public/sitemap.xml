@@ -3,102 +3,77 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://thehorticulturecompany.com.au/</loc>
-	<lastmod>2025-03-31T07:27:11+01:00</lastmod>
+	<lastmod>2025-05-23T06:27:27+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
+	<loc>https://thehorticulturecompany.com.au/landscape-construction/</loc>
+	<lastmod>2025-05-23T06:27:27+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/landscaping-services/</loc>
+	<lastmod>2025-05-23T06:27:27+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
 	<loc>https://thehorticulturecompany.com.au/contact/</loc>
-	<lastmod>2025-03-31T07:27:11+01:00</lastmod>
+	<lastmod>2025-05-23T06:27:27+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://thehorticulturecompany.com.au/products/</loc>
-	<lastmod>2025-03-31T07:27:13+01:00</lastmod>
-	<priority>0.8</priority>
+	<loc>https://thehorticulturecompany.com.au/services/paver-stepper-installation/</loc>
+	<lastmod>2025-05-23T06:27:30+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://thehorticulturecompany.com.au/services/</loc>
-	<lastmod>2025-03-31T07:27:13+01:00</lastmod>
-	<priority>0.8</priority>
+	<loc>https://thehorticulturecompany.com.au/services/timber-retaining-walls/</loc>
+	<lastmod>2025-05-23T06:27:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/services/block-retaining-walls/</loc>
+	<lastmod>2025-05-23T06:27:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/services/deck-construction/</loc>
+	<lastmod>2025-05-23T06:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/services/pergola-construction/</loc>
+	<lastmod>2025-05-23T06:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/services/patio-construction/</loc>
+	<lastmod>2025-05-23T06:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/services/cad-hardscape-design/</loc>
+	<lastmod>2025-05-23T06:27:32+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/services/raised-wooden-pathway/</loc>
+	<lastmod>2025-05-23T06:27:32+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thehorticulturecompany.com.au/services/garden-bed-construction/</loc>
+	<lastmod>2025-05-23T06:27:32+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://thehorticulturecompany.com.au/about/</loc>
-	<lastmod>2025-03-31T07:27:19+01:00</lastmod>
+	<lastmod>2025-05-23T06:27:34+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://thehorticulturecompany.com.au/products/festoon-lighting/</loc>
-	<lastmod>2025-03-31T07:27:19+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/fairy-light-canopy/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/stage-wash-package/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/lighting-installations/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/outdoor-tree-lighting/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/dmx-light-shows/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/projection-mapping-package/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/custom-laser-shows/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/premium-projector-hire/</loc>
-	<lastmod>2025-03-31T07:27:20+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/custom-stage-renders/</loc>
-	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/table-centerpiece-lighting/</loc>
-	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/chandelier-installations/</loc>
-	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/letter-lights/</loc>
-	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://thehorticulturecompany.com.au/products/pendant-light-installations/</loc>
-	<lastmod>2025-03-31T07:27:21+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
 	<loc>https://thehorticulturecompany.com.au/sales-call/</loc>
-	<lastmod>2025-03-31T07:27:23+01:00</lastmod>
+	<lastmod>2025-05-23T06:27:36+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
