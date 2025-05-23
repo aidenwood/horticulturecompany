@@ -14,7 +14,7 @@ import Layout from '../../layouts/Layout.astro';
 
 import services from '../../content/hardscapes-detailed.js';
 
-const serviceId = 'paver-stepper-installation';
+const serviceId = 'cad-hardscape-design';
 const service = services.find(item => item.id === serviceId);
 
 const processSteps = service?.serviceDetails?.process?.split('→').map(s => s.trim()) || [];
@@ -23,18 +23,6 @@ const deliverables = service?.serviceDetails?.deliverables?.split(',').map(s => 
 const relatedServicesData = service?.relatedServices
   ? services.filter(item => service.relatedServices.includes(item.id))
   : [];
-
-
-
-
-// Dynamically load images from the folder matching the serviceId
-const allImages = import.meta.glob('/public/services/*/*.{jpg,jpeg,png,webp}', { eager: true });
-
-const images = Object.entries(allImages)
-  .filter(([path]) => path.includes(`/services/${serviceId}/`))
-  .map(([, module]) => module.default);
-
-
 
 // Helper function to split process string into steps
 const getProcessSteps = (processString) => {
@@ -85,42 +73,6 @@ const getIncludesItems = (includesString) => {
   )}
 
 
-  {/* Dynamic Folder name image gallery */}
-  <div class="my-8" id="contain">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {images.map((src, index) => (
-        <img
-          key={index}
-          src={src}               // use src directly
-          alt={`${serviceId} image ${index + 1}`}
-          class="h-auto max-w-full rounded-lg"
-          loading="lazy"
-        />
-      ))}
-    </div>
-  </div>
-
-
-
-  {/* Deliverables and Process Section */}
-  {service?.serviceDetails ? (
-    <SlotDetails>
-      <div slot="process">
-        <ul class="list-disc pl-6 space-y-2">
-          {processSteps.map(step => <li class="text-secondary-700 dark:text-secondary-300">{step}</li>)}
-        </ul>
-      </div>
-
-      <div slot="deliverables">
-        <ul class="list-disc pl-6 space-y-2">
-          {deliverables.map(item => <li class="text-secondary-700 dark:text-secondary-300">{item}</li>)}
-        </ul>
-      </div>
-    </SlotDetails>
-  ) : (
-    <p>Service details are not available.</p>
-  )}
-
 
   {/* Related Services */}
   <section>
@@ -131,7 +83,23 @@ const getIncludesItems = (includesString) => {
     )}
   </section>
 
- 
+  {service?.serviceDetails ? (
+  <SlotDetails>
+    <div slot="process">
+      <ul class="list-disc pl-6 space-y-2">
+        {processSteps.map(step => <li class="text-secondary-700 dark:text-secondary-300">{step}</li>)}
+      </ul>
+    </div>
+
+    <div slot="deliverables">
+      <ul class="list-disc pl-6 space-y-2">
+        {deliverables.map(item => <li class="text-secondary-700 dark:text-secondary-300">{item}</li>)}
+      </ul>
+    </div>
+  </SlotDetails>
+) : (
+  <p>Service details are not available.</p>
+)}
 
   {/* Pricing */}
   <section>
